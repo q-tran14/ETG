@@ -1,11 +1,11 @@
 # FinalProject-Game
 Các Folder được cung cấp:
-- [ ] Sprites
+- [x] Sprites
   - [x] Bosses
-  - [ ] Enemies
+  - [x] Enemies
   - [x] Familiars
   - [x] Items
-  - [ ] Maps
+  - [x] Maps
   - [x] Main Characters
   - [x] NPCs
   - [x] Start Screen, Something Else
