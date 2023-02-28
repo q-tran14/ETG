@@ -8,7 +8,7 @@ Các Folder được cung cấp:
 - Sprite của Shotgun Kin không có folder ảnh lẻ.
 - Folder Bosses và Enemies trong folder Sounds không được phân đúng loại nên nếu kiếm sound của các Enemy và Boss thì nên kiểm ở cả 2 folder này.
 - Một số Sprite ko có đúng tên so vs trong các link tham khảo nên cần xem hình để phân biệt.
-- Các Sprite lẻ cắt ra từ Sprite - sheet của Shotgun Kin chưa được đặt tên xong (chỉ vừa đặt được vài cái).
+- Các Sprite lẻ cắt ra từ Sprite - sheet của Shotgun Kin chưa được đặt tên xong ( chỉ vừa đặt được vài cái ).
 
 # Hệ thống màn chơi và các scene:
 
@@ -17,7 +17,7 @@ Các Folder được cung cấp:
 # Lưu ý trước khi bắt tay vô làm
 1. ***Tạo nhánh mới có name là MSSV.***
 
-2. Khi ghép Sprite để làm Animation, có thể dùng Sprite Editor để cắt Sprite - Sheet được cung cấp thành cái Sprite nhỏ hơn (Khuyến khích xài Sprite lẻ được cung cấp trong folder cùng tên để tạo Animation vì có thể sẽ có vài Sprite - Sheet cắt bị lỗi).
+2. Khi ghép Sprite để làm Animation, có thể dùng Sprite Editor để cắt Sprite - Sheet được cung cấp thành cái Sprite nhỏ hơn ( Khuyến khích xài Sprite lẻ được cung cấp trong folder cùng tên để tạo Animation vì có thể sẽ có vài Sprite - Sheet cắt bị lỗi ).
 
 3. Tab **Hierarchy** Các object phải được phân rõ loại để tiện tìm kiếm và chỉnh sửa:
 
@@ -39,4 +39,4 @@ Ngoài ra cũng cần tham khảo thêm trên Youtube để tạo hình các roo
 
 - Start Scene
 - The Breach
-- Aimless Void [2 boss chamber trong cốt chuyện của Hunter và Marine]
+- Aimless Void ( 2 boss chamber trong cốt chuyện của Hunter và Marine )
