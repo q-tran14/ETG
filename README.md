@@ -7,6 +7,10 @@ Các Folder được cung cấp:
 - Sprite của Shotgun Kin không có folder ảnh lẻ.
 - Folder Bosses và Enemies trong folder Sounds không được phân đúng loại nên nếu kiếm sound của các Enemy và Boss thì nên kiểm ở cả 2 folder này.
 
+# Hệ thống màn chơi và các scene:
+
+![Imgur](https://imgur.com/jO4Lo8w.png)
+
 # Lưu ý trước khi bắt tay vô làm
 1. ***Tạo nhánh mới có name là MSSV.***
 
