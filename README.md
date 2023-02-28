@@ -18,7 +18,7 @@ Các Folder được cung cấp:
 
 3. Tab **Hierarchy** Các object phải được phân rõ loại để tiện tìm kiếm và chỉnh sửa:
 
-![Imgur](https://i.imgur.com/YLScKYR.png)
+![Imgur](https://imgur.com/c7uIzWJ.png)
 
 4. Các website để tham khảo các Chamber:
 - [The Breach](https://enterthegungeon.fandom.com/wiki/The_Breach?so=search)
