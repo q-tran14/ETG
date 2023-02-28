@@ -38,4 +38,4 @@ Ngoài ra cũng cần tham khảo thêm trên Youtube để tạo hình các roo
 
 - Start Scene
 - The Breach
-- Aimless Void [2 boss chamber in Story of Hunter and Marine]
+- Aimless Void [2 boss chamber trong cốt chuyện của Hunter và Marine]
