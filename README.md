@@ -9,7 +9,7 @@ Các Folder được cung cấp:
 
 # Hệ thống màn chơi và các scene:
 
-![Imgur](https://imgur.com/jO4Lo8w.png)
+![Imgur](https://imgur.com/c7uIzWJ.png)
 
 # Lưu ý trước khi bắt tay vô làm
 1. ***Tạo nhánh mới có name là MSSV.***
@@ -17,8 +17,6 @@ Các Folder được cung cấp:
 2. Khi ghép Sprite để làm Animation, có thể dùng Sprite Editor để cắt Sprite - Sheet được cung cấp thành cái Sprite nhỏ hơn (Khuyến khích xài Sprite lẻ được cung cấp trong folder cùng tên để tạo Animation vì có thể sẽ có vài Sprite - Sheet cắt bị lỗi).
 
 3. Tab **Hierarchy** Các object phải được phân rõ loại để tiện tìm kiếm và chỉnh sửa:
-
-![Imgur](https://imgur.com/c7uIzWJ.png)
 
 4. Các website để tham khảo các Chamber:
 - [The Breach](https://enterthegungeon.fandom.com/wiki/The_Breach?so=search)
