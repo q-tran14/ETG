@@ -1,21 +1,14 @@
 # FinalProject-Game
 Các Folder được cung cấp:
 - [x] Sprites
-  - [x] Bosses
-  - [x] Enemies
-  - [x] Familiars
-  - [x] Items
-  - [x] Maps
-  - [x] Main Characters
-  - [x] NPCs
-  - [x] Start Screen, Something Else
-  - [x] UI Element
-  - [x] VFX
-  - [x] Weapons
-- [ ] Sounds
+- [x] Sounds
+
+***Lưu ý:**
+- Sprite của Shotgun Kin không có folder ảnh lẻ.
+- Folder Bosses và Enemies trong folder Sounds không được phân đúng loại nên nếu kiếm sound của các Enemy và Boss thì nên kiểm ở cả 2 folder này.
 
 # Lưu ý trước khi bắt tay vô làm
-1. Tạo nhánh mới có name là MSSV.
+1. ***Tạo nhánh mới có name là MSSV.***
 
 2. Khi ghép Sprite để làm Animation, có thể dùng Sprite Editor để cắt Sprite - Sheet được cung cấp thành cái Sprite nhỏ hơn (Khuyến khích xài Sprite lẻ được cung cấp trong folder cùng tên để tạo Animation vì có thể sẽ có vài Sprite - Sheet cắt bị lỗi).
 
@@ -40,4 +33,3 @@ Ngoài ra cũng cần tham khảo thêm trên Youtube để tạo hình các roo
 - Start Scene
 - The Breach
 - Aimless Void [2 boss chamber in Story of Hunter and Marine]
-
