@@ -4,8 +4,10 @@ Các Folder được cung cấp:
 - [x] Sounds
 
 ***Lưu ý:**
+- Trong Sprites - Main Characters, Guide chính là Hunter.
 - Sprite của Shotgun Kin không có folder ảnh lẻ.
 - Folder Bosses và Enemies trong folder Sounds không được phân đúng loại nên nếu kiếm sound của các Enemy và Boss thì nên kiểm ở cả 2 folder này.
+- Một số Sprite ko có đúng tên so vs trong các link tham khảo nên cần xem hình để phân biệt.
 
 # Hệ thống màn chơi và các scene:
 
@@ -17,6 +19,8 @@ Các Folder được cung cấp:
 2. Khi ghép Sprite để làm Animation, có thể dùng Sprite Editor để cắt Sprite - Sheet được cung cấp thành cái Sprite nhỏ hơn (Khuyến khích xài Sprite lẻ được cung cấp trong folder cùng tên để tạo Animation vì có thể sẽ có vài Sprite - Sheet cắt bị lỗi).
 
 3. Tab **Hierarchy** Các object phải được phân rõ loại để tiện tìm kiếm và chỉnh sửa:
+
+![Imgur](https://imgur.com/YLScKYR.png)
 
 4. Các website để tham khảo các Chamber:
 - [The Breach](https://enterthegungeon.fandom.com/wiki/The_Breach?so=search)
