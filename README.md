@@ -9,6 +9,7 @@ Các Folder được cung cấp:
 - Folder Bosses và Enemies trong folder Sounds không được phân đúng loại nên nếu kiếm sound của các Enemy và Boss thì nên kiểm ở cả 2 folder này.
 - Một số Sprite ko có đúng tên so vs trong các link tham khảo nên cần xem hình để phân biệt.
 - Các Sprite lẻ cắt ra từ Sprite - sheet của Shotgun Kin chưa được đặt tên xong ( chỉ vừa đặt được vài cái ).
+- Pixels Per Unit: 24
 
 # Hệ thống màn chơi và các scene:
 
