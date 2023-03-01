@@ -1,4 +1,4 @@
-# FinalProject-Game
+# Enter The Dungeon (clone from Enter The Gungeon)
 Các Folder được cung cấp:
 - [x] Sprites
 - [x] Sounds
