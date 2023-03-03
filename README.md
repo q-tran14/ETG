@@ -6,17 +6,17 @@ Các Folder được cung cấp:
 Map được xử lí bởi:
 - [x] Start: ***Quân***
 - [x] The Breach: ***Quân***
-- [ ] Tutorial room:******
+- [ ] Tutorial room:*** ***
 - [x] Shopping room: ***Phát***
-- [ ] Chamber 1: ******
-- [ ] Chamber 2: ******
-- [ ] Chamber 3: ******
-- [ ] Hidden Chamber 1: ******
-- [ ] Hidden Chamber 2: ******
-- [ ] FinalBoss_Lich: ******
-- [ ] Aimless Void: ******
-- [ ] Boss Chamber for Hunter: ******
-- [ ] Boss Chamber for Marine: ******
+- [ ] Chamber 1: *** ***
+- [ ] Chamber 2: *** ***
+- [ ] Chamber 3: *** ***
+- [ ] Hidden Chamber 1: *** ***
+- [ ] Hidden Chamber 2: *** ***
+- [ ] FinalBoss_Lich: *** ***
+- [ ] Aimless Void: *** ***
+- [ ] Boss Chamber for Hunter: *** ***
+- [ ] Boss Chamber for Marine: *** ***
 
 ***Lưu ý:**
 - Trong Sprites - Main Characters, **Guide** chính là **Hunter**.
