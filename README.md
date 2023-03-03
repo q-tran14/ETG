@@ -4,10 +4,14 @@ Các Folder được cung cấp:
 - [x] Sounds
 
 Map được xử lí bởi:
-- [x] Start: ***Quân***
-- [x] The Breach: ***Quân***
+Ai làm scene nào thì vào edit file README.md trong branch "master". Thay "..." bằng ***tên của mình***. Khi hoàn thành thì xóa dấu cách trong ngoặc vuông [] và thay bằng chữ **x**.
+
+> VD: [ ] Start: \*\*\*...*** --> [x] Start: \*\*\*Quân***
+ 
+- [ ] Start: ***Quân***
+- [ ] The Breach: ***Quân***
 - [ ] Tutorial room: ***...***
-- [x] Shopping room: ***Phát***
+- [ ] Shopping room: ***Phát***
 - [ ] Chamber 1: ***...***
 - [ ] Chamber 2: ***Phát***
 - [ ] Chamber 3: ***...***
