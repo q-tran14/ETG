@@ -14,7 +14,7 @@ Map được xử lí bởi:
 - [ ] Hidden Chamber 1: ***...***
 - [ ] Hidden Chamber 2: ***...***
 - [ ] FinalBoss_Lich: ***...***
-- [ ] Aimless Void: ***...***
+- [ ] Aimless Void: ***Quân***
 - [ ] Boss Chamber for Hunter: ***...***
 - [ ] Boss Chamber for Marine: ***...***
 
