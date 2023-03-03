@@ -3,8 +3,23 @@ Các Folder được cung cấp:
 - [x] Sprites
 - [x] Sounds
 
+Map được xử lí bởi:
+- [x] Start: Quân
+- [x] The Breach: Quân
+- [ ] Tutorial room:
+- [x] Shopping room: Phát
+- [ ] Chamber 1:
+- [ ] Chamber 2:
+- [ ] Chamber 3:
+- [ ] Hidden Chamber 1:
+- [ ] Hidden Chamber 2:
+- [ ] FinalBoss_Lich:
+- [ ] Aimless Void:
+- [ ] Boss Chamber for Hunter:
+- [ ] Boss Chamber for Marine:
+
 ***Lưu ý:**
-- Trong Sprites - Main Characters, Guide chính là Hunter.
+- Trong Sprites - Main Characters, **Guide** chính là **Hunter**.
 - Sprite của Shotgun Kin không có folder ảnh lẻ.
 - Folder Bosses và Enemies trong folder Sounds không được phân đúng loại nên nếu kiếm sound của các Enemy và Boss thì nên kiểm ở cả 2 folder này.
 - Một số Sprite ko có đúng tên so vs trong các link tham khảo nên cần xem hình để phân biệt.
