@@ -9,10 +9,10 @@ Map được xử lí bởi:
 - [ ] Tutorial room: ***...***
 - [x] Shopping room: ***Phát***
 - [ ] Chamber 1: ***...***
-- [ ] Chamber 2: ***...***
+- [ ] Chamber 2: ***Phát***
 - [ ] Chamber 3: ***...***
 - [ ] Hidden Chamber 1: ***...***
-- [ ] Hidden Chamber 2: ***...***
+- [ ] Hidden Chamber 2: ***Phát***
 - [ ] FinalBoss_Lich: ***...***
 - [ ] Aimless Void: ***Quân***
 - [ ] Boss Chamber for Hunter: ***...***
