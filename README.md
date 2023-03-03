@@ -4,19 +4,19 @@ Các Folder được cung cấp:
 - [x] Sounds
 
 Map được xử lí bởi:
-- [x] Start: Quân
-- [x] The Breach: Quân
-- [ ] Tutorial room:
-- [x] Shopping room: Phát
-- [ ] Chamber 1:
-- [ ] Chamber 2:
-- [ ] Chamber 3:
-- [ ] Hidden Chamber 1:
-- [ ] Hidden Chamber 2:
-- [ ] FinalBoss_Lich:
-- [ ] Aimless Void:
-- [ ] Boss Chamber for Hunter:
-- [ ] Boss Chamber for Marine:
+- [x] Start: ***Quân***
+- [x] The Breach: ***Quân***
+- [ ] Tutorial room:******
+- [x] Shopping room: ***Phát***
+- [ ] Chamber 1: ******
+- [ ] Chamber 2: ******
+- [ ] Chamber 3: ******
+- [ ] Hidden Chamber 1: ******
+- [ ] Hidden Chamber 2: ******
+- [ ] FinalBoss_Lich: ******
+- [ ] Aimless Void: ******
+- [ ] Boss Chamber for Hunter: ******
+- [ ] Boss Chamber for Marine: ******
 
 ***Lưu ý:**
 - Trong Sprites - Main Characters, **Guide** chính là **Hunter**.
