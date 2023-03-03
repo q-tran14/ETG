@@ -1,27 +1,28 @@
-# FinalProject-Game
+# Enter The Dungeon (clone from Enter The Gungeon)
 Các Folder được cung cấp:
 - [x] Sprites
-  - [x] Bosses
-  - [x] Enemies
-  - [x] Familiars
-  - [x] Items
-  - [x] Maps
-  - [x] Main Characters
-  - [x] NPCs
-  - [x] Start Screen, Something Else
-  - [x] UI Element
-  - [x] VFX
-  - [x] Weapons
-- [ ] Sounds
+- [x] Sounds
+
+***Lưu ý:**
+- Trong Sprites - Main Characters, Guide chính là Hunter.
+- Sprite của Shotgun Kin không có folder ảnh lẻ.
+- Folder Bosses và Enemies trong folder Sounds không được phân đúng loại nên nếu kiếm sound của các Enemy và Boss thì nên kiểm ở cả 2 folder này.
+- Một số Sprite ko có đúng tên so vs trong các link tham khảo nên cần xem hình để phân biệt.
+- Các Sprite lẻ cắt ra từ Sprite - sheet của Shotgun Kin chưa được đặt tên xong ( chỉ vừa đặt được vài cái ).
+- Pixels Per Unit: 24
+
+# Hệ thống màn chơi và các scene:
+
+![Imgur](https://imgur.com/c7uIzWJ.png)
 
 # Lưu ý trước khi bắt tay vô làm
-1. Tạo nhánh mới có name là MSSV.
+1. ***Tạo nhánh mới có name là MSSV-HoTen.***
 
-2. Khi ghép Sprite để làm Animation, có thể dùng Sprite Editor để cắt Sprite - Sheet được cung cấp thành cái Sprite nhỏ hơn (Khuyến khích xài Sprite lẻ được cung cấp trong folder cùng tên để tạo Animation vì có thể sẽ có vài Sprite - Sheet cắt bị lỗi).
+2. Khi ghép Sprite để làm Animation, có thể dùng Sprite Editor để cắt Sprite - Sheet được cung cấp thành cái Sprite nhỏ hơn ( Khuyến khích xài Sprite lẻ được cung cấp trong folder cùng tên để tạo Animation vì có thể sẽ có vài Sprite - Sheet cắt bị lỗi ).
 
 3. Tab **Hierarchy** Các object phải được phân rõ loại để tiện tìm kiếm và chỉnh sửa:
 
-![Imgur](https://i.imgur.com/YLScKYR.png)
+![Imgur](https://imgur.com/YLScKYR.png)
 
 4. Các website để tham khảo các Chamber:
 - [The Breach](https://enterthegungeon.fandom.com/wiki/The_Breach?so=search)
@@ -39,5 +40,4 @@ Ngoài ra cũng cần tham khảo thêm trên Youtube để tạo hình các roo
 
 - Start Scene
 - The Breach
-- Aimless Void [2 boss chamber in Story of Hunter and Marine]
-
+- Aimless Void ( 2 boss chamber trong cốt chuyện của Hunter và Marine )
