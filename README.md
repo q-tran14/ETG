@@ -16,7 +16,7 @@ Các Folder được cung cấp:
 ![Imgur](https://imgur.com/c7uIzWJ.png)
 
 # Lưu ý trước khi bắt tay vô làm
-1. ***Tạo nhánh mới có name là MSSV.***
+1. ***Tạo nhánh mới có name là MSSV-HoTen.***
 
 2. Khi ghép Sprite để làm Animation, có thể dùng Sprite Editor để cắt Sprite - Sheet được cung cấp thành cái Sprite nhỏ hơn ( Khuyến khích xài Sprite lẻ được cung cấp trong folder cùng tên để tạo Animation vì có thể sẽ có vài Sprite - Sheet cắt bị lỗi ).
 
