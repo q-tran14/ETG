@@ -29,6 +29,7 @@
 - Một số Sprite ko có đúng tên so vs trong các link tham khảo nên cần xem hình để phân biệt.
 - Các Sprite lẻ cắt ra từ Sprite - sheet của Shotgun Kin chưa được đặt tên xong ( chỉ vừa đặt được vài cái ).
 - Pixels Per Unit: 24
+- Làm xong thì push lên branch của bản thân rồi vô github tạo ***pull request*** để mn cùng duyệt xong rồi mới merge.
 
 # Hệ thống màn chơi và các scene:
 
