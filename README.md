@@ -19,8 +19,8 @@
 - [ ] Hidden Chamber 2: ***Phát***
 - [ ] FinalBoss_Lich: ***...***
 - [ ] Aimless Void: ***Quân***
-- [ ] Boss Chamber for Hunter: ***...***
-- [ ] Boss Chamber for Marine: ***...***
+- [ ] Boss Chamber for Hunter: ***Phúc***
+- [ ] Boss Chamber for Marine: ***Phúc***
 
 ***Lưu ý:**
 - Trong Sprites - Main Characters, **Guide** chính là **Hunter**.
