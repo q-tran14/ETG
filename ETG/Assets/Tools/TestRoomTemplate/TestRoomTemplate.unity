@@ -236,7 +236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11725bdbb93631241b38951f78cae60c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 1
+  version: 3
   EnableDiagnostics: 0
   FixedLevelGraphConfig:
     LevelGraph: {fileID: 0}
