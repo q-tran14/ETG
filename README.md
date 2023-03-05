@@ -12,9 +12,9 @@
 - [ ] The Breach: ***Quân***
 - [ ] Tutorial room: ***...***
 - [ ] Shopping room: ***Phát***
-- [ ] Chamber 1: ***...***
+- [ ] Chamber 1: ***Quân***
 - [ ] Chamber 2: ***Phát***
-- [ ] Chamber 3: ***Quân***
+- [ ] Chamber 3: ***...***
 - [ ] Hidden Chamber 1: ***...***
 - [ ] Hidden Chamber 2: ***Phát***
 - [ ] FinalBoss_Lich: ***...***
