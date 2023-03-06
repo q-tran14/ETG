@@ -12,15 +12,15 @@
 - [ ] The Breach: ***Quân***
 - [ ] Tutorial room: ***...***
 - [ ] Shopping room: ***Phát***
-- [ ] Chamber 1: ***...***
+- [ ] Chamber 1: ***Quân***
 - [ ] Chamber 2: ***Phát***
-- [ ] Chamber 3: ***Quân***
+- [ ] Chamber 3: ***...***
 - [ ] Hidden Chamber 1: ***...***
 - [ ] Hidden Chamber 2: ***Phát***
 - [ ] FinalBoss_Lich: ***...***
 - [ ] Aimless Void: ***Quân***
-- [ ] Boss Chamber for Hunter: ***...***
-- [ ] Boss Chamber for Marine: ***...***
+- [ ] Boss Chamber for Hunter: ***Phúc***
+- [ ] Boss Chamber for Marine: ***Phúc***
 
 ***Lưu ý:**
 - Trong Sprites - Main Characters, **Guide** chính là **Hunter**.
@@ -28,7 +28,8 @@
 - Folder Bosses và Enemies trong folder Sounds không được phân đúng loại nên nếu kiếm sound của các Enemy và Boss thì nên kiểm ở cả 2 folder này.
 - Một số Sprite ko có đúng tên so vs trong các link tham khảo nên cần xem hình để phân biệt.
 - Các Sprite lẻ cắt ra từ Sprite - sheet của Shotgun Kin chưa được đặt tên xong ( chỉ vừa đặt được vài cái ).
-- Pixels Per Unit: 24
+- Sprite được dựng sẵn (thông thường là các map đặc biệt như Breach, Aimless Void, Boss room của nhân vật) - Pixels Per Unit (Trong Sprite Editor): ***24***
+- Sprite của tileset, env và platform - map spawn enemy thông thường - Pixels Per Unit (Trong Sprite Editor): ***16***
 - Làm xong thì push lên branch của bản thân rồi vô github tạo ***pull request*** để mn cùng duyệt xong. ***TUYỆT ĐỐI KHÔNG ĐC PHÉP TỰ Ý MERGE VÔ BRANCH "MASTER".***
 
 # Hệ thống màn chơi và các scene:
@@ -36,6 +37,7 @@
 ![Imgur](https://imgur.com/c7uIzWJ.png)
 
 # Lưu ý trước khi bắt tay vô làm
+0. Cách sử dụng Room Template Tool: [Room Template](https://www.youtube.com/watch?v=JpWWwneEaPo)
 1. ***Tạo nhánh mới có name là MSSV_HoTen.***
 
 2. Khi ghép Sprite để làm Animation, có thể dùng Sprite Editor để cắt Sprite - Sheet được cung cấp thành cái Sprite nhỏ hơn ( Khuyến khích xài Sprite lẻ được cung cấp trong folder cùng tên để tạo Animation vì có thể sẽ có vài Sprite - Sheet cắt bị lỗi ).
