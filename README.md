@@ -38,7 +38,7 @@
 
 # Lưu ý trước khi bắt tay vô làm
 0. Cách sử dụng Room Template Tool: [Room Template](https://www.youtube.com/watch?v=JpWWwneEaPo)
-1. Sơ đồ từng Chamber (1 - 5): có thể sử dụng lại(ngoại trừ các room đặc biệt)
+1. [Sơ đồ từng Chamber] (1 - 5): có thể sử dụng lại (ngoại trừ các room đặc biệt)(https://drive.google.com/file/d/1NMAKiJlCoooQzqXneosSSOAuTvSE_SlM/view)
 2. ***Tạo nhánh mới có name là MSSV_HoTen.***
 
 3. Khi ghép Sprite để làm Animation, có thể dùng Sprite Editor để cắt Sprite - Sheet được cung cấp thành cái Sprite nhỏ hơn ( Khuyến khích xài Sprite lẻ được cung cấp trong folder cùng tên để tạo Animation vì có thể sẽ có vài Sprite - Sheet cắt bị lỗi ).
