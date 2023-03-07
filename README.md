@@ -4,7 +4,7 @@
 - [x] Sounds
 
 ### Map được xử lí bởi:
-* Ai làm scene nào thì vào edit file README.md trong branch "master". Thay "..." bằng ***tên của mình***. Khi hoàn thành thì xóa dấu cách trong ngoặc vuông [] và thay bằng chữ **x**.
+* Ai làm scene nào thì vào edit file README.md trong branch của mình. Thay "..." bằng ***tên của mình***. Khi hoàn thành thì xóa dấu cách trong ngoặc vuông [] và thay bằng chữ **x**.
 
 > VD: [ ] Start: \*\*\*...*** --> [x] Start: \*\*\*Quân***
  
