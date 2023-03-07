@@ -14,7 +14,7 @@
 - [ ] Shopping room: ***Phát***
 - [ ] Chamber 1: ***Quân***
 - [ ] Chamber 2: ***...***
-- [ ] Chamber 3: ***...***
+- [ ] Chamber 3: ***Duy***
 - [ ] Hidden Chamber 1: ***...***
 - [ ] Hidden Chamber 2: ***Phát***
 - [ ] FinalBoss_Lich: ***...***
