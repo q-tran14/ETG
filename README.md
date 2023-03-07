@@ -10,7 +10,7 @@
  
 - [ ] Start: ***Quân***
 - [ ] The Breach: ***Quân***
-- [ ] Tutorial room: ***Quân***
+- [ ] Tutorial room: ***Phát***
 - [ ] Shopping room: ***Phát***
 - [ ] Chamber 1: ***Quân***
 - [ ] Chamber 2: ***...***
