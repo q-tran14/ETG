@@ -13,11 +13,11 @@
 - [ ] Tutorial room: ***Phát***
 - [ ] Shopping room: ***Phát***
 - [ ] Chamber 1: ***Quân***
-- [ ] Chamber 2: ***...***
+- [ ] Chamber 2: ***Thiện***
 - [ ] Chamber 3: ***Duy***
-- [ ] Hidden Chamber 1: ***...***
+- [ ] Hidden Chamber 1: ***Duy***
 - [ ] Hidden Chamber 2: ***Phát***
-- [ ] FinalBoss_Lich: ***...***
+- [ ] FinalBoss_Lich: ***Thiện***
 - [ ] Aimless Void: ***Quân***
 - [ ] Boss Chamber for Hunter: ***Phúc***
 - [ ] Boss Chamber for Marine: ***Phúc***
