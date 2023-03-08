@@ -4,20 +4,20 @@
 - [x] Sounds
 
 ### Map được xử lí bởi:
-* Ai làm scene nào thì vào edit file README.md trong branch "master". Thay "..." bằng ***tên của mình***. Khi hoàn thành thì xóa dấu cách trong ngoặc vuông [] và thay bằng chữ **x**.
+* Ai làm scene nào thì vào edit file README.md trong ***branch của mình***. Thay "..." bằng ***tên của mình***. Khi hoàn thành thì xóa dấu cách trong ngoặc vuông [] và thay bằng chữ **x**.
 
 > VD: [ ] Start: \*\*\*...*** --> [x] Start: \*\*\*Quân***
  
 - [ ] Start: ***Quân***
 - [ ] The Breach: ***Quân***
-- [ ] Tutorial room: ***...***
+- [ ] Tutorial room: ***Phát***
 - [ ] Shopping room: ***Phát***
 - [ ] Chamber 1: ***Quân***
-- [ ] Chamber 2: ***Phát***
-- [ ] Chamber 3: ***...***
-- [ ] Hidden Chamber 1: ***...***
+- [ ] Chamber 2: ***Thiện***
+- [ ] Chamber 3: ***Duy***
+- [ ] Hidden Chamber 1: ***Duy***
 - [ ] Hidden Chamber 2: ***Phát***
-- [ ] FinalBoss_Lich: ***...***
+- [ ] FinalBoss_Lich: ***Thiện***
 - [ ] Aimless Void: ***Quân***
 - [ ] Boss Chamber for Hunter: ***Phúc***
 - [ ] Boss Chamber for Marine: ***Phúc***
@@ -37,15 +37,17 @@
 ![Imgur](https://imgur.com/c7uIzWJ.png)
 
 # Lưu ý trước khi bắt tay vô làm
-1. ***Tạo nhánh mới có name là MSSV_HoTen.***
+0. Cách sử dụng Room Template Tool: [Room Template](https://www.youtube.com/watch?v=JpWWwneEaPo)
+1. [Sơ đồ từng Chamber](https://drive.google.com/file/d/1NMAKiJlCoooQzqXneosSSOAuTvSE_SlM/view) (1 - 5): có thể sử dụng lại (ngoại trừ các room đặc biệt).
+2. ***Tạo nhánh mới có name là MSSV_HoTen.***
 
-2. Khi ghép Sprite để làm Animation, có thể dùng Sprite Editor để cắt Sprite - Sheet được cung cấp thành cái Sprite nhỏ hơn ( Khuyến khích xài Sprite lẻ được cung cấp trong folder cùng tên để tạo Animation vì có thể sẽ có vài Sprite - Sheet cắt bị lỗi ).
+3. Khi ghép Sprite để làm Animation, có thể dùng Sprite Editor để cắt Sprite - Sheet được cung cấp thành cái Sprite nhỏ hơn ( Khuyến khích xài Sprite lẻ được cung cấp trong folder cùng tên để tạo Animation vì có thể sẽ có vài Sprite - Sheet cắt bị lỗi ).
 
-3. Tab **Hierarchy** Các object phải được phân rõ loại để tiện tìm kiếm và chỉnh sửa:
+4. Tab **Hierarchy** Các object phải được phân rõ loại để tiện tìm kiếm và chỉnh sửa:
 
 ![Imgur](https://imgur.com/YLScKYR.png)
 
-4. Các website để tham khảo các Chamber:
+5. Các website để tham khảo các Chamber:
 - [The Breach](https://enterthegungeon.fandom.com/wiki/The_Breach?so=search)
 - Tutorial Chamber: [Halls of Knowledge](https://enterthegungeon.fandom.com/wiki/Halls_of_Knowledge)
 - Chambers:
