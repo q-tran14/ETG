@@ -66,6 +66,9 @@ TagManager:
   - name: FrontOfOnDoor
     uniqueID: 3428606709
     locked: 0
+  - name: NPCs
+    uniqueID: 1985319313
+    locked: 0
   - name: Roofs
     uniqueID: 144962715
     locked: 0
