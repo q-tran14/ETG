@@ -31,6 +31,8 @@
 - Sprite được dựng sẵn (thông thường là các map đặc biệt như Breach, Aimless Void, Boss room của nhân vật) - Pixels Per Unit (Trong Sprite Editor): ***24***
 - Sprite của tileset, env và platform - map spawn enemy thông thường - Pixels Per Unit (Trong Sprite Editor): ***16***
 - Làm xong thì push lên branch của bản thân rồi vô github tạo ***pull request*** để mn cùng duyệt xong. ***TUYỆT ĐỐI KHÔNG ĐC PHÉP TỰ Ý MERGE VÔ BRANCH "MASTER".***
+- Qui trình xử lý branch Github Desktop:
+> Commit/Push lên branch của mình -> Fetch origin để load bài -> Update from master.
 
 # Hệ thống màn chơi và các scene:
 
