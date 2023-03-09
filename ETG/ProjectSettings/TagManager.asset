@@ -42,6 +42,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: OnWaterHole
+    uniqueID: 2875448677
+    locked: 0
   - name: Floor
     uniqueID: 3452280643
     locked: 0
