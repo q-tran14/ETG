@@ -37,7 +37,6 @@
 ![Imgur](https://imgur.com/c7uIzWJ.png)
 
 # Lưu ý trước khi bắt tay vô làm
-0. Cách sử dụng Room Template Tool: [Room Template](https://www.youtube.com/watch?v=JpWWwneEaPo)
 1. [Sơ đồ từng Chamber](https://drive.google.com/file/d/1NMAKiJlCoooQzqXneosSSOAuTvSE_SlM/view) (1 - 5): có thể sử dụng lại (ngoại trừ các room đặc biệt).
 2. ***Tạo nhánh mới có name là MSSV_HoTen.***
 
