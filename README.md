@@ -37,8 +37,9 @@
 - CMD: 
 
 ***Các lỗi thường gặp:**
-1. Lỗi khi có sự conflict khi update từ master về branch làm việc của mình trên Github Desktop (![mergeIssue](https://user-images.githubusercontent.com/30680192/224209180-c6da9537-50a2-4757-9565-52b419f780b3.png)
-)
+1. Lỗi khi có sự conflict khi update từ master về branch làm việc của mình trên Github Desktop
+![mergeIssue](https://user-images.githubusercontent.com/30680192/224209180-c6da9537-50a2-4757-9565-52b419f780b3.png)
+
 # Hệ thống màn chơi và các scene:
 
 ![Imgur](https://imgur.com/c7uIzWJ.png)
