@@ -36,7 +36,7 @@
 - Github Desktop: Fetch origin để load bài -> đảm bảo phải commit/push bài mới nhất của mình -> Fetch origin để load bài -> Update from master để pull và merge từ branch gốc
 - CMD: 
 # Hệ thống màn chơi và các scene:
-![Imgur](https://imgur.com/c7uIzWJ.png)
+![Imgur](https://i.imgur.com/de2ponc.png)
 
 # Lưu ý trước khi bắt tay vô làm
 1. [Sơ đồ từng Chamber](https://drive.google.com/file/d/1NMAKiJlCoooQzqXneosSSOAuTvSE_SlM/view) (1 - 5): có thể sử dụng lại (ngoại trừ các room đặc biệt).
@@ -53,7 +53,7 @@
 - Tutorial Chamber: [Halls of Knowledge](https://enterthegungeon.fandom.com/wiki/Halls_of_Knowledge)
 - Chambers:
   - Chamber 1: [Keep of the Lead Lord](https://enterthegungeon.fandom.com/wiki/Keep_of_the_Lead_Lord)
-  - Chamber 2: [Gungeon Proper](https://enterthegungeon.fandom.com/wiki/Gungeon_Proper)
+  - Chamber 2: [Black Powder Mine](https://enterthegungeon.fandom.com/wiki/Black_Powder_Mine)
   - Chamber 3: [Forge](https://enterthegungeon.fandom.com/wiki/Forge)
 - Hidden Chambers:
   - Hidden Chamber 1: [Oubliette](https://enterthegungeon.fandom.com/wiki/Oubliette)
