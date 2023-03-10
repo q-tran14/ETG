@@ -31,9 +31,14 @@
 - Sprite được dựng sẵn (thông thường là các map đặc biệt như Breach, Aimless Void, Boss room của nhân vật) - Pixels Per Unit (Trong Sprite Editor): ***24***
 - Sprite của tileset, env và platform - map spawn enemy thông thường - Pixels Per Unit (Trong Sprite Editor): ***16***
 - Làm xong thì push lên branch của bản thân rồi vô github tạo ***pull request*** để mn cùng duyệt xong. ***TUYỆT ĐỐI KHÔNG ĐC PHÉP TỰ Ý MERGE VÔ BRANCH "MASTER".***
-- Qui trình xử lý branch Github Desktop:
-> Commit/Push lên branch của mình -> Fetch origin để load bài -> Update from master.
 
+***Qui trình xử lý project:**
+- Github Desktop: Fetch origin để load bài -> đảm bảo phải commit/push bài mới nhất của mình -> Fetch origin để load bài -> Update from master để pull và merge từ branch gốc
+- CMD: 
+
+***Các lỗi thường gặp:**
+1. Lỗi khi có sự conflict khi update từ master về branch làm việc của mình trên Github Desktop (![mergeIssue](https://user-images.githubusercontent.com/30680192/224209180-c6da9537-50a2-4757-9565-52b419f780b3.png)
+)
 # Hệ thống màn chơi và các scene:
 
 ![Imgur](https://imgur.com/c7uIzWJ.png)
