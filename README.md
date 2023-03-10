@@ -53,7 +53,7 @@
 - Tutorial Chamber: [Halls of Knowledge](https://enterthegungeon.fandom.com/wiki/Halls_of_Knowledge)
 - Chambers:
   - Chamber 1: [Keep of the Lead Lord](https://enterthegungeon.fandom.com/wiki/Keep_of_the_Lead_Lord)
-  - Chamber 2: [Gungeon Proper](https://enterthegungeon.fandom.com/wiki/Gungeon_Proper)
+  - Chamber 2: [Black Powder Mine](https://enterthegungeon.fandom.com/wiki/Black_Powder_Mine)
   - Chamber 3: [Forge](https://enterthegungeon.fandom.com/wiki/Forge)
 - Hidden Chambers:
   - Hidden Chamber 1: [Oubliette](https://enterthegungeon.fandom.com/wiki/Oubliette)
