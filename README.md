@@ -39,7 +39,10 @@
 ***Các lỗi thường gặp:**
 1. Lỗi khi có sự conflict khi update từ master về branch làm việc của mình trên Github Desktop
 ![mergeIssue](https://user-images.githubusercontent.com/30680192/224209180-c6da9537-50a2-4757-9565-52b419f780b3.png)
-
+  Cách fix:
+  - Xổ các lựa chọn ở nút mũi tên và Chọn modified đúng branch tên của mình ![UIStep1](https://user-images.githubusercontent.com/30680192/224210068-8dd3aa7d-6013-49e0-9891-49423ac167f3.png)
+  - Lúc này sẽ báo hết lỗi và có thể tiếp tục merge ![UIStep2](https://user-images.githubusercontent.com/30680192/224210381-dff738b2-5210-4899-a00b-eac920e7aa94.png)
+Giải thích: Lỗi này xảy ra khi người chơi thực hiện chỉnh sửa file khác với branch chính (thêm/bớt sprite trong palette,...) nên khi update từ branch chính về sẽ bị xung đột do khác cấu trúc, nên ta phải thực hiện thêm phần chỉnh sửa của mình để override data của branch master chưa chỉnh sửa.
 # Hệ thống màn chơi và các scene:
 
 ![Imgur](https://imgur.com/c7uIzWJ.png)
