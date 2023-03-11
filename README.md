@@ -3,27 +3,6 @@
 - [x] Sprites
 - [x] Sounds
 
-## Map được xử lí bởi:
-* Ai làm scene nào thì vào edit file README.md trong ***branch của mình***. Thay "..." bằng ***tên của mình***. Khi hoàn thành thì xóa dấu cách trong ngoặc vuông [] và thay bằng chữ **x**.
-
-VD:
-
-    [ ] Start: ***...*** --> [x] Start: ***Quân***
- 
-- [ ] Start: ***Quân***
-- [ ] The Breach: ***Quân***
-- [ ] Tutorial room: ***Phát***
-- [ ] Shopping room: ***Phát***
-- [ ] Chamber 1: ***Quân***
-- [ ] Chamber 2: ***Thiện***
-- [ ] Chamber 3: ***Duy***
-- [ ] Hidden Chamber 1: ***Duy***
-- [ ] Hidden Chamber 2: ***Phát***
-- [ ] FinalBoss_Lich: ***Thiện***
-- [ ] Aimless Void: ***Quân***
-- [ ] Boss Chamber for Hunter: ***Phúc***
-- [ ] Boss Chamber for Marine: ***Phúc***
-
 ## Phân công:
 ### Boss:
 
@@ -50,7 +29,26 @@ VD:
 |sunburst | T-Bulon	| wizard blue | wizard purple | wizard yellow |
 |wizard red|  |  |  |  |
 
+## Map được xử lí bởi:
+* Ai làm scene nào thì vào edit file README.md trong ***branch của mình***. Thay "..." bằng ***tên của mình***. Khi hoàn thành thì xóa dấu cách trong ngoặc vuông [] và thay bằng chữ **x**.
 
+VD:
+
+    [ ] Start: ***...*** --> [x] Start: ***Quân***
+ 
+- [ ] Start: ***Quân***
+- [ ] The Breach: ***Quân***
+- [ ] Tutorial room: ***Phát***
+- [ ] Shopping room: ***Phát***
+- [ ] Chamber 1: ***Quân***
+- [ ] Chamber 2: ***Thiện***
+- [ ] Chamber 3: ***Duy***
+- [ ] Hidden Chamber 1: ***Duy***
+- [ ] Hidden Chamber 2: ***Phát***
+- [ ] FinalBoss_Lich: ***Thiện***
+- [ ] Aimless Void: ***Quân***
+- [ ] Boss Chamber for Hunter: ***Phúc***
+- [ ] Boss Chamber for Marine: ***Phúc***
 
 ## Vấn đề cần lưu ý:
 - Trong Sprites - Main Characters, **Guide** chính là **Hunter**.
