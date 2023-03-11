@@ -42,11 +42,11 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: OnWaterHole
+    uniqueID: 2875448677
+    locked: 0
   - name: Floor
     uniqueID: 3452280643
-    locked: 0
-  - name: Wall
-    uniqueID: 1904152613
     locked: 0
   - name: Shadows
     uniqueID: 628047645
@@ -54,14 +54,17 @@ TagManager:
   - name: BodyWall
     uniqueID: 318615709
     locked: 0
+  - name: Character
+    uniqueID: 1600222447
+    locked: 0
   - name: Wall
     uniqueID: 4263240509
     locked: 0
-  - name: OnWall
-    uniqueID: 3890227271
-    locked: 0
   - name: FloorItem
     uniqueID: 3183428291
+    locked: 0
+  - name: OnWall
+    uniqueID: 3890227271
     locked: 0
   - name: FrontOfOnDoor
     uniqueID: 3428606709
