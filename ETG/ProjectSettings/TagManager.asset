@@ -54,7 +54,7 @@ TagManager:
   - name: BodyWall
     uniqueID: 318615709
     locked: 0
-  - name: Player
+  - name: Character
     uniqueID: 1600222447
     locked: 0
   - name: Wall
