@@ -6,7 +6,9 @@
 ### Map được xử lí bởi:
 * Ai làm scene nào thì vào edit file README.md trong ***branch của mình***. Thay "..." bằng ***tên của mình***. Khi hoàn thành thì xóa dấu cách trong ngoặc vuông [] và thay bằng chữ **x**.
 
-> VD: [ ] Start: \*\*\*...*** --> [x] Start: \*\*\*Quân***
+VD:
+
+    [ ] Start: \*\*\*...*** --> [x] Start: \*\*\*Quân***
  
 - [ ] Start: ***Quân***
 - [ ] The Breach: ***Quân***
@@ -37,6 +39,19 @@
 - Sprite được dựng sẵn (thông thường là các map đặc biệt như Breach, Aimless Void, Boss room của nhân vật) - Pixels Per Unit (Trong Sprite Editor): ***24***
 - Sprite của tileset, env và platform - map spawn enemy thông thường - Pixels Per Unit (Trong Sprite Editor): ***16***
 - Làm xong thì push lên branch của bản thân rồi vô github tạo ***pull request*** để mn cùng duyệt xong. ***TUYỆT ĐỐI KHÔNG ĐC PHÉP TỰ Ý MERGE VÔ BRANCH "MASTER".***
+
+***Quy ước kích thước corridor:**[Tìm hiểu chi tiết ở Chamber 1, Tutorial ở các tilemap liên quan đến wall]
+- Horizontal corridor:
+  
+![Imgur](https://imgur.com/vVfMSDg.png)
+  
+- Floor under wall:
+  
+![Imgur](https://imgur.com/4OfBeNd.png) 
+
+- Vertical corridor:
+
+![Imgur](https://imgur.com/bYpKH1U.png)
 
 ***Qui trình xử lý project:**
 - Github Desktop: Fetch origin để load bài -> đảm bảo phải commit/push bài mới nhất của mình -> Fetch origin để load bài -> Update from master để pull và merge từ branch gốc
