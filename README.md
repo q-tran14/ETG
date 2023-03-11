@@ -8,7 +8,7 @@
 
 VD:
 
-    [ ] Start: \*\*\*...*** --> [x] Start: \*\*\*Quân***
+    [ ] Start: ***...*** --> [x] Start: ***Quân***
  
 - [ ] Start: ***Quân***
 - [ ] The Breach: ***Quân***
