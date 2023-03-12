@@ -8,8 +8,8 @@
 
 | Quân | Phát | Phúc | Duy | Thiện |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
-| Dragun | Old Bullet King	| Boss Final Guide | Bullet King | Beholster |
-| Gatling Gull | Final Lich | Boss Final Marine | Blobulord | Meduzi |
+| Final Lich | Old Bullet King	| Boss Final Guide | Bullet King | Beholster |
+| Gatling Gull | Dragun | Boss Final Marine | Blobulord | Meduzi |
 
 ### Enemy:
 | Quân | Phát | Phúc | Duy | Thiện |
