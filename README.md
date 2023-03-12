@@ -8,8 +8,8 @@
 
 | Quân | Phát | Phúc | Duy | Thiện |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
-| Dragun | Old Bullet King	| Boss Final Guide | Bullet King | Beholster |
-| Gatling Gull | Final Lich | Boss Final Marine | Blobulord | Meduzi |
+| Final Lich | Old Bullet King	| Boss Final Guide | Bullet King | Beholster |
+| Gatling Gull | Dragun | Boss Final Marine | Blobulord | Meduzi |
 
 ### Enemy:
 | Quân | Phát | Phúc | Duy | Thiện |
@@ -27,7 +27,7 @@
 |mushroom guy big | phase spider | poisbulon | poopulon | powder skull |
 |shotgun kin | sunburst blue | shotgun creecher | shelleton | rubber bullet |
 |sunburst | T-Bulon	| wizard blue | wizard purple | wizard yellow |
-|wizard red|  |  |  |  |
+|wizard red| ---- | ---- | ---- | ---- |
 
 ## Map được xử lí bởi:
 * Ai làm scene nào thì vào edit file README.md trong ***branch của mình***. Thay "..." bằng ***tên của mình***. Khi hoàn thành thì xóa dấu cách trong ngoặc vuông [] và thay bằng chữ **x**.
