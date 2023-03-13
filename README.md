@@ -67,6 +67,7 @@ VD:
     - BodyWall - 0
     - BorderWall - 1
     - FrontWall - 2 (static tiles / animated tiles)
+- Roof - 0
 
 ## Vấn đề cần lưu ý:
 - Trong Sprites - Main Characters, **Guide** chính là **Hunter**.
