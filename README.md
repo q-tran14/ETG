@@ -54,19 +54,19 @@ VD:
 > - Group object name == Sorting Layer name:
 >     - TileMap name - order in layer [n]
 
-- Abyss_WaterHole_LavaHole_SpikeHole:
+- Hole:
     - UnderSurface - 0
     - Surface - 1 (animated tiles)
 - Floor:
     - Ground - 0
     - AnotherBrickOnGround - 1
 - Shadow - 0
-- StaticObjectOnFloor - 0
+- StaticObjectFloor - 0
 - Character_Object_Projectile - 0
 - Wall:
     - BodyWall - 0
     - BorderWall - 1
-    - FrontOfWall - 2 (static tiles / animated tiles)
+    - FrontWall - 2 (static tiles / animated tiles)
 
 ## Vấn đề cần lưu ý:
 - Trong Sprites - Main Characters, **Guide** chính là **Hunter**.
