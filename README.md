@@ -54,9 +54,9 @@ VD:
 > - Group object name:
 >     - TileMap name & Sorting Layer name - order in layer [n]
 
-- Abyss / Water Hole / Lava Hole / Spike Hole / ... :
+- Abyss_WaterHole_LavaHole_SpikeHole:
     - Under Surface - 0
-    - Surface - 0 (animated tiles)
+    - Surface - 1 (animated tiles)
 - Floor:
     - Ground - 0
     - Another Brick on Ground - 1
