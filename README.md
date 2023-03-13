@@ -56,7 +56,7 @@ VD:
 
 - Abyss / Water Hole / Lava Hole / Spike Hole / ... :
     - Under Surface - 0
-    - Surface - 1 (animated tiles)
+    - Surface - 0 (animated tiles)
 - Floor:
     - Ground - 0
     - Another Brick on Ground - 1
