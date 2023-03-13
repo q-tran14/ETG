@@ -51,8 +51,8 @@ VD:
 - [ ] Boss Chamber for Marine: ***Phúc***
 
 ### Sorting Layer - Order in Layer
-> - Group object name:
->     - TileMap name & Sorting Layer name - order in layer [n]
+> - Group object name == Sorting Layer name:
+>     - TileMap name - order in layer [n]
 
 - Abyss_WaterHole_LavaHole_SpikeHole:
     - UnderSurface - 0
