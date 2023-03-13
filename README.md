@@ -51,22 +51,23 @@ VD:
 - [ ] Boss Chamber for Marine: ***Phúc***
 
 ### Sorting Layer - Order in Layer
-> - Group object name:
->     - TileMap name & Sorting Layer name - order in layer [n]
+> - Group object name == Sorting Layer name:
+>     - TileMap name - order in layer [n]
 
-- Abyss / Water Hole / Lava Hole / Spike Hole / ... :
-    - Under Surface - 0
+- Hole:
+    - UnderSurface - 0
     - Surface - 1 (animated tiles)
 - Floor:
     - Ground - 0
-    - Another Brick on Ground - 1
+    - AnotherBrickOnGround - 1
 - Shadow - 0
-- Static Object on Floor - 0
+- StaticObjectFloor - 0
 - Character_Object_Projectile - 0
 - Wall:
-    - Body Wall - 0
-    - Border Wall - 1
-    - Front of Wall - 2 (static tiles / animated tiles)
+    - BodyWall - 0
+    - BorderWall - 1
+    - FrontWall - 2 (static tiles / animated tiles)
+- Roof - 0
 
 ## Vấn đề cần lưu ý:
 - Trong Sprites - Main Characters, **Guide** chính là **Hunter**.
