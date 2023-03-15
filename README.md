@@ -45,7 +45,7 @@ VD:
 - [ ] Chamber 3: ***Duy***
 - [ ] Hidden Chamber 1: ***Duy***
 - [ ] Hidden Chamber 2: ***Phát***
-- [ ] FinalBoss_Lich: ***Thiện***
+- [ ] FinalBoss_Lich: ***Quân***
 - [ ] Aimless Void: ***Quân***
 - [ ] Boss Chamber for Hunter: ***Phúc***
 - [ ] Boss Chamber for Marine: ***Phúc***
