@@ -36,19 +36,19 @@ VD:
 
     [ ] Start: ***...*** --> [x] Start: ***Quân***
  
-- [x] Start: ***Quân***
-- [x] The Breach: ***Quân***
-- [x] Tutorial room: ***Phát***
-- [x] Shopping room: ***Phát***
-- [x] Chamber 1: ***Quân***
+- [ ] Start: ***Quân***
+- [ ] The Breach: ***Quân***
+- [ ] Tutorial room: ***Phát***
+- [ ] Shopping room: ***Phát***
+- [ ] Chamber 1: ***Quân***
 - [ ] Chamber 2: ***Thiện***
 - [ ] Chamber 3: ***Duy***
 - [ ] Hidden Chamber 1: ***Duy***
-- [x] Hidden Chamber 2: ***Phát***
+- [ ] Hidden Chamber 2: ***Phát***
 - [ ] FinalBoss_Lich: ***Quân***
-- [x] Aimless Void: ***Quân***
-- [x] Boss Chamber for Hunter: ***Phúc***
-- [x] Boss Chamber for Marine: ***Phúc***
+- [ ] Aimless Void: ***Quân***
+- [ ] Boss Chamber for Hunter: ***Phúc***
+- [ ] Boss Chamber for Marine: ***Phúc***
 
 ### Sorting Layer - Order in Layer
 > - Group object name == Sorting Layer name:
