@@ -36,19 +36,38 @@ VD:
 
     [ ] Start: ***...*** --> [x] Start: ***Quân***
  
-- [ ] Start: ***Quân***
-- [ ] The Breach: ***Quân***
-- [ ] Tutorial room: ***Phát***
-- [ ] Shopping room: ***Phát***
-- [ ] Chamber 1: ***Quân***
+- [x] Start: ***Quân***
+- [x] The Breach: ***Quân***
+- [x] Tutorial room: ***Phát***
+- [x] Shopping room: ***Phát***
+- [x] Chamber 1: ***Quân***
 - [ ] Chamber 2: ***Thiện***
 - [ ] Chamber 3: ***Duy***
 - [ ] Hidden Chamber 1: ***Duy***
-- [ ] Hidden Chamber 2: ***Phát***
-- [ ] FinalBoss_Lich: ***Thiện***
-- [ ] Aimless Void: ***Quân***
-- [ ] Boss Chamber for Hunter: ***Phúc***
-- [ ] Boss Chamber for Marine: ***Phúc***
+- [x] Hidden Chamber 2: ***Phát***
+- [ ] FinalBoss_Lich: ***Quân***
+- [x] Aimless Void: ***Quân***
+- [x] Boss Chamber for Hunter: ***Phúc***
+- [x] Boss Chamber for Marine: ***Phúc***
+
+### Sorting Layer - Order in Layer
+> - Group object name == Sorting Layer name:
+>     - TileMap name - order in layer [n]
+
+- Hole:
+    - UnderSurface - 0
+    - Surface - 1 (animated tiles)
+- Floor:
+    - Ground - 0
+    - AnotherBrickOnGround - 1
+- Shadow - 0
+- StaticObjectFloor - 0
+- Character_Object_Projectile - 0
+- Wall:
+    - BodyWall - 0
+    - BorderWall - 1
+    - FrontWall - 2 (static tiles / animated tiles)
+- Roof - 0
 
 ## Vấn đề cần lưu ý:
 - Trong Sprites - Main Characters, **Guide** chính là **Hunter**.
