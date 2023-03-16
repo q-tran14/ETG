@@ -9,7 +9,7 @@
 | Quân | Phát | Phúc | Duy | Thiện |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
 | Final Lich | Old Bullet King	| Boss Final Guide | Bullet King | Beholster |
-| Gatling Gull | Dragun | Boss Final Marine | Blobulord | Meduzi |
+| Gatling Gull | Dragun | Boss Final Marine | ---- | Meduzi |
 
 ### Enemy:
 | Quân | Phát | Phúc | Duy | Thiện |
@@ -36,19 +36,18 @@ VD:
 
     [ ] Start: ***...*** --> [x] Start: ***Quân***
  
-- [ ] Start: ***Quân***
-- [ ] The Breach: ***Quân***
-- [ ] Tutorial room: ***Phát***
-- [ ] Shopping room: ***Phát***
-- [ ] Chamber 1: ***Quân***
+- [x] Start: ***Quân***
+- [x] The Breach: ***Quân***
+- [x] Tutorial room: ***Phát***
+- [x] Shopping room: ***Phát***
+- [x] Chamber 1: ***Quân***
 - [ ] Chamber 2: ***Thiện***
 - [ ] Chamber 3: ***Duy***
-- [ ] Hidden Chamber 1: ***Duy***
-- [ ] Hidden Chamber 2: ***Phát***
+- [x] Hidden Chamber 2: ***Phát***
 - [ ] FinalBoss_Lich: ***Quân***
-- [ ] Aimless Void: ***Quân***
-- [ ] Boss Chamber for Hunter: ***Phúc***
-- [ ] Boss Chamber for Marine: ***Phúc***
+- [x] Aimless Void: ***Quân***
+- [x] Boss Chamber for Hunter: ***Phúc***
+- [x] Boss Chamber for Marine: ***Phúc***
 
 ### Sorting Layer - Order in Layer
 > - Group object name == Sorting Layer name:
