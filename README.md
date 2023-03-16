@@ -1,30 +1,75 @@
 # Enter The Dungeon (clone from Enter The Gungeon)
-### Các Folder được cung cấp:
+## Các Folder được cung cấp:
 - [x] Sprites
 - [x] Sounds
 
-### Map được xử lí bởi:
+## Phân công:
+### Boss:
+
+| Quân | Phát | Phúc | Duy | Thiện |
+| ----------- | ----------- | ----------- | ----------- | ----------- |
+| Final Lich | Old Bullet King	| Boss Final Guide | Bullet King | Beholster |
+| Gatling Gull | Dragun | Boss Final Marine | Blobulord | Meduzi |
+
+### Enemy:
+| Quân | Phát | Phúc | Duy | Thiện |
+| ----------- | ----------- | ----------- | ----------- | ----------- |
+| angry book blue |angry book | angry book green | angry book necro | big hell face |
+|bullat	| bubble lizard	| bloodbulon | blobulin	| bird enemy |
+|bullat ghost | bubble lizard red | bullet man shroomed | blobuloid | bullet man skeleton |
+|bullat shotgun	| bullet rigle professional | bullet shark | blobulon | bullet man mutant |
+|bullet man bandana	| bulllet man magic	| bullet man | bullet rifle man	 | bullet shotgun man mutant |
+|bullet shotgun man sawed off |chance bullet | cubulon	| cultist bald | dynamite guy |
+|ghost | giant bullat | grenade guy	| grim reaper | gripmaster |
+|gun nut | gun nut chain | kaliber cultist bullet main	| key bullet kin | lead maiden|
+|lead wizard blue | lead wizard	| metal cube guy | mimic blackbone | mimic pedestal |
+|mimic rat chest | mimic red gold | mimic silver chest | mimic wood chest | mushroom guy small |
+|mushroom guy big | phase spider | poisbulon | poopulon | powder skull |
+|shotgun kin | sunburst blue | shotgun creecher | shelleton | rubber bullet |
+|sunburst | T-Bulon	| wizard blue | wizard purple | wizard yellow |
+|wizard red| ---- | ---- | ---- | ---- |
+
+## Map được xử lí bởi:
 * Ai làm scene nào thì vào edit file README.md trong ***branch của mình***. Thay "..." bằng ***tên của mình***. Khi hoàn thành thì xóa dấu cách trong ngoặc vuông [] và thay bằng chữ **x**.
 
 VD:
 
     [ ] Start: ***...*** --> [x] Start: ***Quân***
  
-- [ ] Start: ***Quân***
-- [ ] The Breach: ***Quân***
-- [ ] Tutorial room: ***Phát***
-- [ ] Shopping room: ***Phát***
-- [ ] Chamber 1: ***Quân***
+- [x] Start: ***Quân***
+- [x] The Breach: ***Quân***
+- [x] Tutorial room: ***Phát***
+- [x] Shopping room: ***Phát***
+- [x] Chamber 1: ***Quân***
 - [ ] Chamber 2: ***Thiện***
 - [ ] Chamber 3: ***Duy***
 - [ ] Hidden Chamber 1: ***Duy***
-- [ ] Hidden Chamber 2: ***Phát***
-- [ ] FinalBoss_Lich: ***Thiện***
-- [ ] Aimless Void: ***Quân***
-- [ ] Boss Chamber for Hunter: ***Phúc***
-- [ ] Boss Chamber for Marine: ***Phúc***
+- [x] Hidden Chamber 2: ***Phát***
+- [ ] FinalBoss_Lich: ***Quân***
+- [x] Aimless Void: ***Quân***
+- [x] Boss Chamber for Hunter: ***Phúc***
+- [x] Boss Chamber for Marine: ***Phúc***
 
-***Lưu ý:**
+### Sorting Layer - Order in Layer
+> - Group object name == Sorting Layer name:
+>     - TileMap name - order in layer [n]
+
+- Hole:
+    - UnderSurface - 0
+    - Surface - 1 (animated tiles)
+- Floor:
+    - Ground - 0
+    - AnotherBrickOnGround - 1
+- Shadow - 0
+- StaticObjectFloor - 0
+- Character_Object_Projectile - 0
+- Wall:
+    - BodyWall - 0
+    - BorderWall - 1
+    - FrontWall - 2 (static tiles / animated tiles)
+- Roof - 0
+
+## Vấn đề cần lưu ý:
 - Trong Sprites - Main Characters, **Guide** chính là **Hunter**.
 - Sprite của Shotgun Kin không có folder ảnh lẻ.
 - Folder Bosses và Enemies trong folder Sounds không được phân đúng loại nên nếu kiếm sound của các Enemy và Boss thì nên kiểm ở cả 2 folder này.
@@ -50,10 +95,10 @@ VD:
 ***Qui trình xử lý project:**
 - Github Desktop: Fetch origin để load bài -> đảm bảo phải commit/push bài mới nhất của mình -> Fetch origin để load bài -> Update from master để pull và merge từ branch gốc
 - CMD: 
-# Hệ thống màn chơi và các scene:
+## Hệ thống màn chơi và các scene:
 ![Imgur](https://i.imgur.com/de2ponc.png)
 
-# Lưu ý trước khi bắt tay vô làm
+## Lưu ý trước khi bắt tay vô làm
 1. [Sơ đồ từng Chamber](https://drive.google.com/file/d/1NMAKiJlCoooQzqXneosSSOAuTvSE_SlM/view) (1 - 5): có thể sử dụng lại (ngoại trừ các room đặc biệt).
 2. ***Tạo nhánh mới có name là MSSV_HoTen.***
 
@@ -82,7 +127,7 @@ Ngoài ra cũng cần tham khảo thêm trên Youtube để tạo hình các roo
 - Aimless Void
 - 2 boss chamber trong cốt chuyện của Hunter và Marine
 
-# Các lỗi thường gặp:
+## Các lỗi thường gặp:
 1. Lỗi khi có sự conflict khi update từ master về branch làm việc của mình trên Github Desktop
 
 ![mergeIssue](https://user-images.githubusercontent.com/30680192/224209180-c6da9537-50a2-4757-9565-52b419f780b3.png)
