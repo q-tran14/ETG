@@ -3,6 +3,32 @@
 - [x] Sprites
 - [x] Sounds
 
+## Phân công:
+### Boss:
+
+| Quân | Phát | Phúc | Duy | Thiện |
+| ----------- | ----------- | ----------- | ----------- | ----------- |
+| Final Lich | Old Bullet King	| Boss Final Guide | Bullet King | Beholster |
+| Gatling Gull | Dragun | Boss Final Marine | Blobulord | Meduzi |
+
+### Enemy:
+| Quân | Phát | Phúc | Duy | Thiện |
+| ----------- | ----------- | ----------- | ----------- | ----------- |
+| angry book blue |angry book | angry book green | angry book necro | big hell face |
+|bullat	| bubble lizard	| bloodbulon | blobulin	| bird enemy |
+|bullat ghost | bubble lizard red | bullet man shroomed | blobuloid | bullet man skeleton |
+|bullat shotgun	| bullet rigle professional | bullet shark | blobulon | bullet man mutant |
+|bullet man bandana	| bulllet man magic	| bullet man | bullet rifle man	 | bullet shotgun man mutant |
+|bullet shotgun man sawed off |chance bullet | cubulon	| cultist bald | dynamite guy |
+|ghost | giant bullat | grenade guy	| grim reaper | gripmaster |
+|gun nut | gun nut chain | kaliber cultist bullet main	| key bullet kin | lead maiden|
+|lead wizard blue | lead wizard	| metal cube guy | mimic blackbone | mimic pedestal |
+|mimic rat chest | mimic red gold | mimic silver chest | mimic wood chest | mushroom guy small |
+|mushroom guy big | phase spider | poisbulon | poopulon | powder skull |
+|shotgun kin | sunburst blue | shotgun creecher | shelleton | rubber bullet |
+|sunburst | T-Bulon	| wizard blue | wizard purple | wizard yellow |
+|wizard red| ---- | ---- | ---- | ---- |
+
 ## Map được xử lí bởi:
 * Ai làm scene nào thì vào edit file README.md trong ***branch của mình***. Thay "..." bằng ***tên của mình***. Khi hoàn thành thì xóa dấu cách trong ngoặc vuông [] và thay bằng chữ **x**.
 
@@ -23,34 +49,6 @@ VD:
 - [ ] Aimless Void: ***Quân***
 - [ ] Boss Chamber for Hunter: ***Phúc***
 - [ ] Boss Chamber for Marine: ***Phúc***
-
-## Phân công:
-### Boss:
-
-| Quân | Phát | Phúc | Duy | Thiện |
-| ----------- | ----------- | ----------- | ----------- | ----------- |
-| Dragun | Old Bullet King	| Boss Final Guide | Bullet King | Beholster |
-| Gatling Gull | Final Lich | Boss Final Marine | Blobulord | Meduzi |
-
-### Enemy:
-| Quân | Phát | Phúc | Duy | Thiện |
-| ----------- | ----------- | ----------- | ----------- | ----------- |
-| angry book blue |angry book | angry book green | angry book necro | big hell face |
-|bullat	| bubble lizard	| bloodbulon | blobulin	| bird enemy |
-|bullat ghost | bubble lizard red | bullet man shroomed | blobuloid | bullet man skeleton |
-|bullat shotgun	| bullet rigle professional | bullet shark | blobulon | bullet man mutant |
-|bullet man bandana	| bulllet man magic	| bullet man | bullet rifle man	 | bullet shotgun man mutant |
-|bullet shotgun man sawed off |chance bullet | cubulon	| cultist bald | dynamite guy |
-|ghost | giant bullat | grenade guy	| grim reaper | gripmaster |
-|gun nut | gun nut chain | kaliber cultist bullet main	| key bullet kin | lead maiden|
-|lead wizard blue | lead wizard	| metal cube guy | mimic blackbone | mimic pedestal |
-|mimic rat chest | mimic red gold | mimic silver chest | mimic wood chest | mushroom guy small |
-|mushroom guy big | phase spider | poisbulon | poopulon | powder skull |
-|shotgun kin | sunburst blue | shotgun creecher | shelleton | rubber bullet |
-|sunburst | T-Bulon	| wizard blue | wizard purple | wizard yellow |
-|wizard red|  |  |  |  |
-
-
 
 ## Vấn đề cần lưu ý:
 - Trong Sprites - Main Characters, **Guide** chính là **Hunter**.
