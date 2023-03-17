@@ -9,7 +9,7 @@
 | Quân | Phát | Phúc | Duy | Thiện |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
 | Final Lich | Old Bullet King	| Boss Final Guide | Bullet King | Beholster |
-| Gatling Gull | Dragun | Boss Final Marine | Blobulord | Meduzi |
+| Gatling Gull | Dragun | Boss Final Marine | ---- | Meduzi |
 
 ### Enemy:
 | Quân | Phát | Phúc | Duy | Thiện |
@@ -43,7 +43,6 @@ VD:
 - [x] Chamber 1: ***Quân***
 - [ ] Chamber 2: ***Thiện***
 - [ ] Chamber 3: ***Duy***
-- [ ] Hidden Chamber 1: ***Duy***
 - [x] Hidden Chamber 2: ***Phát***
 - [ ] FinalBoss_Lich: ***Quân***
 - [x] Aimless Void: ***Quân***
