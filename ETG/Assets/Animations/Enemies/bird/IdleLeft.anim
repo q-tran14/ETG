@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Anim_bird_left
+  m_Name: IdleLeft
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,11 +21,11 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 21300000, guid: 40e84bce84ab7df488ac7eca7a95ba6d, type: 3}
-    - time: 0.083333336
-      value: {fileID: 21300000, guid: 6c3c4b72e72148c4b83ff8b2bfb08e94, type: 3}
     - time: 0.16666667
+      value: {fileID: 21300000, guid: 6c3c4b72e72148c4b83ff8b2bfb08e94, type: 3}
+    - time: 0.33333334
       value: {fileID: 21300000, guid: 026addee72053124c8916283453ce5b0, type: 3}
-    - time: 0.25
+    - time: 0.5
       value: {fileID: 21300000, guid: f51cf673e14ad3748bdfe94d7f0b5101, type: 3}
     attribute: m_Sprite
     path: 
@@ -56,7 +56,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.33333334
+    m_StopTime: 0.5833333
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
