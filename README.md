@@ -42,8 +42,8 @@ VD:
 - [x] Tutorial room: ***Phát***
 - [x] Shopping room: ***Phát***
 - [x] Chamber 1: ***Quân***
-- [ ] Chamber 2: ***Thiện***
-- [ ] Chamber 3: ***Duy***
+- [x] Chamber 2: ***Thiện***
+- [x] Chamber 3: ***Duy***
 - [x] Hidden Chamber 2: ***Phát***
 - [x] FinalBoss_Lich: ***Quân***
 - [x] Aimless Void: ***Quân***
