@@ -42,8 +42,8 @@ VD:
 - [x] Tutorial room: ***Phát***
 - [x] Shopping room: ***Phát***
 - [x] Chamber 1: ***Quân***
-- [ ] Chamber 2: ***Thiện***
-- [ ] Chamber 3: ***Duy***
+- [x] Chamber 2: ***Thiện***
+- [x] Chamber 3: ***Duy***
 - [x] Hidden Chamber 2: ***Phát***
 - [x] FinalBoss_Lich: ***Quân***
 - [x] Aimless Void: ***Quân***
@@ -76,10 +76,10 @@ VD:
 - Một số Sprite ko có đúng tên so vs trong các link tham khảo nên cần xem hình để phân biệt.
 - Các Sprite lẻ cắt ra từ Sprite - sheet của Shotgun Kin chưa được đặt tên xong ( chỉ vừa đặt được vài cái ).
 - Sprite được dựng sẵn (thông thường là các map đặc biệt như Breach, Aimless Void, Boss room của nhân vật) - Pixels Per Unit (Trong Sprite Editor): ***24***
-- Sprite của tileset, env và platform - map spawn enemy thông thường - Pixels Per Unit (Trong Sprite Editor): ***16***
+- Sprite của character, enemy tileset, env và platform - map spawn enemy thông thường - Pixels Per Unit (Trong Sprite Editor): ***16***
 - Làm xong thì push lên branch của bản thân rồi vô github tạo ***pull request*** để mn cùng duyệt xong. ***TUYỆT ĐỐI KHÔNG ĐC PHÉP TỰ Ý MERGE VÔ BRANCH "MASTER".***
 
-***Quy ước kích thước corridor:**[Tìm hiểu chi tiết ở Chamber 1, Tutorial ở các tilemap liên quan đến wall]
+***Quy ước kích thước corridor: **[ Tìm hiểu chi tiết ở Chamber 1, Tutorial ở các tilemap liên quan đến wall ]** ***
 - Horizontal corridor:
   
 ![Imgur](https://imgur.com/vVfMSDg.png)
