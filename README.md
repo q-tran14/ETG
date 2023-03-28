@@ -8,26 +8,26 @@
 
 | Quân | Phát | Phúc | Duy | Thiện |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
-| &#x2610; Final Lich | &#x2610; Old Bullet King | &#x2610; Boss Final Guide | &#x2611; Bullet King | &#x2610; Gatling Gull |
+| &#x2610; Final Lich | &#x2610; Old Bullet King | &#x2610; Boss Final Guide | &#x2610; Bullet King | &#x2610; Gatling Gull |
 | &#x2610; Beholster | &#x2610; Dragun | &#x2610; Boss Final Marine | ---- | &#x2610; Meduzi |
 
 ### Enemy:
 | Quân | Phát | Phúc | Duy | Thiện |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
-|&#x2611; angry book blue | &#x2610; angry book | &#x2610; angry book green | &#x2611; angry book necro | &#x2610; big hell face |
-|&#x2611; bullat	| &#x2610; bubble lizard	| &#x2610; bloodbulon | &#x2611; blobulin	| &#x2610; bird enemy |
-|&#x2611; bullat ghost | &#x2610; bubble lizard red | &#x2610; bullet man shroomed | &#x2611; blobuloid | &#x2610; bullet man skeleton |
-|&#x2611; bullat shotgun	| &#x2610; bullet rigle professional | &#x2610; bullet shark | &#x2610; blobulon | &#x2610; bullet man mutant |
-|&#x2611; bullet man bandana	| &#x2610; bulllet man magic	| &#x2610; bullet man | &#x2610; bullet rifle man	 | &#x2610; bullet shotgun man mutant |
-|&#x2611; bullet shotgun man sawed off |&#x2610; chance bullet | &#x2610; cubulon	| &#x2610; cultist bald | &#x2610; dynamite guy |
-|&#x2611; ghost | &#x2610; giant bullat | &#x2610; grenade guy	| &#x2610; grim reaper | &#x2610; gripmaster |
+|&#x2611; angry book blue | &#x2610; angry book | &#x2610; angry book green | &#x2610; angry book necro | &#x2611; big hell face |
+|&#x2611; bullat	| &#x2610; bubble lizard	| &#x2610; bloodbulon | &#x2610; blobulin	| &#x2611; bird enemy |
+|&#x2611; bullat ghost | &#x2610; bubble lizard red | &#x2610; bullet man shroomed | &#x2610; blobuloid | &#x2611; bullet man skeleton |
+|&#x2611; bullat shotgun	| &#x2610; bullet rigle professional | &#x2610; bullet shark | &#x2610; blobulon | &#x2611; bullet man mutant |
+|&#x2611; bullet man bandana	| &#x2610; bulllet man magic	| &#x2610; bullet man | &#x2610; bullet rifle man	 | &#x2611; bullet shotgun man mutant |
+|&#x2611; bullet shotgun man sawed off |&#x2610; chance bullet | &#x2610; cubulon	| &#x2610; cultist bald | &#x2611; dynamite guy |
+|&#x2611; ghost | &#x2610; giant bullat | &#x2610; grenade guy	| &#x2610; grim reaper | &#x2611; gripmaster |
 |&#x2611; gun nut | &#x2610; gun nut chain | &#x2610; kaliber cultist bullet main	| &#x2610; key bullet kin | &#x2610; lead maiden|
-|&#x2611; lead wizard blue | &#x2610; lead wizard	| &#x2610; metal cube guy | &#x2610; mimic blackbone | &#x2610; mimic pedestal |
-|&#x2610; mimic rat chest | &#x2610; mimic red gold | &#x2610; mimic silver chest | &#x2610; mimic wood chest | &#x2610; mushroom guy small |
+|&#x2611; lead wizard blue | &#x2610; lead wizard	| &#x2610; metal cube guy | &#x2610; mimic blackbone | &#x2611; mimic pedestal |
+|&#x2611; mimic rat chest | &#x2610; mimic red gold | &#x2610; mimic silver chest | &#x2610; mimic wood chest | &#x2611; mushroom guy small |
 |&#x2611; mushroom guy big | &#x2610; phase spider | &#x2610; poisbulon | &#x2610; poopulon | &#x2610; powder skull |
-|&#x2610; shotgun kin | &#x2610; sunburst blue | &#x2610; shotgun creecher | &#x2610; shelleton | &#x2610; rubber bullet |
-|&#x2610; sunburst | &#x2610; T-Bulon	| &#x2610; wizard blue | &#x2610; wizard purple | &#x2610; wizard yellow |
-|&#x2610; wizard red| ---- | ---- | ---- | ---- |
+|&#x2611; shotgun kin | &#x2610; sunburst blue | &#x2610; shotgun creecher | &#x2610; shelleton | &#x2611; rubber bullet |
+|&#x2611; sunburst | &#x2610; T-Bulon	| &#x2610; wizard blue | &#x2610; wizard purple | &#x2610; wizard yellow |
+|&#x2611; wizard red| ---- | ---- | ---- | ---- |
 
 ## Map được xử lí bởi:
 * Ai làm scene nào thì vào edit file README.md trong ***branch của mình***. Thay "..." bằng ***tên của mình***. Khi hoàn thành thì xóa dấu cách trong ngoặc vuông [] và thay bằng chữ **x**.
