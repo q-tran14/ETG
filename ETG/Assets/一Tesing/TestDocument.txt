@@ -1,1 +1,5 @@
-Pixel Per Unit: 10 ( 16 hơi bé )
+Pixel Per Unit: 10 cho Marine
+		12 cho Crosshair
+
+Package: New Input System
+	Cinemachine
