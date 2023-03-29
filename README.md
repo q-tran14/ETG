@@ -14,19 +14,19 @@
 ### Enemy:
 | Quân | Phát | Phúc | Duy | Thiện |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
-|&#x2611; angry book blue | &#x2610; ~~angry book~~ | &#x2610; angry book green | &#x2611; angry book necro | &#x2611; big hell face |
-|&#x2611; bullat	| &#x2610; ~~bubble lizard~~	| &#x2610; bloodbulon | &#x2611; blobulin	| &#x2611; bird enemy |
+|&#x2611; angry book blue | &#x2610; ~~angry book~~ | &#x2611; angry book green | &#x2611; angry book necro | &#x2611; big hell face |
+|&#x2611; bullat	| &#x2610; ~~bubble lizard~~	| &#x2611; bloodbulon | &#x2611; blobulin	| &#x2611; bird enemy |
 |&#x2611; bullat ghost | &#x2610; bubble lizard red | &#x2610; bullet man shroomed | &#x2611; blobuloid | &#x2611; bullet man skeleton |
 |&#x2611; bullat shotgun	| &#x2610; ~~bullet rigle professional~~ | &#x2610; bullet shark | &#x2610; blobulon | &#x2611; bullet man mutant |
 |&#x2611; bullet man bandana	| &#x2610; bulllet man magic	| &#x2610; bullet man | &#x2610; ~~bullet rifle man~~	 | &#x2611; bullet shotgun man mutant |
-|&#x2611; bullet shotgun man sawed off |&#x2610; chance bullet | &#x2610; cubulon	| &#x2610; ~~cultist bald~~ | &#x2611; dynamite guy |
+|&#x2611; bullet shotgun man sawed off |&#x2610; chance bullet | &#x2611; cubulon	| &#x2610; ~~cultist bald~~ | &#x2611; dynamite guy |
 |&#x2611; ghost | &#x2610; giant bullat | &#x2610; grenade guy	| &#x2610; grim reaper | &#x2611; gripmaster |
-|&#x2611; gun nut | &#x2610; gun nut chain | &#x2610; kaliber cultist bullet main	| &#x2610; key bullet kin | &#x2610; ~~lead maiden~~|
-|&#x2611; lead wizard blue | &#x2610; ~~lead wizard~~	| &#x2610; metal cube guy | &#x2610; mimic blackbone | &#x2611; mimic pedestal |
-|&#x2611; mimic rat chest | &#x2610; mimic red gold | &#x2610; mimic silver chest | &#x2610; ~~mimic wood chest~~ | &#x2611; mushroom guy small |
+|&#x2611; gun nut | &#x2610; gun nut chain | &#x2610; ~~kaliber cultist bullet main~~	| &#x2610; key bullet kin | &#x2610; ~~lead maiden~~|
+|&#x2611; lead wizard blue | &#x2610; ~~lead wizard~~	| &#x2611; metal cube guy | &#x2610; mimic blackbone | &#x2611; mimic pedestal |
+|&#x2611; mimic rat chest | &#x2610; mimic red gold | &#x2611; mimic silver chest | &#x2610; ~~mimic wood chest~~ | &#x2611; mushroom guy small |
 |&#x2611; mushroom guy big | &#x2610; phase spider | &#x2610; poisbulon | &#x2610; poopulon | &#x2610; ~~powder skull~~ |
-|&#x2611; shotgun kin | &#x2610; ~~sunburst blue~~ | &#x2610; shotgun creecher | &#x2610; ~~shelleton~~ | &#x2611; rubber bullet |
-|&#x2611; sunburst | &#x2610; T-Bulon	| &#x2610; wizard blue | &#x2610; ~~wizard purple~~ | &#x2610; ~~wizard yellow~~ |
+|&#x2611; shotgun kin | &#x2610; ~~sunburst blue~~ | &#x2611; shotgun creecher | &#x2610; ~~shelleton~~ | &#x2611; rubber bullet |
+|&#x2611; sunburst | &#x2610; T-Bulon	| &#x2610; ~~wizard blue~~ | &#x2610; ~~wizard purple~~ | &#x2610; ~~wizard yellow~~ |
 |&#x2611; wizard red| ---- | ---- | ---- | ---- |
 
 ## Map được xử lí bởi:
