@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -215,11 +215,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_8
+      name: Blue_Idle00
       rect:
         serializedVersion: 2
         x: 245
-        y: 487
+        y: 488
         width: 12
         height: 29
       alignment: 0
@@ -236,7 +236,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_9
+      name: Blue_Idle01
       rect:
         serializedVersion: 2
         x: 260
@@ -257,7 +257,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_10
+      name: Blue_Idle_Back00
       rect:
         serializedVersion: 2
         x: 282
@@ -278,7 +278,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_11
+      name: Blue_Idle_Back01
       rect:
         serializedVersion: 2
         x: 297
@@ -551,7 +551,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_30
+      name: ShotgunKin_Blue_Walk_Right_Front_1
       rect:
         serializedVersion: 2
         x: 245
@@ -572,7 +572,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_31
+      name: ShotgunKin_Blue_Walk_Right_Front_2
       rect:
         serializedVersion: 2
         x: 261
@@ -593,7 +593,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_32
+      name: ShotgunKin_Blue_Walk_Right_Front_3
       rect:
         serializedVersion: 2
         x: 281
@@ -614,7 +614,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_33
+      name: ShotgunKin_Blue_Walk_Right_Front_4
       rect:
         serializedVersion: 2
         x: 301
@@ -635,7 +635,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_34
+      name: ShotgunKin_Blue_Walk_Right_Front_5
       rect:
         serializedVersion: 2
         x: 316
@@ -656,7 +656,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_35
+      name: ShotgunKin_Blue_Walk_Right_Front_6
       rect:
         serializedVersion: 2
         x: 336
@@ -677,7 +677,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_36
+      name: ShotgunKin_Blue_Walk_Left_Front_1
       rect:
         serializedVersion: 2
         x: 371
@@ -698,7 +698,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_37
+      name: ShotgunKin_Blue_Walk_Left_Front_2
       rect:
         serializedVersion: 2
         x: 387
@@ -719,7 +719,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_38
+      name: ShotgunKin_Blue_Walk_Left_Front_3
       rect:
         serializedVersion: 2
         x: 407
@@ -740,7 +740,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_39
+      name: ShotgunKin_Blue_Walk_Left_Front_4
       rect:
         serializedVersion: 2
         x: 427
@@ -761,7 +761,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_40
+      name: ShotgunKin_Blue_Walk_Left_Front_5
       rect:
         serializedVersion: 2
         x: 442
@@ -782,7 +782,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_41
+      name: ShotgunKin_Blue_Walk_Left_Front_6
       rect:
         serializedVersion: 2
         x: 462
@@ -992,7 +992,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_51
+      name: ShotgunKin_Blue_Walk_Left_Back_1
       rect:
         serializedVersion: 2
         x: 245
@@ -1013,7 +1013,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_52
+      name: ShotgunKin_Blue_Walk_Left_Back_2
       rect:
         serializedVersion: 2
         x: 260
@@ -1034,7 +1034,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_53
+      name: ShotgunKin_Blue_Walk_Left_Back_3
       rect:
         serializedVersion: 2
         x: 280
@@ -1055,7 +1055,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_54
+      name: ShotgunKin_Blue_Walk_Right_Back_1
       rect:
         serializedVersion: 2
         x: 301
@@ -1076,7 +1076,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_55
+      name: ShotgunKin_Blue_Walk_Right_Back_2
       rect:
         serializedVersion: 2
         x: 316
@@ -1097,7 +1097,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_56
+      name: ShotgunKin_Blue_Walk_Right_Back_3
       rect:
         serializedVersion: 2
         x: 337
@@ -1181,7 +1181,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_62
+      name: Red_Death_Explode01
       rect:
         serializedVersion: 2
         x: 0
@@ -1269,7 +1269,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 30
-        y: 368
+        y: 367
         width: 18
         height: 28
       alignment: 0
@@ -1286,7 +1286,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_72
+      name: Red_Death_Explode02
       rect:
         serializedVersion: 2
         x: 33
@@ -1328,7 +1328,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_78
+      name: Red_Death_Explode03
       rect:
         serializedVersion: 2
         x: 65
@@ -1391,7 +1391,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_89
+      name: Red_Death_Explode04
       rect:
         serializedVersion: 2
         x: 90
@@ -1412,7 +1412,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_90
+      name: Red_Death_Explode06
       rect:
         serializedVersion: 2
         x: 165
@@ -1475,7 +1475,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_93
+      name: Red_Death_Explode05
       rect:
         serializedVersion: 2
         x: 126
@@ -1538,7 +1538,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_97
+      name: BlueDeadthExplode1
       rect:
         serializedVersion: 2
         x: 245
@@ -1559,7 +1559,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_102
+      name: BlueDeadthExplode0
       rect:
         serializedVersion: 2
         x: 262
@@ -1601,7 +1601,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_106
+      name: BlueDeadthExplode2
       rect:
         serializedVersion: 2
         x: 278
@@ -1769,7 +1769,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_138
+      name: Red_Fall00
       rect:
         serializedVersion: 2
         x: 0
@@ -1790,7 +1790,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_139
+      name: Red_Fall01
       rect:
         serializedVersion: 2
         x: 21
@@ -1811,7 +1811,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_140
+      name: Red_Fall02
       rect:
         serializedVersion: 2
         x: 43
@@ -1832,7 +1832,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_141
+      name: Red_Fall03
       rect:
         serializedVersion: 2
         x: 61
@@ -1853,7 +1853,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_142
+      name: Red_Fall04
       rect:
         serializedVersion: 2
         x: 75
@@ -1874,7 +1874,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_143
+      name: BlueFall1
       rect:
         serializedVersion: 2
         x: 245
@@ -1895,7 +1895,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_144
+      name: BlueFall2
       rect:
         serializedVersion: 2
         x: 266
@@ -1916,7 +1916,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_145
+      name: BlueFall3
       rect:
         serializedVersion: 2
         x: 288
@@ -1937,7 +1937,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_146
+      name: BlueFall4
       rect:
         serializedVersion: 2
         x: 306
@@ -1958,7 +1958,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_147
+      name: BlueFall5
       rect:
         serializedVersion: 2
         x: 320
@@ -1979,7 +1979,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_182
+      name: Red_Death_Front1
       rect:
         serializedVersion: 2
         x: 0
@@ -2000,7 +2000,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_183
+      name: Red_Death_Front2
       rect:
         serializedVersion: 2
         x: 15
@@ -2021,7 +2021,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_184
+      name: Red_Death_Front4
       rect:
         serializedVersion: 2
         x: 30
@@ -2042,7 +2042,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_185
+      name: Red_Death_Front3
       rect:
         serializedVersion: 2
         x: 45
@@ -2063,7 +2063,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_186
+      name: Blue_Death_Front1
       rect:
         serializedVersion: 2
         x: 245
@@ -2084,7 +2084,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_187
+      name: Blue_Death_Front2
       rect:
         serializedVersion: 2
         x: 260
@@ -2105,7 +2105,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_188
+      name: Blue_Death_Front4
       rect:
         serializedVersion: 2
         x: 275
@@ -2126,7 +2126,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_189
+      name: Blue_Death_Front3
       rect:
         serializedVersion: 2
         x: 290
@@ -2147,7 +2147,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_190
+      name: Red_Death_Back1
       rect:
         serializedVersion: 2
         x: 0
@@ -2168,7 +2168,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_191
+      name: Red_Death_Back2
       rect:
         serializedVersion: 2
         x: 15
@@ -2189,7 +2189,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_192
+      name: Red_Death_Back3
       rect:
         serializedVersion: 2
         x: 30
@@ -2210,7 +2210,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_193
+      name: Red_Death_Back4
       rect:
         serializedVersion: 2
         x: 45
@@ -2231,7 +2231,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_194
+      name: Blue_Death_Back1
       rect:
         serializedVersion: 2
         x: 245
@@ -2252,7 +2252,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_195
+      name: Blue_Death_Back2
       rect:
         serializedVersion: 2
         x: 260
@@ -2273,7 +2273,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_196
+      name: Blue_Death_Back3
       rect:
         serializedVersion: 2
         x: 275
@@ -2294,7 +2294,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_197
+      name: Blue_Death_Back4
       rect:
         serializedVersion: 2
         x: 290
@@ -2315,7 +2315,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_198
+      name: Red_Death_Left1
       rect:
         serializedVersion: 2
         x: 0
@@ -2336,7 +2336,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_199
+      name: Red_Death_Left2
       rect:
         serializedVersion: 2
         x: 21
@@ -2357,7 +2357,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_200
+      name: Red_Death_Left3
       rect:
         serializedVersion: 2
         x: 45
@@ -2378,7 +2378,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_201
+      name: Red_Death_Left4
       rect:
         serializedVersion: 2
         x: 69
@@ -2399,7 +2399,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_202
+      name: Blue_Death_Left1
       rect:
         serializedVersion: 2
         x: 245
@@ -2420,7 +2420,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_203
+      name: Blue_Death_Left2
       rect:
         serializedVersion: 2
         x: 266
@@ -2441,7 +2441,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_204
+      name: Blue_Death_Left3
       rect:
         serializedVersion: 2
         x: 290
@@ -2462,7 +2462,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_205
+      name: Blue_Death_Left4
       rect:
         serializedVersion: 2
         x: 314
@@ -2483,7 +2483,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_206
+      name: Red_Death_Front_Right_Short00
       rect:
         serializedVersion: 2
         x: 0
@@ -2504,7 +2504,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_207
+      name: Red_Death_Front_Right_Short01
       rect:
         serializedVersion: 2
         x: 21
@@ -2525,7 +2525,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_208
+      name: Red_Death_Front_Right_Short02
       rect:
         serializedVersion: 2
         x: 45
@@ -2546,7 +2546,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_209
+      name: Red_Death_Front_Right_Short03
       rect:
         serializedVersion: 2
         x: 69
@@ -2567,7 +2567,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_210
+      name: Blue_Death_Front_Right_Short00
       rect:
         serializedVersion: 2
         x: 245
@@ -2588,7 +2588,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_211
+      name: Blue_Death_Front_Right_Short01
       rect:
         serializedVersion: 2
         x: 266
@@ -2609,7 +2609,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_212
+      name: Blue_Death_Front_Right_Short02
       rect:
         serializedVersion: 2
         x: 290
@@ -2630,7 +2630,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_213
+      name: Blue_Death_Front_Right_Short03
       rect:
         serializedVersion: 2
         x: 314
@@ -2651,7 +2651,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_214
+      name: Red_Death_Front_Left_Short00
       rect:
         serializedVersion: 2
         x: 0
@@ -2672,7 +2672,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_215
+      name: Red_Death_Front_Left_Short01
       rect:
         serializedVersion: 2
         x: 21
@@ -2693,7 +2693,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_216
+      name: Red_Death_Front_Left_Short02
       rect:
         serializedVersion: 2
         x: 45
@@ -2714,7 +2714,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_217
+      name: Red_Death_Front_Left_Short03
       rect:
         serializedVersion: 2
         x: 69
@@ -2735,7 +2735,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_218
+      name: Blue_Death_Front_Left_Short00
       rect:
         serializedVersion: 2
         x: 245
@@ -2756,7 +2756,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_219
+      name: Blue_Death_Front_Left_Short01
       rect:
         serializedVersion: 2
         x: 266
@@ -2777,7 +2777,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_220
+      name: Blue_Death_Front_Left_Short02
       rect:
         serializedVersion: 2
         x: 290
@@ -2798,7 +2798,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_221
+      name: Blue_Death_Front_Left_Short03
       rect:
         serializedVersion: 2
         x: 314
@@ -2819,7 +2819,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_222
+      name: Red_Death_Front_Right00
       rect:
         serializedVersion: 2
         x: 0
@@ -2840,7 +2840,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_223
+      name: Red_Death_Front_Right01
       rect:
         serializedVersion: 2
         x: 21
@@ -2861,7 +2861,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_224
+      name: Red_Death_Front_Right02
       rect:
         serializedVersion: 2
         x: 47
@@ -2882,7 +2882,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_225
+      name: Red_Death_Front_Right03
       rect:
         serializedVersion: 2
         x: 77
@@ -2903,7 +2903,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_226
+      name: Red_Death_Front_Right04
       rect:
         serializedVersion: 2
         x: 107
@@ -2924,7 +2924,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_227
+      name: Blue_Death_Front_Right00
       rect:
         serializedVersion: 2
         x: 245
@@ -2945,7 +2945,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_228
+      name: Blue_Death_Front_Right01
       rect:
         serializedVersion: 2
         x: 266
@@ -2966,7 +2966,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_229
+      name: Blue_Death_Front_Right02
       rect:
         serializedVersion: 2
         x: 292
@@ -2987,7 +2987,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_230
+      name: Blue_Death_Front_Right03
       rect:
         serializedVersion: 2
         x: 322
@@ -3008,7 +3008,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_231
+      name: Blue_Death_Front_Right04
       rect:
         serializedVersion: 2
         x: 352
@@ -3029,7 +3029,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_232
+      name: Red_Death_Front_Left00
       rect:
         serializedVersion: 2
         x: 0
@@ -3050,7 +3050,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_233
+      name: Red_Death_Front_Left01
       rect:
         serializedVersion: 2
         x: 21
@@ -3071,7 +3071,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_234
+      name: Red_Death_Front_Left02
       rect:
         serializedVersion: 2
         x: 48
@@ -3092,7 +3092,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_235
+      name: Red_Death_Front_Left03
       rect:
         serializedVersion: 2
         x: 78
@@ -3113,7 +3113,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_236
+      name: Red_Death_Front_Left04
       rect:
         serializedVersion: 2
         x: 108
@@ -3134,7 +3134,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_237
+      name: Blue_Death_Front_Left00
       rect:
         serializedVersion: 2
         x: 245
@@ -3155,7 +3155,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_238
+      name: Blue_Death_Front_Left01
       rect:
         serializedVersion: 2
         x: 266
@@ -3176,7 +3176,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_239
+      name: Blue_Death_Front_Left02
       rect:
         serializedVersion: 2
         x: 293
@@ -3197,7 +3197,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_240
+      name: Blue_Death_Front_Left03
       rect:
         serializedVersion: 2
         x: 323
@@ -3218,7 +3218,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_241
+      name: Blue_Death_Front_Left04
       rect:
         serializedVersion: 2
         x: 353
@@ -3323,7 +3323,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_258
+      name: Corpse_Red
       rect:
         serializedVersion: 2
         x: 0
@@ -3344,7 +3344,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_259
+      name: Corpse_Blue
       rect:
         serializedVersion: 2
         x: 245
@@ -3376,179 +3376,179 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_163: -1233692752
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_188: 1320845252
+      Red_Death_Front_Right_Short00: -1244364478
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_0: 1142667480
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_119: 671868621
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_82: -933449715
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_115: -1707964752
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_244: -1365665534
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_236: 783308431
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_136: 390424321
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_200: -2093757072
+      ShotgunKin_Blue_Walk_Right_Front_4: 1517194218
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_251: 284248505
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_70: -312994975
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_113: 545360595
+      Blue_Death_Back1: 253333590
       ShotgunKin_Red_Walk_Right_Front_2: -2089120545
+      Blue_Death_Front_Left04: -1579352401
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_151: -1817402500
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_167: 687901057
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_201: -1438762803
       ShotgunKin_Red_Walk_Right_Back_3: -31749103
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_183: -1829189280
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_106: -964861839
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_186: 309536516
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_223: 1289360088
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_1: 833709387
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_103: 425953724
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_187: -789492458
       ShotgunKin_Red_Walk_Left_Back_2: 256356122
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_247: 1691617369
+      Corpse_Red: -1777274722
+      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_1: 833709387
+      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_103: 425953724
+      Blue_Death_Front2: -789492458
+      Blue_Death_Back2: 1560223577
+      ShotgunKin_Blue_Walk_Left_Front_4: 737493323
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_68: 1116672472
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_174: 1074409092
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_190: 568193223
-      ShotgunKin_Red_Walk_Left_Front_4: -1488676867
+      Red_Death_Front_Right01: 1289360088
+      Blue_Death_Front_Right00: 993861699
+      Blue_Death_Front_Right01: 2145245361
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_111: 2010949500
+      ShotgunKin_Red_Walk_Left_Front_4: -1488676867
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_83: 1036968759
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_54: -1016102476
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_195: 1560223577
+      Blue_Death_Front_Left_Short01: 1932086934
+      Red_Death_Explode06: 746966183
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_154: 2107793114
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_100: 242248167
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_10: 1127975932
+      Red_Death_Front_Right02: 1356510529
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_13: 150204443
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_48: -2084296155
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_90: 746966183
+      Red_Death_Front_Right00: -1468641414
+      Blue_Death_Front_Left02: -357346755
       ShotgunKin_Red_Idle_3: 664776056
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_170: -116225448
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_32: -747431369
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_237: 1443016157
       ShotgunKin_Red_Walk_Right_Front_3: -802570077
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_89: 446219521
+      Red_Fall01: 1131100481
+      Red_Fall03: -546470297
       ShotgunKin_Red_Walk_LeftBack_1: -2019951694
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_144: 967112127
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_218: -14955247
+      Red_Death_Explode02: -225293672
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_91: -238049049
+      Blue_Death_Front_Left01: -678468905
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_155: 1775255485
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_185: -1565965360
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_133: 1171255123
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_29: 1918584799
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_8: 581555821
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_76: 270341867
       ShotgunKin_Red_Walk_Left_Front_5: 125989202
+      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_76: 270341867
+      Red_Death_Front_Left01: -995304176
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_158: -446497400
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_12: -701153257
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_128: -527126091
       ShotgunKin_Red_Walk_Right_Front_1: 1133526895
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_177: -1298076588
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_101: -1657602492
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_231: 552930679
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_225: 379299275
+      Red_Fall02: 1947478846
+      BlueDeadthExplode1: -1917868636
+      Corpse_Blue: -52740151
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_130: 621312499
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_203: -307385344
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_198: -2067809202
+      Red_Fall04: 2054535973
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_95: -1535271272
+      ShotgunKin_Blue_Walk_Left_Back_3: -1486416194
+      ShotgunKin_Blue_Walk_Right_Front_6: 122369693
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_255: 1222562078
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_221: 1144686836
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_199: 919415395
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_209: -372063009
+      ShotgunKin_Blue_Walk_Left_Front_2: -1925631797
+      ShotgunKin_Blue_Walk_Left_Front_6: -1652794725
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_79: -1980795853
+      Blue_Death_Front_Left_Short00: -14955247
+      Blue_Death_Front_Right03: -974661363
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_131: 1653371008
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_166: -1981165360
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_142: 2054535973
       ShotgunKin_Red_Walk_Left_Front_3: -159426386
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_35: 122369693
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_96: 1047423413
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_109: -1276761227
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_38: 249256590
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_196: -234297628
+      ShotgunKin_Blue_Walk_Left_Front_1: 373911281
+      Red_Death_Front_Right04: -1940029205
+      Red_Death_Left1: -2067809202
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_71: 1704042997
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_194: 253333590
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_14: 1380981111
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_257: 1922309889
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_233: -995304176
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_224: 1356510529
+      Red_Death_Front_Right_Short03: -372063009
+      Red_Death_Front_Left02: -1058646250
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_74: -202773457
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_219: 1932086934
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_207: -2115848551
+      Red_Death_Front_Right_Short01: -2115848551
+      Blue_Idle01: -1358892572
+      Blue_Death_Left1: 1842259176
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_86: -1703272722
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_15: 1104609637
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_213: 1076181900
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_36: 373911281
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_11: 1899070984
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_53: -1486416194
+      ShotgunKin_Blue_Walk_Right_Back_2: -123264024
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_16: -197107921
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_226: -1940029205
+      Red_Death_Back3: 1176370627
+      Red_Death_Front_Left00: -407818023
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_65: 13522526
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_2: -1126915509
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_148: 884904128
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_124: 1293882055
+      ShotgunKin_Blue_Walk_Left_Back_1: -188322859
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_249: 402250293
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_205: -2000091443
+      Red_Death_Front3: -1565965360
+      Blue_Death_Left3: 355915113
+      Blue_Death_Front_Left_Short02: 2052072942
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_125: -2063907755
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_168: 436065091
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_192: 1176370627
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_3: -2090931657
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_50: 963626198
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_92: 1582957424
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_184: -1515099242
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_217: 797929025
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_164: -579805330
+      BlueFall1: -1526206008
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_248: 1338491899
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_30: -1735619670
+      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_164: -579805330
+      Blue_Death_Front_Right_Short02: 720718079
+      Blue_Death_Front_Left03: 1904402523
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_75: 1126064243
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_118: 670742514
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_122: -474318770
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_204: 355915113
+      Red_Death_Front2: -1829189280
+      Blue_Death_Front_Right_Short00: -260558109
+      Red_Death_Front_Right_Short02: 1068905892
+      Red_Death_Front_Left_Short01: -407099625
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_137: -190381787
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_256: -2061567032
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_140: 1947478846
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_93: -1789362754
+      ShotgunKin_Blue_Walk_Right_Front_1: -1735619670
+      ShotgunKin_Blue_Walk_Right_Back_1: -1016102476
+      ShotgunKin_Blue_Walk_Right_Front_5: -1412649648
+      Red_Death_Front_Left04: 783308431
+      Blue_Death_Front4: 1320845252
+      Red_Death_Front1: -1179211845
       ShotgunKin_Red_Walk_Right_Back_2: 1084750045
+      Blue_Idle00: 581555821
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_114: 1401958527
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_116: 2130263075
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_239: -357346755
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_146: 651385295
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_59: 1428433637
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_60: 1921582710
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_229: -1131351977
       ShotgunKin_Red_Walk_Right_Front_4: -1442049881
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_39: 737493323
       ShotgunKin_Red_Walk_Left_Front_1: 648763634
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_37: -1925631797
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_222: -1468641414
+      ShotgunKin_Blue_Walk_Left_Back_2: 826546318
+      Red_Death_Back4: 1012663917
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_180: 726104309
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_132: -815788409
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_165: 1492690324
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_9: -1358892572
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_258: -1777274722
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_147: -2145495369
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_135: -1784530275
+      Red_Death_Explode03: -1066433485
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_160: 97013445
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_62: 1327918794
+      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_135: -1784530275
+      Blue_Idle_Back01: 1899070984
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_129: -1573244172
+      ShotgunKin_Blue_Walk_Left_Front_5: 1453820687
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_112: 1044732977
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_243: 115160585
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_31: -1544171702
-      ShotgunKin_Red_Walk_Left_Back_1: 106398989
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_134: 1439483657
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_206: -1244364478
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_33: 1517194218
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_80: -1795462061
+      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_243: 115160585
+      ShotgunKin_Red_Walk_Left_Back_1: 106398989
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_64: -1420874373
+      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_80: -1795462061
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_123: -1722045025
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_102: 1647391238
       ShotgunKin_Red_Walk_Right_Back_1: -813031348
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_152: -504524993
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_228: 2145245361
+      Red_Death_Left2: 919415395
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_246: -1559290407
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_150: 190526223
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_238: -678468905
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_84: 1865992710
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_208: 1068905892
+      Blue_Death_Front_Right_Short03: 1076181900
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_104: 1652913283
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_216: 1834001415
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_34: -1412649648
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_56: 1017257393
+      Red_Death_Explode04: 446219521
+      ShotgunKin_Blue_Walk_Right_Back_3: 1017257393
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_153: 1981255997
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_182: -1179211845
+      Blue_Death_Left2: -307385344
+      Red_Death_Left4: -1438762803
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_108: 818178275
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_57: 1980927025
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_105: 1658206324
@@ -3556,86 +3556,86 @@ TextureImporter:
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_61: 1319365258
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_120: 382584518
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_260: -729799605
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_212: 720718079
       ShotgunKin_Red_Walk_Right_Front_6: -1492507159
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_227: 993861699
+      Blue_Death_Front3: -1907240189
       ShotgunKin_Red_Walk_Left_Front_2: 1092319801
+      Red_Death_Front4: -1515099242
+      Red_Death_Left3: -2093757072
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_250: 1561741114
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_52: 826546318
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_55: -123264024
+      Red_Death_Front_Right03: 379299275
+      Blue_Death_Front_Right_Short01: 1821822801
+      BlueFall5: -2145495369
       ShotgunKin_Red_Idle_1: -707175046
+      Red_Death_Back1: 568193223
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_99: -59934434
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_138: -393672256
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_232: -407818023
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_235: 1622849985
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_97: -1917868636
       ShotgunKin_Spawn_2: -1024551875
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_242: 1003779831
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_78: -1066433485
+      Red_Death_Explode05: -1789362754
+      Blue_Death_Left4: -2000091443
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_88: 1844992903
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_110: 2099981064
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_193: 1012663917
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_259: -52740151
+      BlueFall2: 967112127
+      Blue_Death_Front1: 309536516
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_81: 1671926699
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_181: 325399697
       ShotgunKin_Red_Idle_4: 1982800421
+      Blue_Death_Front_Right04: 552930679
+      Blue_Idle_Back00: 1127975932
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_169: 1766927497
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_245: 225573702
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_40: 1453820687
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_220: 2052072942
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_253: 1593296811
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_66: 604502550
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_94: 585239095
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_141: -546470297
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_98: -1378826552
+      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_171: -1271061769
+      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_157: -2101776135
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_77: -423455688
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_58: -1296617951
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_139: 1131100481
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_171: -1271061769
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_230: -974661363
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_157: -2101776135
+      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_98: -1378826552
+      Red_Fall00: -393672256
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_176: -844006688
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_143: -1526206008
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_211: 1821822801
+      Red_Death_Explode01: 1327918794
+      BlueDeadthExplode2: -964861839
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_179: -1259181821
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_127: 1660914729
+      BlueFall4: 651385295
+      Blue_Death_Front_Right02: -1131351977
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_254: -822204019
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_121: -1197877800
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_145: 1804298809
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_210: -260558109
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_126: 1509555947
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_117: -1306973521
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_215: -407099625
+      Red_Death_Front_Left_Short02: 1834001415
       ShotgunKin_Spawn_1: -1737269659
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_17: 906308468
+      Blue_Death_Back4: 85155225
+      ShotgunKin_Blue_Walk_Right_Front_3: -747431369
+      Blue_Death_Front_Left00: 1443016157
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_162: -1549214154
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_72: -225293672
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_159: 458718329
+      BlueDeadthExplode0: 1647391238
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_49: 1159263452
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_202: 1842259176
+      ShotgunKin_Red_Walk_Right_Front_5: 1781011275
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_172: -892941979
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_191: 2076797802
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_234: -1058646250
+      Red_Death_Front_Left_Short03: 797929025
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_252: -1745845464
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_41: -1652794725
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_149: 170040898
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_85: 2053133144
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_175: -1060992411
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_87: -20392642
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_240: 1904402523
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_51: -188322859
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_214: -1154920926
+      ShotgunKin_Blue_Walk_Right_Front_2: -1544171702
+      Blue_Death_Front_Left_Short03: 1144686836
+      Red_Death_Front_Left_Short00: -1154920926
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_161: 698187410
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_189: -1907240189
+      BlueFall3: 1804298809
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_73: -1157279919
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_241: -1579352401
       ShotgunKin_Red_Idle_2: 687588191
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_156: -1267175160
+      ShotgunKin_Blue_Walk_Left_Front_3: 249256590
+      Red_Death_Front_Left03: 1622849985
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_173: 1077865169
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_107: -1861157841
-      ShotgunKin_Red_Walk_Right_Front_5: 1781011275
+      Red_Death_Back2: 2076797802
       PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_69: 231348900
-      PC Computer - Enter the Gungeon - Shotgun Kin-sheet-sheet_197: 85155225
+      Blue_Death_Back3: -234297628
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
