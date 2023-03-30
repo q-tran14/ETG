@@ -60,6 +60,9 @@ TagManager:
   - name: Character_Object_Projectile
     uniqueID: 4064858419
     locked: 0
+  - name: Player(T)
+    uniqueID: 331849893
+    locked: 0
   - name: Roof
     uniqueID: 3103825055
     locked: 0
