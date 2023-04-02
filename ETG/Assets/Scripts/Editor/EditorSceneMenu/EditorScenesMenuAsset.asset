@@ -12,16 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 393b1ee345c54ad4cb5098e8d41eb5d5, type: 3}
   m_Name: EditorScenesMenuAsset
   m_EditorClassIdentifier: 
-  scenes:
-  - {fileID: 102900000, guid: 2cda990e2423bbf4892e6590ba056729, type: 3}
-  - {fileID: 102900000, guid: b9b2fbdd7e0e7be41be78f614f5a0ad6, type: 3}
-  - {fileID: 102900000, guid: 87ca70dfe1ff2e349b9770bdc897435a, type: 3}
-  - {fileID: 102900000, guid: e46d50e0ab4a3114fa4f09e00548e7fc, type: 3}
-  - {fileID: 102900000, guid: 3a40e8baeb345dc40925af1dc6a7f874, type: 3}
-  - {fileID: 102900000, guid: bbab9e354bf9e5943a95ed00a3184d9c, type: 3}
-  - {fileID: 102900000, guid: 39dc26279689db2488dc638813442598, type: 3}
-  - {fileID: 102900000, guid: 0ede39657a1a4a746b76d3f6500ea1cc, type: 3}
-  - {fileID: 102900000, guid: 91bceca8075966d40916c4f0d0bd65d5, type: 3}
-  - {fileID: 102900000, guid: 2caa479ad4f24ce4abfe819ef9a8d74a, type: 3}
-  - {fileID: 102900000, guid: 3e593ecd7d179ff4e92093f7dc716d06, type: 3}
-  - {fileID: 102900000, guid: 3a74f5116f461ec40916bf44ea535271, type: 3}
+  scenes: []
