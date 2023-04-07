@@ -18,7 +18,7 @@ namespace Game.Ed.ScenesMenu
         private void OnEnable()
         {
             asset = new SerializedObject(EditorScenesMenuData.Asset);
-            prop = asset.FindProperty("scenes");
+            prop = asset.FindProperty("Scenes");
         }
 
         private void OnGUI()

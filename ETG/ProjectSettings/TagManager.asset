@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - NPCs
+  - Hole
+  - Floor
+  - Door
+  - Character
+  - HiddenGround
   layers:
   - Default
   - TransparentFX

@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 100415269}
   - component: {fileID: 100415271}
   - component: {fileID: 100415270}
+  - component: {fileID: 100415272}
   m_Layer: 0
   m_Name: BodyWall
   m_TagString: Untagged
@@ -341,6 +342,23 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &100415272
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100415268}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
+  m_UseDelaunayMesh: 0
 --- !u!1 &422502198
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,6 +524,7 @@ GameObject:
   - component: {fileID: 431981100}
   - component: {fileID: 431981102}
   - component: {fileID: 431981101}
+  - component: {fileID: 431981103}
   m_Layer: 0
   m_Name: StaticObject
   m_TagString: Untagged
@@ -681,6 +700,23 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &431981103
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431981099}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
+  m_UseDelaunayMesh: 0
 --- !u!1 &434334238
 GameObject:
   m_ObjectHideFlags: 0
@@ -1271,7 +1307,7 @@ GameObject:
   - component: {fileID: 1201886250}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1493,6 +1529,7 @@ GameObject:
   - component: {fileID: 1292113211}
   - component: {fileID: 1292113213}
   - component: {fileID: 1292113212}
+  - component: {fileID: 1292113214}
   m_Layer: 0
   m_Name: BorderWall
   m_TagString: Untagged
@@ -1702,6 +1739,23 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &1292113214
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292113210}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
+  m_UseDelaunayMesh: 0
 --- !u!1 &1576882178
 GameObject:
   m_ObjectHideFlags: 0
@@ -1713,6 +1767,7 @@ GameObject:
   - component: {fileID: 1576882179}
   - component: {fileID: 1576882181}
   - component: {fileID: 1576882180}
+  - component: {fileID: 1576882182}
   m_Layer: 0
   m_Name: FrontWall
   m_TagString: Untagged
@@ -1896,6 +1951,23 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &1576882182
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576882178}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
+  m_UseDelaunayMesh: 0
 --- !u!1 &1661457913
 GameObject:
   m_ObjectHideFlags: 0
@@ -1907,6 +1979,7 @@ GameObject:
   - component: {fileID: 1661457915}
   - component: {fileID: 1661457914}
   - component: {fileID: 1661457916}
+  - component: {fileID: 1661457917}
   m_Layer: 0
   m_Name: golemkeep_idle_mask_001
   m_TagString: NPCs
@@ -2001,3 +2074,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!58 &1661457917
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661457913}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -1.5}
+  serializedVersion: 2
+  m_Radius: 1.3

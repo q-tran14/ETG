@@ -92,7 +92,7 @@ namespace Game.Ed.ScenesMenu
 
 			var srcChildren = src.Children().ToList();
 			var dstChildren = dst.Children().ToList();
-			if (srcChildren.Count == dstChildren.Count)
+            if (srcChildren.Count == dstChildren.Count)
 			{
 				for (int i = 0; i < srcChildren.Count; i++)
 				{
@@ -101,7 +101,7 @@ namespace Game.Ed.ScenesMenu
 			}
 			else
 			{
-				Debug.LogWarning("This method should only be used on elements that are similar.");
+				//Debug.LogWarning("This method should only be used on elements that are similar.");
 			}
 		}
 
