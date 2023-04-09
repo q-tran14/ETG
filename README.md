@@ -20,7 +20,7 @@
 |&#x2611; bullat shotgun	| &#x2610; ~~bullet rigle professional~~ | &#x2610; bullet shark | &#x2611; blobulon | &#x2611; bullet man mutant |
 |&#x2611; bullet man bandana	| &#x2611; bulllet man magic	| &#x2610; bullet man | &#x2610; ~~bullet rifle man~~	 | &#x2611; bullet shotgun man mutant |
 |&#x2611; bullet shotgun man sawed off |&#x2611; chance bullet | &#x2611; cubulon	| &#x2610; ~~cultist bald~~ | &#x2611; dynamite guy |
-|&#x2611; ghost | &#x2611; giant bullat | &#x2610; grenade guy	| &#x2610; grim reaper | &#x2611; gripmaster |
+|&#x2611; ghost | &#x2611; giant bullat | &#x2610; grenade guy	| &#x2611; grim reaper | &#x2611; gripmaster |
 |&#x2611; gun nut | &#x2610; ~~gun nut chain~~ | &#x2610; ~~kaliber cultist bullet main~~	| &#x2611; key bullet kin | &#x2610; ~~lead maiden~~|
 |&#x2611; lead wizard blue | &#x2610; ~~lead wizard~~	| &#x2611; metal cube guy | &#x2611; mimic blackbone | &#x2611; mimic pedestal |
 |&#x2611; mimic rat chest | &#x2610; ~~mimic red gold~~ | &#x2611; mimic silver chest | &#x2610; ~~mimic wood chest~~ | &#x2611; mushroom guy small |
