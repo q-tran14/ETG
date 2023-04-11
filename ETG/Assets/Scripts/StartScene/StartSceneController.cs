@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class StartSceneController : MonoBehaviour
 {
-    public Animator dragun, lich_top, lich_bot, lich_gun, flag;
     // Start is called before the first frame update
     void Start()
     {
