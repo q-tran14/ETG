@@ -10,14 +10,16 @@ TagManager:
   - Door
   - Character
   - HiddenGround
+  - Block
+  - Choose
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Battle
   - Water
   - UI
-  - 
+  - Environment
   - 
   - 
   - 
