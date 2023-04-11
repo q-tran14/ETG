@@ -8,7 +8,7 @@
 
 | Quân | Phát | Phúc | Duy | Thiện |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
-| &#x2610; Final Lich | &#x2610; Old Bullet King | &#x2611; Boss Final Guide | &#x2611; Bullet King | &#x2610; Gatling Gull |
+| &#x2610; Final Lich | &#x2610; Blobulord | &#x2611; Boss Final Guide | &#x2611; Bullet King | &#x2610; Gatling Gull |
 | &#x2610; ~~Beholster~~ | &#x2610; Lich Phase 2 | &#x2611; Boss Final Marine | ---- | &#x2610; ~~Meduzi~~ |
 
 ### Enemy:
