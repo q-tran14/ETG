@@ -20,4 +20,9 @@ public class PlayerController : MonoBehaviour
     {
         
     }
+
+    private void OnMouseEnter()
+    {
+        
+    }
 }
