@@ -4,13 +4,8 @@ using UnityEngine;
 
 public class PitfallState : IState
 {
-    // follow the key input
-    public float previous_direction_ver;
-    public float previous_direction_hori;
     public override void EnterState()
     {
-        previous_direction_hori = base.stateManager.hori;
-        previous_direction_ver = base.stateManager.ver;
         base.stateManager.animator.Play("Pitfall");
     }
 

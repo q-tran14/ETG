@@ -3,53 +3,65 @@ using System.Collections.Generic;
 using UnityEditor.EditorTools;
 using UnityEngine;
 
+[System.Serializable]
 public class Player
 {
     //User's playing data everytime user enter chamber
-    [SerializeField] private int health { get; set; }
-    [SerializeField] private int shield { get; set; }
-    [SerializeField] private int blank { get; set; }
-    [SerializeField] private int silverKey { get; set; }
-    [SerializeField] private int goldkey { get; set; }
-    [SerializeField] private int shell {get;set;}
-    [SerializeField] private List<Weapon> weapons;
-    [SerializeField] private List<Item> activeItems;
-    [SerializeField] private List<Item> passiveItems;
-    [SerializeField] private List<Item> passives;
-    [SerializeField] private List<Synergy> synergies;
+    public string name;
+    public int health;
+    public int shield;
+    public int blank;
+    public int silverKey;
+    public int goldkey;
+    public int shell;
+    public List<Weapon> weapons;
+    public List<Item> activeItems;
+    public List<Item> passiveItems;
+    public List<Synergy> synergies;
 
-    //User's store data
-    [SerializeField] private List<Weapon> weaponCollection;
-    [SerializeField] private List<Item> itemCollection;
-    [SerializeField] private List<Enemy> enemyCollection;
-    [SerializeField] private List<Boss> bossCollection;
-
-    public Player(List<Weapon> _weapons, List<Item> _items)
+    public Player(string _name)
     {
-        health = 6;
-        shield = 0;
-        blank = 0;
-        silverKey = 0;
-        goldkey = 0;
-        shell = 0;
+        this.name = _name;
+        this.health = 6;
+        this.shield = 0;
+        this.blank = 2;
+        this.silverKey = 1;
+        this.goldkey = 0;
+        this.shell = 0;
 
-        weapons = _weapons;
+    }
+    public Player(string _name, List<Weapon> _weapons, List<Item> _items)
+    {
+        this.name = _name;
+        this.health = 6;
+        this.shield = 0;
+        this.blank = 2;
+        this.silverKey = 1;
+        this.goldkey = 0;
+        this.shell = 0;
+
+        this.weapons = _weapons;
         foreach (Item _i in _items)
         {
             //Check item type [Active or Passive]
-            activeItems.Add(_i);
-            passiveItems.Add(_i);
+            this.activeItems.Add(_i);
+            this.passiveItems.Add(_i);
         }
     }
+
     public void addInList(object obj)
     {
         switch (obj.GetType().Name)
         {
             case "Item":
                 var tmp = (Item)obj;
-                if (!itemCollection.Contains(tmp))
+                if (!activeItems.Contains(tmp))
                 {
-                    itemCollection.Add(tmp);
+                    activeItems.Add(tmp);
+                }
+                if (!passiveItems.Contains(tmp))
+                {
+                    passiveItems.Add(tmp);
                 }
                 break;
 
@@ -59,10 +71,6 @@ public class Player
                 {
                     weapons.Add(tmp1);
                 }
-                if (!weaponCollection.Contains(tmp1))
-                {
-                    weaponCollection.Add(tmp1);
-                }
                 break;
 
             case "Synergy":
@@ -70,22 +78,6 @@ public class Player
                 if (!synergies.Contains(tmp2))
                 {
                     synergies.Add(tmp2);
-                }
-                break;
-
-            case "Enemy":
-                var tmp3 = (Enemy)obj;
-                if (!enemyCollection.Contains(tmp3))
-                {
-                    enemyCollection.Add(tmp3);
-                }
-                break;
-
-            case "Boss":
-                var tmp4 = (Boss)obj;
-                if (!bossCollection.Contains(tmp4))
-                {
-                    bossCollection.Add(tmp4);
                 }
                 break;
         }

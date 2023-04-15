@@ -18,12 +18,12 @@ public abstract class IState
     }
     public abstract void EnterState();
     public abstract void UpdateState();
-    public virtual void OnTriggerEnter()
+    public virtual void OnTriggerEnter() // Haven't use yet
     {
 
     }
 
-    public virtual void OnCollision(Collider2D collider)
+    public virtual void OnCollision(Collider2D collider) // Haven't use yet
     {
 
     }

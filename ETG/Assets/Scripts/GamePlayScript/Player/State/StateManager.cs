@@ -5,15 +5,15 @@ using UnityEngine;
 
 public class StateManager: MonoBehaviour 
 {
+    IState currentState;
+    public IState previousState;
+    IState selectState = new SelectState(); // Default state - Don't need
+
     public PlayerController controller;
     public Animator animator;
     public SpriteRenderer spriteRenderer;
-    IState currentState;
-    public IState previousState;
-    IState selectState = new SelectState();
     public float ver, hori, speed = 5f;
     public Rigidbody2D rb;
-
     public bool isInChamber = false;
     public bool isDodging = false;
     public bool hasGun = false;
@@ -25,6 +25,8 @@ public class StateManager: MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
+
+        // Initialization Context in State pattern
         currentState = selectState;
         previousState = currentState;
         currentState.SetSide("S", "S");
