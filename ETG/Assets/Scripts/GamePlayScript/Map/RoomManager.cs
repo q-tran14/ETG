@@ -9,36 +9,26 @@ using Random = UnityEngine.Random;
 
 public class RoomManager : MonoBehaviour
 {
+    public GameObject player;
     public bool isClear = false;
-    public int spawnRoundMax = 2,spawnRoundMin = 1;
+    public int spawnRoundMax = 2,spawnRoundMin = 1, spawnRound;
     
     // A number of enemies spawn each time
     private int numEnemyPerTimeSpawnMin;
-    public int numEnemyPerTimeSpawnMax = 8; 
+    public int numEnemyPerTimeSpawnMax = 8;
 
-    [Serializable]
-    public struct ranPosD
-    {
-        public int round;
-        public List<Vector3Int> ranPosL;
-        public ranPosD(int i, List<Vector3Int> l)
-        {
-            this.round = i;
-            this.ranPosL = l;
-        }
-    }
-
-    public List<ranPosD> ranPosDs;
-    // ChamberManager to get chamber enemy list
+    // Neighborhood room
     public GameObject[] doors;
+    // ChamberManager to get chamber enemy list
     public GameObject[] enemies;
+    public int enemiesCurrent;
 
     // Room Area
     public List<Vector3Int> trackedCells;
 
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         if (trackedCells.Count <= 1000) 
         { 
@@ -52,36 +42,58 @@ public class RoomManager : MonoBehaviour
         {
             numEnemyPerTimeSpawnMin = 5;
         }
-        StartCoroutine(SpawnPosition());
+        spawnRound = Random.Range(spawnRoundMin, spawnRoundMax + 1);
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        if(isClear == true) this.gameObject.SetActive(false);
+        //RoomCleared();
     }
 
-    IEnumerator SpawnPosition() // Initialization number spawn round for each room, number enemy for each spawn round, spawn position for enemies when enter the chamber
+    void Spawn() // Initialization number spawn round for each room, number enemy for each spawn round, spawn position for enemies when enter the chamber
     {
-        yield return new WaitForSeconds(1f);
         if (trackedCells.Count > 0)
         {
-            int spawnRound = Random.Range(spawnRoundMin, spawnRoundMax+1);
-            for (int j = 1; j <= spawnRound; j++)
+            int numEnemyPerTimeSpawn = Random.Range(numEnemyPerTimeSpawnMin, numEnemyPerTimeSpawnMax); //A Number of enemies spawn in each round
+            for (int i = 0; i < numEnemyPerTimeSpawn; i++)
             {
-                int numEnemyPerTimeSpawn = Random.Range(numEnemyPerTimeSpawnMin, numEnemyPerTimeSpawnMax); //A Number of enemies spawn in each round
-                List<Vector3Int> ranPosL = new List<Vector3Int>();
-                for (int i = 0; i < numEnemyPerTimeSpawn; i++)
-                {
-                    int ran;
-                    Vector3Int ranPos;
-                    ran = Random.Range(0, trackedCells.Count - 1);
-                    ranPos = trackedCells.ToArray()[ran];
-                    ranPosL.Add(ranPos);
-                }
-                ranPosD n = new ranPosD(j, ranPosL);
-                ranPosDs.Add(n);
+                // Random spawn position and enemy
+                int ran = Random.Range(0, trackedCells.Count - 1);
+                int e = Random.Range(0, enemies.Length - 1);
+                Vector3Int ranPos = trackedCells.ToArray()[ran];
+
+                // Instantiate enemy at random position and set target = player
+                GameObject enemy = enemies[e];
+                enemy.GetComponent<Enemy>().target = player;
+                Instantiate(enemy, new Vector3(ranPos.x, ranPos.y, ranPos.z), Quaternion.identity);
+
+                enemiesCurrent += 1;
             }
+            spawnRound -= 1;
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Player")
+        {
+            //Close door
+            player = collision.gameObject;
+            Spawn();
+        }
+    }
+
+    void RoomCleared()
+    {
+        if (enemiesCurrent == 0 && spawnRound == 0)
+        {
+            //door open
+            isClear = true;
+        }
+        else if (enemiesCurrent == 0 && spawnRound != 0)
+        {
+            Spawn();
         }
     }
 }

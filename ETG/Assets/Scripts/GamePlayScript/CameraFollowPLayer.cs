@@ -6,9 +6,9 @@ public class CameraFollowPLayer : MonoBehaviour
 {
     public GameController controller;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame
