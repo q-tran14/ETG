@@ -4,13 +4,15 @@ using UnityEngine;
 
 public abstract class IState
 {
-    protected StateManager stateManager;
     public string previous_side_ver = "S"; // {back,front} => {W,S}
     public string previous_side_hori = "S";// {right,left} => {D,A}
+
+    public StateManager stateManager;
     public void SetManager(StateManager stateManager)
     {
         this.stateManager = stateManager;
     }
+
     public void SetSide(string hori, string ver)
     {
         previous_side_hori = hori;

@@ -12,7 +12,7 @@ public class DodgeState : IState
 
     public override void UpdateState()
     {
-        if (base.stateManager.animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.8)
+        if (base.stateManager.animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
         {
             base.stateManager.isDodging = false;
             base.stateManager.SwitchState(new RunState());

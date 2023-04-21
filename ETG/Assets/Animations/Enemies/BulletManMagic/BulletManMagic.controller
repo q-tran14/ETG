@@ -86,7 +86,7 @@ AnimatorController:
   m_Name: BulletManMagic
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: Blend
+  - m_Name: hori
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -129,7 +129,7 @@ AnimatorStateMachine:
   m_ChildStateMachines:
   - serializedVersion: 1
     m_StateMachine: {fileID: -5296050246780683701}
-    m_Position: {x: 330, y: 160, z: 0}
+    m_Position: {x: 320, y: 170, z: 0}
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
@@ -171,7 +171,7 @@ BlendTree:
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
     m_Mirror: 0
-  m_BlendParameter: Blend
+  m_BlendParameter: hori
   m_BlendParameterY: Blend
   m_MinThreshold: -1
   m_MaxThreshold: 1
@@ -212,7 +212,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Death
+  m_Name: Die
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []

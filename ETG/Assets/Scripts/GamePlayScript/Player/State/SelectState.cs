@@ -14,6 +14,7 @@ public class SelectState : IState
     }
     
     state currentState = state.SelectIdle;
+    
     public override void EnterState()
     {
         base.stateManager.animator.Play(currentState.ToString());

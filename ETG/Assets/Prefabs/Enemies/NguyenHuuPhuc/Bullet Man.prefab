@@ -111,6 +111,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1723070990}
   - component: {fileID: 1723070991}
+  - component: {fileID: 2108900712}
   m_Layer: 0
   m_Name: Hand
   m_TagString: Untagged
@@ -186,6 +187,58 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &2108900712
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723070989}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!1 &1728835166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1728835167}
+  m_Layer: 0
+  m_Name: Spawn Bullet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1728835167
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728835166}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.4, y: 0.125, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8690651590153632309}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9031118007765545804
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,7 +253,7 @@ GameObject:
   - component: {fileID: 1511605412}
   - component: {fileID: 1511605413}
   - component: {fileID: 1511605416}
-  - component: {fileID: 1511605417}
+  - component: {fileID: 1511605414}
   m_Layer: 0
   m_Name: Bullet Man
   m_TagString: Untagged
@@ -223,7 +276,7 @@ Transform:
   - {fileID: 289030560}
   - {fileID: 1723070990}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4446010998230505051
 SpriteRenderer:
@@ -268,7 +321,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ecc88c7762f134d4c88937c966128650, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -354,7 +407,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.375
-  m_Speed: 3.5
+  m_Speed: 1
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -366,7 +419,7 @@ NavMeshAgent:
   m_BaseOffset: 0.71875
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &1511605417
+--- !u!114 &1511605414
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -379,11 +432,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  weapon: {fileID: 8690651590153632312}
+  hand: {fileID: 1723070989}
+  projectileTrajectorys: []
   HP: 0
+  animator: {fileID: 0}
+  waitToNextShot: 0
+  curVerSide: 
+  curHoriSide: 
   targetPos: {x: 0, y: 0, z: 0}
   agent: {fileID: 0}
-  hand: {fileID: 1723070989}
-  weapon: {fileID: 8690651590153632312}
 --- !u!1001 &740812230
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -452,8 +510,15 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8690651590894133246, guid: 418d5413aa304a64bb49eec10c9de4d1, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8690651590894133235, guid: 418d5413aa304a64bb49eec10c9de4d1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1728835167}
   m_SourcePrefab: {fileID: 100100000, guid: 418d5413aa304a64bb49eec10c9de4d1, type: 3}
 --- !u!4 &8690651590153632309 stripped
 Transform:

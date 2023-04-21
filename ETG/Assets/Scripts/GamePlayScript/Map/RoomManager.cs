@@ -15,7 +15,7 @@ public class RoomManager : MonoBehaviour
     
     // A number of enemies spawn each time
     private int numEnemyPerTimeSpawnMin;
-    public int numEnemyPerTimeSpawnMax = 8;
+    public int numEnemyPerTimeSpawnMax;
 
     // Neighborhood room
     public GameObject[] doors;
@@ -32,15 +32,15 @@ public class RoomManager : MonoBehaviour
     {
         if (trackedCells.Count <= 1000) 
         { 
-            numEnemyPerTimeSpawnMin = 3;
+            numEnemyPerTimeSpawnMin = 1; //3
         }
         if (trackedCells.Count > 1000 && trackedCells.Count <= 1600)
         {
-            numEnemyPerTimeSpawnMin = 4;
+            numEnemyPerTimeSpawnMin = 1; //4
         }
         if (trackedCells.Count > 1600)
         {
-            numEnemyPerTimeSpawnMin = 5;
+            numEnemyPerTimeSpawnMin = 1; //5
         }
         spawnRound = Random.Range(spawnRoundMin, spawnRoundMax + 1);
     }
@@ -56,7 +56,8 @@ public class RoomManager : MonoBehaviour
     {
         if (trackedCells.Count > 0)
         {
-            int numEnemyPerTimeSpawn = Random.Range(numEnemyPerTimeSpawnMin, numEnemyPerTimeSpawnMax); //A Number of enemies spawn in each round
+            int numEnemyPerTimeSpawn = 1;
+            if (numEnemyPerTimeSpawnMax != 1) numEnemyPerTimeSpawn = Random.Range(numEnemyPerTimeSpawnMin, numEnemyPerTimeSpawnMax); //A Number of enemies spawn in each round
             for (int i = 0; i < numEnemyPerTimeSpawn; i++)
             {
                 // Random spawn position and enemy
@@ -66,7 +67,7 @@ public class RoomManager : MonoBehaviour
 
                 // Instantiate enemy at random position and set target = player
                 GameObject enemy = enemies[e];
-                enemy.GetComponent<Enemy>().target = player;
+                enemy.GetComponent<Enemy.Enemy>().target = player;
                 Instantiate(enemy, new Vector3(ranPos.x, ranPos.y, ranPos.z), Quaternion.identity);
 
                 enemiesCurrent += 1;

@@ -59,7 +59,6 @@ public class GameController : MonoBehaviour
             RaycastHit2D hit = hitObj();
             if (hit.collider != null)
             {
-                Debug.Log(hit.collider.name);
                 if (hit.collider.gameObject.tag == "Player")
                 {
                     playerObj = hit.collider.gameObject;
@@ -68,7 +67,7 @@ public class GameController : MonoBehaviour
                     {
                         playerData = new Player(playerObj.name);
                     }
-                    
+                    DontDestroyOnLoad (playerObj);
                     
                 }
             }

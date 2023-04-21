@@ -9,7 +9,7 @@ public class UserData
     //User's store data
     [SerializeField] private List<Weapon> weaponCollection;
     [SerializeField] private List<Item> itemCollection;
-    [SerializeField] private List<Enemy> enemyCollection;
+    [SerializeField] private List<Enemy.Enemy> enemyCollection;
     [SerializeField] private List<Boss> bossCollection;
     // Start is called before the first frame update
     public void addInList(object obj)
@@ -33,7 +33,7 @@ public class UserData
                 break;
 
             case "Enemy":
-                var tmp3 = (Enemy)obj;
+                var tmp3 = (Enemy.Enemy)obj;
                 if (!enemyCollection.Contains(tmp3))
                 {
                     enemyCollection.Add(tmp3);

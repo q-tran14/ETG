@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class StateManager: MonoBehaviour 
+public class StateManager : MonoBehaviour
 {
     IState currentState;
     public IState previousState;
-    IState selectState = new SelectState(); // Default state - Don't need
 
     public PlayerController controller;
     public Animator animator;
@@ -27,7 +26,7 @@ public class StateManager: MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         // Initialization Context in State pattern
-        currentState = selectState;
+        currentState = new SelectState();
         previousState = currentState;
         currentState.SetSide("S", "S");
         currentState.SetManager(this);
@@ -40,13 +39,11 @@ public class StateManager: MonoBehaviour
         ver = Input.GetAxis("Vertical");
         hori = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(hori, ver) * speed;
-        if (Input.GetMouseButtonDown(1) && isDodging == false)
-        {
-            isDodging = true;
-        }
+        
+        if (Input.GetMouseButtonDown(1) && isDodging == false) isDodging = true;
+
         currentState.UpdateState();
-        Debug.Log(currentState.GetType().Name);
-        if(isOnFloor) lastPos = transform.position;
+        if (isOnFloor) lastPos = transform.position;
     }
 
     public void SwitchState(IState newState)
@@ -72,10 +69,10 @@ public class StateManager: MonoBehaviour
             isOnFloor = false;
             SwitchState(new PitfallState());
         }
-        if(collision.tag == "Floor")
+        if (collision.tag == "Floor")
         {
             isOnFloor = true;
-            
+
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
@@ -84,9 +81,5 @@ public class StateManager: MonoBehaviour
         {
             SwitchState(new PitfallState());
         }
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        
     }
 }

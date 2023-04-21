@@ -7,7 +7,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Die_big_hell_face
+  m_Name: Die
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -33,7 +33,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Fire_big_hell_face
+  m_Name: Fire
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []

@@ -1,33 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class BulletMan : Enemy
+namespace Enemy
 {
-    
-    
-
-    public override void Fire()
+    public class BulletMan : Enemy
     {
-        return;
-    }
 
-    public override void State()
-    {
-        if(base.target.transform.position.x < transform.position.x)
+        public override void Die()
         {
 
         }
-        if(base.target.transform.position.x > transform.position.x)
+
+        public override void Fire()
         {
-
+            
         }
-        return;
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+           
+        }
+
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (collision.collider.tag == "Player")
+            {
+
+            }
+        }
     }
 
-    IEnumerator FireDelay()
-    {
-
-        yield return new WaitForSeconds(1.5f);
-    }
 }
