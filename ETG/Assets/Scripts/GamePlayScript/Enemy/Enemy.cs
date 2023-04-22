@@ -6,16 +6,37 @@ using UnityEngine.AI;
 namespace Enemy{
     public abstract class Enemy : MonoBehaviour
     {
+        [Header("General Attribute")]
+        #region General attribute
         public GameObject target;
+        
+        #endregion
+
+        [Header("Attributes user for fire")]
+        #region attribute use for fire
+        public PathFireManager fireManager;
+        [Tooltip("Get spawn bullet position in enemy")]
+        public Transform spawnBullet; // previous name : shootingPoint
+        public GameObject projectilePrefab;
+        public float projectileSpeed;
+        public enum TypeBullet
+        {
+            CircleType,
+            None
+        }
+        public TypeBullet typeBullet;
+        public GameObject owner;
+        #endregion
+
+        [Header("Attributes for animation, state")]
+        #region attribute use for state
         public GameObject weapon;
         public GameObject hand;
 
         public int HP;
         public Animator animator;
         public float waitToNextShot;
-        public StateManager manager;
-
-        [SerializeField]
+        public StateManager stateManager;
         protected enum side
         {
             L, // Left side
@@ -28,29 +49,36 @@ namespace Enemy{
         [SerializeField] protected string curVerSide, curHoriSide;
         [SerializeField] private Vector3 targetPos;
         [SerializeField] protected NavMeshAgent agent;
+        #endregion 
 
         // Start is called before the first frame update
         void Start()
         {
+            #region Stategy
+            owner = gameObject;
+            #endregion
+
+            #region State
             animator = GetComponent<Animator>();
             agent = GetComponent<NavMeshAgent>();
             agent.updateRotation = false;
             agent.updateUpAxis = false;
-            manager = new StateManager(new Spawn(), animator);
-            
+            stateManager = new StateManager(new Spawn(), animator);
+            stateManager.EnterState();
+            #endregion
+
         }
 
         // Update is called once per frame
         void FixedUpdate()
         {
-            manager.EnterState();
+            
             targetPos = new Vector3(target.transform.position.x, target.transform.position.y, transform.position.z);
             SetAgentPos(targetPos);
             WeaponLookAtPLayer();
             CompareTargetPositionToAgent();
             SetDir();
-            if (target != null) manager.SwithcState(new MoveState());
-            if (HP == 0) Die();
+            if (target != null) stateManager.SwithcState(new MoveState());
         }
 
         private void SetAgentPos(Vector3 position)
@@ -116,15 +144,43 @@ namespace Enemy{
         {
             if (animator.parameterCount == 1)
             {
-                if (animator.GetParameter(0).name == "ver") manager.setDirection("O",curVerSide);
-                if (animator.GetParameter(0).name == "hori") manager.setDirection(curHoriSide, "0");
+                if (animator.GetParameter(0).name == "ver") stateManager.setDirection("O",curVerSide);
+                if (animator.GetParameter(0).name == "hori") stateManager.setDirection(curHoriSide, "0");
             }
-            if (animator.parameterCount == 2) manager.setDirection(curHoriSide,curVerSide);
+            if (animator.parameterCount == 2) stateManager.setDirection(curHoriSide,curVerSide);
         }
 
         public abstract void Fire();
-        public abstract void Die();
+        public void Die()
+        {
+            stateManager.SwithcState(new Die());
+            if(animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
+            {
+                Destroy(gameObject);
+            }
+        }
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (collision.collider.tag == "Player")
+            {
+                collision.gameObject.GetComponent<PlayerController>().player.health -= 1;
+                HP -= 1; // Sub equal damage of player weapon
+                if (HP == 0) Die();
+            }
+            if (collision.collider.tag == "PlayerBullet")
+            {
+                HP -= 1; // Sub equal damage of player weapon
+                if (HP == 0) Die();
+            }
+            if (collision.collider.tag == "Table")
+            {
 
+            }
+            if (collision.collider.tag == "Obj")
+            {
+
+            }
+        }
     }
 
 }

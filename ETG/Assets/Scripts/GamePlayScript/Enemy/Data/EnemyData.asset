@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ecbbed13e4a09242ae5ed1c889b8c5b, type: 3}
   m_Name: EnemyData
   m_EditorClassIdentifier: 
-  datas:
-  - enemy: {fileID: 0}
-    hp: 
-    chamberAppear: 
+  enemy: {fileID: 0}
+  hp: 000000000000000000000000000000000000000000000000
+  chamberAppear: 000000000000000000000000000000000000000000000000

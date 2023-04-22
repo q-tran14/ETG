@@ -276,7 +276,7 @@ Transform:
   - {fileID: 289030560}
   - {fileID: 1723070990}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4446010998230505051
 SpriteRenderer:
@@ -432,9 +432,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  spawnBullet: {fileID: 1728835167}
+  projectilePrefab: {fileID: 8706610897507911240, guid: ecfe0cbaa335849428072063f00db6b6, type: 3}
+  projectileSpeed: 10
+  typeBullet: 1
+  owner: {fileID: 0}
   weapon: {fileID: 8690651590153632312}
   hand: {fileID: 1723070989}
-  projectileTrajectorys: []
   HP: 0
   animator: {fileID: 0}
   waitToNextShot: 0

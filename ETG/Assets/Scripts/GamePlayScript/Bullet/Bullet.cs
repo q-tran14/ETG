@@ -1,12 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[System.Serializable]
 public class Bullet : MonoBehaviour
 {
-    private Vector2 moveDirection;
-    public float projectileSpeed = 5f;
-    [SerializeField] private float timeDestroy = 3f;
+    public Vector2 moveDirection;
+    public Transform spawnPoint;
+    public float projectileSpeed;
+    private float timeDestroy = 12f;
+    public string checkType;
+    public float rotation = 0;
+    public float radius = 2f; // the radius of the circle
+
     private void OnEnable()
     {
         Invoke("Destroy", timeDestroy);
@@ -15,7 +20,15 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(moveDirection * projectileSpeed * Time.deltaTime);
+        switch (checkType)
+        {
+            case "None":
+                break;
+            case "CircleType":
+                CircleRotation();
+                break;
+        }
+        gameObject.transform.Translate(moveDirection * projectileSpeed * Time.deltaTime);
     }
 
     public void SetMoveDirection(Vector2 dir)
@@ -33,4 +46,12 @@ public class Bullet : MonoBehaviour
         CancelInvoke();
     }
 
+    private void CircleRotation()
+    {
+        rotation += 40 * Time.deltaTime * projectileSpeed;
+        float x = Mathf.Sin(rotation * Mathf.Deg2Rad) * radius;
+        float y = Mathf.Cos(rotation * Mathf.Deg2Rad) * radius;
+        Vector3 position = spawnPoint.position + new Vector3(x, y, 0);
+        gameObject.transform.position = position;
+    }
 }
