@@ -6,16 +6,17 @@ using UnityEngine.AI;
 namespace Enemy{
     public abstract class Enemy : MonoBehaviour
     {
-        [Header("General Attribute")]
         #region General attribute
+        [Tooltip("Auto set target")]
         public GameObject target;
-        
+        public PathFireManager pathFireManager;
+        [SerializeField] protected float timer = 0;
+        public float shootingTime;
         #endregion
 
         [Header("Attributes user for fire")]
-        #region attribute use for fire
-        public PathFireManager fireManager;
-        [Tooltip("Get spawn bullet position in enemy")]
+        #region Attribute use for fire
+        [Tooltip("Spawn bullet position in enemy")]
         public Transform spawnBullet; // previous name : shootingPoint
         public GameObject projectilePrefab;
         public float projectileSpeed;
@@ -25,11 +26,11 @@ namespace Enemy{
             None
         }
         public TypeBullet typeBullet;
-        public GameObject owner;
+        [SerializeField]protected GameObject owner;
         #endregion
 
         [Header("Attributes for animation, state")]
-        #region attribute use for state
+        #region Attribute use for state
         public GameObject weapon;
         public GameObject hand;
 
@@ -51,13 +52,10 @@ namespace Enemy{
         [SerializeField] protected NavMeshAgent agent;
         #endregion 
 
-        // Start is called before the first frame update
-        void Start()
+        private void Awake()
         {
-            #region Stategy
+            pathFireManager = new PathFireManager();
             owner = gameObject;
-            #endregion
-
             #region State
             animator = GetComponent<Animator>();
             agent = GetComponent<NavMeshAgent>();
@@ -66,11 +64,10 @@ namespace Enemy{
             stateManager = new StateManager(new Spawn(), animator);
             stateManager.EnterState();
             #endregion
-
         }
 
         // Update is called once per frame
-        void FixedUpdate()
+        void Update()
         {
             
             targetPos = new Vector3(target.transform.position.x, target.transform.position.y, transform.position.z);
@@ -79,6 +76,7 @@ namespace Enemy{
             CompareTargetPositionToAgent();
             SetDir();
             if (target != null) stateManager.SwithcState(new MoveState());
+            timer += Time.deltaTime;
         }
 
         private void SetAgentPos(Vector3 position)

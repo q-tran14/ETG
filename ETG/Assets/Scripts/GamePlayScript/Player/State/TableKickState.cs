@@ -6,11 +6,14 @@ public class TableKickState : IState
 {
     public override void EnterState()
     {
-        throw new System.NotImplementedException();
+        setValueAndPlay("TableKick");
     }
 
     public override void UpdateState()
     {
-        throw new System.NotImplementedException();
+        if(stateManager.animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
+        {
+            stateManager.SwitchState(new IdleState());
+        }
     }
 }

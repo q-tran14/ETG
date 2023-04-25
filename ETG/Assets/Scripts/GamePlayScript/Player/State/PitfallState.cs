@@ -15,6 +15,7 @@ public class PitfallState : IState
         {
             base.stateManager.transform.position = base.stateManager.lastPos;
             base.stateManager.animator.Play("PitfallReturn");
+            base.stateManager.allowToMove = true;
         }
         if (base.stateManager.animator.GetCurrentAnimatorStateInfo(0).IsName("PitfallReturn") && base.stateManager.animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
         {

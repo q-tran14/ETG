@@ -5,50 +5,41 @@ namespace Enemy
 {
     public class BulletMan : Enemy
     {
-        [SerializeField] private bool isFire = false;
-        [SerializeField] private bool isFiring = false;
+        public PathFireBullet path;
         #region Special Attributes for fire path if it has
         //
         #endregion
 
-
-        
-
+        private void Start()
+        {
+            path = new BasicBullet();
+            
+        }
         public override void Fire()
         {
-            PathFireBullet path = new BasicBullet();                                                                        // create path fire bullet
-            path.SetValue(target.transform, spawnBullet, projectilePrefab, projectileSpeed, typeBullet.ToString(), owner);  // set value
-            // set special value
-            fireManager.SetPathFire(path);
-            if (isFire == true && isFiring == false)
-            { 
-                isFiring = true;
-                fireManager.Fire(this); 
-            }
+            pathFireManager.SetFirePath(path);
+            pathFireManager.Fire(this);
         }
-
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.tag == "Player")
-            {
-                isFire = true;
-            }
+            if (collision.tag == "Player") path.SetValue(collision.transform, spawnBullet, projectilePrefab, projectileSpeed, typeBullet.ToString(), owner);
+
         }
         private void OnTriggerStay2D(Collider2D collision)
         {
-            if(collision.tag == "Player" && isFire ==  true)
+            if(collision.tag == "Player")
             {
-                Fire();
-                isFiring = false;
+                if (path.target != null && timer >= shootingTime) 
+                { 
+                    Fire();
+                    timer = 0;
+                }
             }
         }
 
         private void OnTriggerExit2D(Collider2D collision)
         {
-            if (collision.tag == "Player")
-            {
-                isFire = false;
-            }
+            if (collision.tag == "Player") path.SetValue(null, spawnBullet, projectilePrefab, projectileSpeed, typeBullet.ToString(), owner);
         }
     }
 

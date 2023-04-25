@@ -28,6 +28,7 @@ public class SelectState : IState
             base.stateManager.animator.Play("IsSelected");
             if (base.stateManager.animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
             {
+                base.stateManager.allowToMove = true;
                 base.stateManager.previousState = new IdleState();
                 base.stateManager.SwitchState(new IdleState());
             }

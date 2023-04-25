@@ -30,7 +30,7 @@ public abstract class IState
 
     }
 
-    public void setValueAndPlay(string nameOfState)  // Just use for Blend tree
+    public void setValueAndPlay(string nameOfState)  // Just use for Blend tree - Not inChamber
     {
         if (Input.GetKeyDown(KeyCode.D))
         {
@@ -48,6 +48,33 @@ public abstract class IState
 
         if (Input.GetKeyDown(KeyCode.W)) previous_side_ver = "W";
         else if (Input.GetKeyDown(KeyCode.S)) previous_side_ver = "S";
+
+        stateManager.animator.SetFloat("hori", ((previous_side_hori == "D" || previous_side_hori == "A") ? 1f : 0f));
+        stateManager.animator.SetFloat("ver", (previous_side_ver == "W" ? 1f : 0f));
+        stateManager.animator.Play(nameOfState);
+    }
+
+    public void SetValueAndPlayInChamber(string nameOfState)
+    {
+        bool right = stateManager.mousePos.x > stateManager.gameObject.transform.position.x + 0.5f;
+        bool left = stateManager.mousePos.x < stateManager.gameObject.transform.position.x - 0.5f;
+        bool up = stateManager.mousePos.y > stateManager.gameObject.transform.position.y + 0.5f;
+        bool down = stateManager.mousePos.y < stateManager.gameObject.transform.position.y - 0.5f;
+        if (right)
+        {
+            if (stateManager.spriteRenderer.flipX == true) stateManager.spriteRenderer.flipX = false;
+            previous_side_hori = "D"; // Right
+        }
+        if (left)
+        {
+            if (stateManager.spriteRenderer.flipX == false) stateManager.spriteRenderer.flipX = true;
+            previous_side_hori = "A"; // Leftt
+        }
+
+        if(up || down && (!right && !left)) previous_side_hori = "S";
+
+        if (up) previous_side_ver = "W";
+        else if (down) previous_side_ver = "S";
 
         stateManager.animator.SetFloat("hori", ((previous_side_hori == "D" || previous_side_hori == "A") ? 1f : 0f));
         stateManager.animator.SetFloat("ver", (previous_side_ver == "W" ? 1f : 0f));

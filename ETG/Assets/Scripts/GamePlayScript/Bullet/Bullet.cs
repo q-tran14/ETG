@@ -54,4 +54,12 @@ public class Bullet : MonoBehaviour
         Vector3 position = spawnPoint.position + new Vector3(x, y, 0);
         gameObject.transform.position = position;
     }
+
+    public void OnTriggerEnter2D(Collider2D collider)
+    {
+        if(collider.tag == "Wall")
+        {
+            Destroy();
+        }
+    }
 }

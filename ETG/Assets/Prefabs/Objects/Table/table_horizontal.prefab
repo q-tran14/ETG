@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 4103177446400710118}
   - component: {fileID: 4103177446400710117}
   - component: {fileID: -6715443425525060162}
+  - component: {fileID: 1548847302}
   m_Layer: 0
   m_Name: table_horizontal
-  m_TagString: Untagged
+  m_TagString: Table
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4103177446400710118
 SpriteRenderer:
@@ -116,7 +117,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.1698761}
@@ -130,5 +131,22 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 1.1602478}
+  m_Size: {x: 2, y: 1.15}
   m_EdgeRadius: 0
+--- !u!114 &1548847302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4103177446400710116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7ee9dae4690fcc4b80fb49756d9c0c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dirToFlip: 0
+  hp: 5
+  ani: {fileID: 0}
+  fliped: 0
+  isbreak: 0
