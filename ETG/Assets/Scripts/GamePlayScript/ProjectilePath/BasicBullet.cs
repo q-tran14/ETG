@@ -4,9 +4,10 @@ using System.Collections;
 public class BasicBullet : PathFireBullet
 {  
     [Header("Shooting Settings")]
-    public float timeBetweenWaves = 1f; // Time between each wave
+    public float timeBetweenWaves = 5f; // Time between each wave
     public float timeBetweenShots = 1f; // Time between each shot
     public int bulletAmount = 1;
+    public bool isFire = false;
 
     public override IEnumerator FireProjectile()
     {
@@ -15,20 +16,25 @@ public class BasicBullet : PathFireBullet
             if (target == null) break;
             else
             {
-                for (int k = 0; k < bulletAmount; k++)
+                if (isFire == false)
                 {
-                    
-                    Vector3 direction = (target.position - shootingPoint.transform.position).normalized;
-                    GameObject projectile = ObjectPool.SharedInstance.GetPooledObject(projectilePrefab);
-                    if (projectile != null)
+                    isFire = true;
+                    for (int k = 0; k < bulletAmount; k++)
                     {
-                        projectile.transform.position = shootingPoint.transform.position;
-                        projectile.transform.rotation = owner.transform.rotation;
-                        projectile.SetActive(true);
-                        projectile.GetComponent<Bullet>().SetMoveDirection(direction);
+
+                        Vector3 direction = (target.position - shootingPoint.transform.position).normalized;
+                        GameObject projectile = ObjectPool.SharedInstance.GetPooledObject(projectilePrefab);
+                        if (projectile != null)
+                        {
+                            projectile.transform.position = shootingPoint.transform.position;
+                            projectile.transform.rotation = owner.transform.rotation;
+                            projectile.SetActive(true);
+                            projectile.GetComponent<Bullet>().SetMoveDirection(direction);
+                        }
+                        yield return new WaitForSeconds(timeBetweenShots);
                     }
-                    yield return new WaitForSeconds(timeBetweenShots);
-                    
+
+                    isFire = false;
                 }
                 yield return new WaitForSeconds(timeBetweenWaves);
             }

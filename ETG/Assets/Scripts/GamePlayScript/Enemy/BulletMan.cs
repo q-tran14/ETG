@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 namespace Enemy
 {
@@ -22,18 +23,11 @@ namespace Enemy
         }
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.tag == "Player") path.SetValue(collision.transform, spawnBullet, projectilePrefab, projectileSpeed, typeBullet.ToString(), owner);
+            if (collision.tag == "Player") 
+            { 
+                path.SetValue(collision.transform, spawnBullet, projectilePrefab, projectileSpeed, typeBullet.ToString(), owner);
+                Fire();
 
-        }
-        private void OnTriggerStay2D(Collider2D collision)
-        {
-            if(collision.tag == "Player")
-            {
-                if (path.target != null && timer >= shootingTime) 
-                { 
-                    Fire();
-                    timer = 0;
-                }
             }
         }
 

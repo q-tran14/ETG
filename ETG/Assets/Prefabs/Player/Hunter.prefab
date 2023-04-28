@@ -152,7 +152,7 @@ GameObject:
   - component: {fileID: 7873468424064811046}
   m_Layer: 0
   m_Name: Shadow
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -437,12 +437,14 @@ MonoBehaviour:
   hori: 0
   speed: 8
   rb: {fileID: 0}
-  isInChamber: 1
+  weaponActive: 0
   isDodging: 0
   hasGun: 0
   isOnFloor: 0
   lastPos: {x: 0, y: 0, z: 0}
   mousePos: {x: 0, y: 0, z: 0}
+  allowToMove: 0
+  loading: {fileID: 0}
 --- !u!114 &7873468424193002339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -501,7 +503,7 @@ MonoBehaviour:
   - {x: -0.2380848, y: -1.0004139, z: 0}
   m_ShapePathHash: 1271433925
   m_Mesh: {fileID: 0}
-  m_InstanceId: -1097590
+  m_InstanceId: -1258
 --- !u!114 &7873468424193002364
 MonoBehaviour:
   m_ObjectHideFlags: 0

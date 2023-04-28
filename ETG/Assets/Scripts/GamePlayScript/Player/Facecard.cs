@@ -8,6 +8,10 @@ public class Facecard : MonoBehaviour
     public GameObject panel;
     public Vector2 offset;
     // Start is called before the first frame update
+    private void Start()
+    {
+        panel = UIController.Instance.facecard;
+    }
     private void LateUpdate()
     {
         if (gameObject.GetComponent<PlayerController>().enabled == true)
