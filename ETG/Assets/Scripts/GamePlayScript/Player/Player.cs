@@ -19,34 +19,15 @@ public class Player
     public List<Item> passiveItems;
     public List<Synergy> synergies;
 
-    public Player(string _name)
+    public Player(CharacterData characterData)
     {
-        this.name = _name;
-        this.health = 6;
-        this.shield = 0;
-        this.blank = 2;
-        this.silverKey = 1;
-        this.goldkey = 0;
-        this.shell = 0;
-
-    }
-    public Player(string _name, List<Weapon> _weapons, List<Item> _items)
-    {
-        this.name = _name;
-        this.health = 6;
-        this.shield = 0;
-        this.blank = 2;
-        this.silverKey = 1;
-        this.goldkey = 0;
-        this.shell = 0;
-
-        this.weapons = _weapons;
-        foreach (Item _i in _items)
-        {
-            //Check item type [Active or Passive]
-            this.activeItems.Add(_i);
-            this.passiveItems.Add(_i);
-        }
+       name = characterData.name;
+       health = characterData.HP;
+       shield = characterData.Shield;
+       blank = characterData.Blank;
+       silverKey = characterData.SilverKey;
+        goldkey = characterData.GoldKey;
+        shell = characterData.Coin;
     }
 
     public void addInList(object obj)

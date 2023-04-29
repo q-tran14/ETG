@@ -12,6 +12,7 @@ namespace Enemy{
         public PathFireManager pathFireManager;
         [SerializeField] protected float timer = 0;
         public float shootingTime;
+        public bool canCollision;
         #endregion
 
         [Header("Attributes user for fire")]
@@ -76,7 +77,6 @@ namespace Enemy{
             CompareTargetPositionToAgent();
             SetDir();
             if (target != null) stateManager.SwithcState(new MoveState());
-            timer += Time.deltaTime;
         }
 
         private void SetAgentPos(Vector3 position)

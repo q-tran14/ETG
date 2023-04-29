@@ -441,7 +441,7 @@ MonoBehaviour:
   owner: {fileID: 0}
   weapon: {fileID: 8690651590153632312}
   hand: {fileID: 1723070989}
-  HP: 0
+  HP: 4
   animator: {fileID: 0}
   waitToNextShot: 0
   curVerSide: 

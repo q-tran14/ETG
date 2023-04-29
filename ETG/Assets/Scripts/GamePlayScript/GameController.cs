@@ -65,7 +65,16 @@ public class GameController : MonoBehaviour
                     playerObj.GetComponent<PlayerController>().enabled = true;
                     if (playerObj.name == "Hunter")
                     {
-                        playerData = new Player(playerObj.name);
+                        foreach(CharacterData c in GameObject.Find("CharacterData")?.GetComponent<Characters>().characterData)
+                        {
+                            if(c.name == playerObj.name)
+                            {
+                                playerData = new Player(c);
+                                playerObj.GetComponent<PlayerController>().player = playerData;
+                                break;
+                            }
+                        }
+                        
                     }
                     DontDestroyOnLoad (playerObj);
                     

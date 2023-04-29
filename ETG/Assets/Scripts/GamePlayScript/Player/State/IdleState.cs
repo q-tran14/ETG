@@ -33,4 +33,9 @@ public class IdleState : IState
     {
         setValueAndPlay(Idle.IdleNoHand.ToString());
     }
+
+    void InChamberSetSide()
+    {
+        setValueAndPlay(Idle.IdleWithHand.ToString());
+    }
 }

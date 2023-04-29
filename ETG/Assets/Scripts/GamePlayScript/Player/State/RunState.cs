@@ -12,7 +12,7 @@ public class RunState : IState
     }
     public override void EnterState()
     {
-        if (!base.stateManager.isInChamber)
+        if (base.stateManager.weaponActive == false)
         {
             RunWithNoHand();
         }
@@ -24,7 +24,7 @@ public class RunState : IState
 
     public override void UpdateState()
     {
-        if (!base.stateManager.isInChamber)
+        if (base.stateManager.weaponActive == false)
         {
             RunWithNoHand();
         }
@@ -42,6 +42,8 @@ public class RunState : IState
     }
     void RunWithHand()
     {
-
+        if (base.stateManager.isDodging == true) base.stateManager.SwitchState(new DodgeState());
+        else base.setValueAndPlay(Run.RunWithHand.ToString());
+        if (base.stateManager.ver == 0 && base.stateManager.hori == 0) base.stateManager.SwitchState(new IdleState());
     }
 }
