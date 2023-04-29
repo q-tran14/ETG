@@ -4,15 +4,17 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : Publisher
 {
     public Player player;
     public bool onChange = false;
     public bool isFinishedTutorial = false;
+    public HeartHealthSystem healthSystem;
     // Start is called before the first frame update
     void Start()
     {
-        
+        healthSystem = new HeartHealthSystem(player.health);
+        notify("HP");
     }
 
     // Update is called once per frame
@@ -23,15 +25,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Enemy")
-        {
-            if(collision.GetComponent<Enemy.Enemy>().canCollision == false)
-            {
-                DecreaseHPorShield();
-            }
-        }
-
-        if (collision.tag == "EnemyBullet" || collision.tag == "Hole")
+        if (collision.tag == "EnemyBullet" || collision.tag == "Hole" && GetComponent<StateManager>().loading.activeInHierarchy == false)
         {
             DecreaseHPorShield();
         }
@@ -47,6 +41,10 @@ public class PlayerController : MonoBehaviour
         {
 
         }
+        if (collision.gameObject.tag == "Enemy")
+        {
+            DecreaseHPorShield();
+        }
     }
     public void DecreaseHPorShield()
     {
@@ -55,7 +53,11 @@ public class PlayerController : MonoBehaviour
             player.shield -= 1;
             // Create Shock Wave here
         }
-        else player.health -= 1;
+        else
+        { 
+            healthSystem.Damage();
+            notify("HP");
+        }
     }
 
     public void GetItem(string name)

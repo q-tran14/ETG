@@ -11,33 +11,51 @@ public class ShotgunBullet : PathFireBullet
     public float timeBetweenWaves = 1f;  // Time between waves
     public float waveNum = 1;            // Number of wave bullets shoot
     public int bulletAmount = 5;
+    public bool isFire = false;
+    
+
+    public override void SetSpecialValue2(float timeBetweenShots, float timeBetweenWaves, float waveNum, int bulletAmount)
+    {
+        this.timeBetweenShots = timeBetweenShots;
+        this.timeBetweenWaves = timeBetweenWaves;
+        this.waveNum = waveNum;
+        this.bulletAmount = bulletAmount;
+    }
+
     public override IEnumerator FireProjectile()
     {
         while (true)
         {
-            yield return new WaitForSeconds(timeBetweenWaves);
-            
-            for (int i = 0; i < waveNum; i++)
-            {
-                for (int j = 0; j < bulletAmount; j++)
+            if (target == null) break;
+            else{
+                if (isFire == false)
                 {
-                    Vector3 direction = (target.position - shootingPoint.position).normalized;
-                    float angle = (90f / bulletAmount) * j - (90f / (bulletAmount - 1));
-                    direction = Quaternion.Euler(0, 0, angle) * direction;
-
-                    GameObject projectile = ObjectPool.SharedInstance.GetPooledObject(projectilePrefab);
-                    if (projectile != null)
+                    isFire = true;
+                    for (int i = 0; i < waveNum; i++)
                     {
-                        projectile.transform.position = shootingPoint.position;
-                        projectile.transform.rotation = owner.transform.rotation; 
-                        projectile.SetActive(true);
-                        projectile.GetComponent<Bullet>().SetMoveDirection(direction);
-                    }
-                }
+                        for (int j = 0; j < bulletAmount; j++)
+                        {
+                            Vector3 direction = (target.position - shootingPoint.position).normalized;
+                            float angle = (90f / bulletAmount) * j - (90f / (bulletAmount - 1));
+                            direction = Quaternion.Euler(0, 0, angle) * direction;
 
+                            GameObject projectile = ObjectPool.SharedInstance.GetPooledObject(projectilePrefab);
+                            if (projectile != null)
+                            {
+                                projectile.transform.position = shootingPoint.position;
+                                projectile.transform.rotation = owner.transform.rotation; 
+                                projectile.SetActive(true);
+                                projectile.GetComponent<Bullet>().SetMoveDirection(direction);
+                            }
+                        }
+                        AudioManager.instance.PlayOneShot(FMODEvents.instance.bulletShot, shootingPoint.position);
+                    }
+                    
+                    yield return new WaitForSeconds(timeBetweenWaves);
+                    isFire = false;
+                }
                 yield return new WaitForSeconds(timeBetweenShots);
             }
-
         }
     }
 }

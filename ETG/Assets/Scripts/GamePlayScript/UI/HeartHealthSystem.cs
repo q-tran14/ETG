@@ -2,15 +2,15 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[System.Serializable]
 public class HeartHealthSystem
 {
     public const int MAX_FRAGMENT_AMOUNT = 2;
-    private List<Heart> heartList;
-    public HeartHealthSystem(int heartAmount)
+    [SerializeField]private List<Heart> heartList;
+    public HeartHealthSystem(int amount)
     {
         heartList = new List<Heart>();
-        for (int i = 0; i < heartAmount; i++)
+        for (int i = 0; i < amount; i++)
         {
             Heart heart = new Heart(MAX_FRAGMENT_AMOUNT);
             heartList.Add(heart);
@@ -56,9 +56,10 @@ public class HeartHealthSystem
             }
         }
     }
+    [System.Serializable]
     public class Heart
     {
-        private int fragments;
+        [SerializeField]private int fragments;
         public Heart(int fragments)
         {
             this.fragments = fragments;

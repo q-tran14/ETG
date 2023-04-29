@@ -76,7 +76,8 @@ namespace Enemy{
             WeaponLookAtPLayer();
             CompareTargetPositionToAgent();
             SetDir();
-            if (target != null) stateManager.SwithcState(new MoveState());
+            if (agent.velocity != Vector3.zero) stateManager.SwithcState(new MoveState());
+            else stateManager.SwithcState(new IdleState());
         }
 
         private void SetAgentPos(Vector3 position)
@@ -159,12 +160,6 @@ namespace Enemy{
         }
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collision.collider.tag == "Player")
-            {
-                collision.gameObject.GetComponent<PlayerController>().player.health -= 1;
-                HP -= 1; // Sub equal damage of player weapon
-                if (HP == 0) Die();
-            }
             if (collision.collider.tag == "PlayerBullet")
             {
                 HP -= 1; // Sub equal damage of player weapon

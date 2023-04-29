@@ -10,16 +10,13 @@ public class HeartHealthVisual : MonoBehaviour
     [SerializeField] private Sprite heartEmpty;
 
     private List<HeartImage> heartImageList;
-    private HeartHealthSystem heartHealthSystem;
-    private void Awake()
+    public HeartHealthSystem heartHealthSystem;
+    private void Start()
     {
         heartImageList = new List<HeartImage>();
+        SetHeartHealthSystem(GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().healthSystem);
     }
-    private void Initialize(int heartImageAmount)
-    {
-        HeartHealthSystem heartHealthSystem = new HeartHealthSystem(heartImageAmount);
-        SetHeartHealthSystem(heartHealthSystem);
-    }
+    
 
     public void SetHeartHealthSystem(HeartHealthSystem heartHealthSystem)
     {

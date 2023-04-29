@@ -2,45 +2,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UISub: Subscriber
+public class UISub : MonoBehaviour,Subscriber
 {
-    // Heart Counter - image
-    // Blank Counter - image
-    // Coin Counter - text
-    // Key Counter - text
-    // Weapon List - Scroll list
-    // Passive Item List - Scroll list
-    // Active Item List - Scroll list
-
-    // Boss health bar - 
-
-    public UISub()
+    public GameObject heartCounter;
+    public void OnNotify(string eventName)
     {
-
-    }
-
-    public override void OnNotify(string evenName)
-    {
-        switch (evenName)
+        switch (eventName)
         {
-            case "Health":
+            case "HP":
+                heartCounter.GetComponent<HeartHealthVisual>().HeartHealthSystemHaveChange();
                 break;
             case "Blank":
+                break ;
+            case "Coin":
                 break;
             case "Key":
                 break;
-            case "Coin":
+            case "Shield":
                 break;
-            case "Weapon List":
+            case "WeaponList":
                 break;
-            case "Passive Item List":
-                break;
-            case "Active Item List":
-                break;
-            case "BossHPChange":
-                break;
-            case "BossDie":
+            case "ItemList":
                 break;
         }
+    }
+
+    private void OnEnable()
+    {
+        Publisher.Subcribe(this);
+    }
+
+    private void OnDisable()
+    {
+        Publisher.Unsubcribe(this);
     }
 }

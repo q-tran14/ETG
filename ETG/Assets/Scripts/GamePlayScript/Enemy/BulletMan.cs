@@ -31,7 +31,15 @@ namespace Enemy
 
             }
         }
+        private void OnTriggerStay2D(Collider2D collision)
+        {
+            if (collision.tag == "Player")
+            {
+                path.SetValue(collision.transform, spawnBullet, projectilePrefab, projectileSpeed, typeBullet.ToString(), owner);
+                Fire();
 
+            }
+        }
         private void OnTriggerExit2D(Collider2D collision)
         {
             if (collision.tag == "Player") path.SetValue(null, spawnBullet, projectilePrefab, projectileSpeed, typeBullet.ToString(), owner);
