@@ -188,6 +188,11 @@ public class StateManager : MonoBehaviour
 
     private IEnumerator LoadScene(string name)
     {
+        string levelName = name;
+        if(SceneManager.GetActiveScene().name == "Tutorial" && name == "TheBreach")
+        {
+            levelName = "TutorialToBreach";
+        }
         var scene = SceneManager.LoadSceneAsync(name,LoadSceneMode.Single);
         while (scene.progress < 0.9f)
         {
@@ -195,7 +200,7 @@ public class StateManager : MonoBehaviour
         }
         foreach (LevelData l in LevelManager.levelManager.levelDatas)
         {
-            if (l.name == name)
+            if (l.name == levelName)
             {
                 transform.position = new Vector3(l.posX,l.posY,transform.position.z);
                 break;

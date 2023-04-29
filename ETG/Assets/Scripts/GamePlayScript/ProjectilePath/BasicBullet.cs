@@ -21,7 +21,6 @@ public class BasicBullet : PathFireBullet
                     isFire = true;
                     for (int k = 0; k < bulletAmount; k++)
                     {
-
                         Vector3 direction = (target.position - shootingPoint.transform.position).normalized;
                         GameObject projectile = ObjectPool.SharedInstance.GetPooledObject(projectilePrefab);
                         if (projectile != null)
@@ -31,6 +30,7 @@ public class BasicBullet : PathFireBullet
                             projectile.SetActive(true);
                             projectile.GetComponent<Bullet>().SetMoveDirection(direction);
                         }
+                        //AudioManager.instance.PlayOneShot(FMODEvents.instance.bulletShot, shootingPoint.transform.position);
                         yield return new WaitForSeconds(timeBetweenShots);
                     }
 
