@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 677551961607413924}
   m_Layer: 0
   m_Name: LuxinBullet
-  m_TagString: Untagged
+  m_TagString: PlayerBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

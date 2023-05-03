@@ -13,11 +13,11 @@ GameObject:
   - component: {fileID: 5711611241942664343}
   m_Layer: 0
   m_Name: Phoenix
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5711611241942664337
 Transform:
   m_ObjectHideFlags: 0

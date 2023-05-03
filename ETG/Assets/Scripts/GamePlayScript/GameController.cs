@@ -8,7 +8,9 @@ public class GameController : MonoBehaviour
     public static GameController gController { get; private set; }
     public GameObject playerObj; // Player Game Obj
     public bool isWin = false;
+    [Header("Character Data")]
     public Player playerData; // Data while explore chamber
+    [Header("User Data")]
     public UserData userData; // Data storage per time when meet new weapon, item, enemy, boss
 
     
@@ -32,16 +34,10 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ChoosePlayer();
-
+        if(playerObj == null) ChoosePlayer();
     }
 
     void GameOver() //Handle lose or win game event
-    {
-
-    }
-
-    void onDamageEvent() // Damage Event
     {
 
     }
@@ -62,15 +58,19 @@ public class GameController : MonoBehaviour
                 if (hit.collider.gameObject.tag == "Player")
                 {
                     playerObj = hit.collider.gameObject;
-                    playerObj.GetComponent<PlayerController>().enabled = true;
                     if (playerObj.name == "Hunter")
                     {
-                        foreach(CharacterData c in GameObject.Find("CharacterData")?.GetComponent<Characters>().characterData)
+                        playerObj.GetComponent<PlayerController>().enabled = true;
+                        foreach (CharacterData c in GameObject.Find("CharacterData")?.GetComponent<Characters>().characterData)
                         {
                             if(c.name == playerObj.name)
                             {
                                 playerData = new Player(c);
                                 playerObj.GetComponent<PlayerController>().player = playerData;
+                                foreach (GameObject w in c.weapons)
+                                {
+                                    playerObj.GetComponent<PlayerController>().SetWeapon(w);
+                                }
                                 break;
                             }
                         }

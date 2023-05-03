@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class Invoker
 {
-    private ICommand[] commands;
-    public void SetCommand(int pos, ICommand command)
+    private List<ICommand> commands = new List<ICommand>();
+    public void SetCommand(ICommand command)
     {
-        if(commands[pos] != null)
-        {
-            commands[pos] = command;
-        }
+        commands.Add(command);
     }
 
     public void OnPress(int pos)

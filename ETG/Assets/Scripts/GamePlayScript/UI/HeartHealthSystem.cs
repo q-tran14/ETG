@@ -40,8 +40,9 @@ public class HeartHealthSystem
 
     public void Heal(int value) // 1 - 2
     {
-        for (int i = 0; i < heartList.Count - 1; i++)
+        for (int i = 0; i < heartList.Count; i++)
         {
+            
             Heart heart = heartList[i];
             int missingPiece = MAX_FRAGMENT_AMOUNT - heart.GetFragmentAmount();
             if (value > missingPiece)

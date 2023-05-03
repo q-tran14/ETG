@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class UserData
+[CreateAssetMenu(fileName = "UserData",menuName = "Scriptable Object/UserData",order = 4)]
+[System.Serializable]
+public class UserData: ScriptableObject
 {
     //Custom config data
 
     //User's store data
+    public int hegemony;
     [SerializeField] private List<Weapon> weaponCollection;
     [SerializeField] private List<Item> itemCollection;
     [SerializeField] private List<Enemy.Enemy> enemyCollection;

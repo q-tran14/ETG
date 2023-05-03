@@ -358,7 +358,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9031118007765545804}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -432,8 +432,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  timer: 0
-  shootingTime: 10
   canCollision: 0
   spawnBullet: {fileID: 1728835167}
   projectilePrefab: {fileID: 8706610897507911240, guid: ecfe0cbaa335849428072063f00db6b6, type: 3}
@@ -444,7 +442,6 @@ MonoBehaviour:
   hand: {fileID: 1723070989}
   HP: 4
   animator: {fileID: 0}
-  waitToNextShot: 0
   curVerSide: 
   curHoriSide: 
   targetPos: {x: 0, y: 0, z: 0}

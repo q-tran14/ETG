@@ -7,9 +7,11 @@ using UnityEngine.XR;
 using UnityEngine.SceneManagement;
 using System.Threading.Tasks;
 using FMOD.Studio;
+using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 
 public class StateManager : MonoBehaviour
 {
+    public static StateManager SInstance { get; private set; }
     IState currentState;
     public IState previousState;
 
@@ -23,34 +25,41 @@ public class StateManager : MonoBehaviour
     public Rigidbody2D rb;
     public bool weaponActive = false;
     public bool isDodging = false;
-    public bool hasGun = false;
+    public bool isInChamber = false;
     public bool isOnFloor;
     public Vector3 lastPos;
     public Vector3 mousePos;
     public bool allowToMove = false;
     public GameObject loading;
     private EventInstance playerFootsteps;
+    private void Awake()
+    {
+        if (SInstance != null && SInstance != this) DestroyImmediate(gameObject);
+        else SInstance = this;
+    }
     // Start is called before the first frame update
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
-
-        // Initialization Context in State pattern
-        currentState = new SelectState();
-        previousState = currentState;
-        currentState.SetSide("S", "S");
-        currentState.SetManager(this);
-        currentState.EnterState();
+        if (weaponActive == true)
+        {
+            currentState = new SelectState();
+            previousState = currentState;
+            currentState.SetSide("S", "S");
+            currentState.SetManager(this);
+            currentState.EnterState();
+        }
+        else
+        {
+            // Initialization Context in State pattern
+            currentState = new SelectState();
+            previousState = currentState;
+            currentState.SetSide("S", "S");
+            currentState.SetManager(this);
+            currentState.EnterState();
+        }
         playerFootsteps = AudioManager.instance.CreateInstance(FMODEvents.instance.playerFootsteps);
-        //if (weaponActive == true)
-        //{
-        //    currentState = new SelectState();
-        //    previousState = currentState;
-        //    currentState.SetSide("S", "S");
-        //    currentState.SetManager(this);
-        //    currentState.EnterState();
-        //}
     }
 
     // Update is called once per frame
@@ -58,6 +67,8 @@ public class StateManager : MonoBehaviour
     {
         if (controller.enabled == true)
         {
+            if(SceneManager.GetActiveScene().name != "TheBreach") isInChamber = true;
+            else isInChamber = false;
             if (allowToMove == true)
             {
                 ver = Input.GetAxis("Vertical");
@@ -65,29 +76,27 @@ public class StateManager : MonoBehaviour
                 rb.velocity = new Vector2(hori, ver) * speed;
                 UpdateSound();
             }
-            else
-            {
-                rb.velocity = new Vector2(0, 0) * speed;
-            }
-            if (Input.GetMouseButtonDown(1) && isDodging == false) isDodging = true;
+            else rb.velocity = new Vector2(0, 0) * speed;
+
+            if (Input.GetMouseButtonDown(1) && isDodging == false && rb.velocity != Vector2.zero) isDodging = true;
 
             currentState.UpdateState();
             if (isOnFloor) lastPos = transform.position;
-            if (weaponActive) 
+
+            if (weaponActive && isInChamber) 
             {
                 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 hand.SetActive(true);
-                GetMousePos(mousePos); 
+                GetMousePos(mousePos);
             }
+            else if(!weaponActive && isInChamber) hand.SetActive(false);
+            if (controller.healthSystem.GetHeartList().Count == 0) SwitchState(new DeathState());
         }
     }
 
     public void SwitchState(IState newState)
     {
-        if (previousState != currentState)
-        {
-            previousState = currentState;
-        }
+        if (previousState != currentState) previousState = currentState;
         currentState = newState;
         currentState.SetSide(previousState.previous_side_hori, previousState.previous_side_ver);
         currentState.SetManager(this);
@@ -98,20 +107,11 @@ public class StateManager : MonoBehaviour
     {
         mousePos.z = -10;
         WeaponLookAtPLayer(mousePos);
-        if (mousePos.x > transform.position.x + 0.5f)
-        {
-            ChangeSideHand(1);
-        }
+        if (mousePos.x > transform.position.x + 0.5f) ChangeSideHand(1);
 
-        if (mousePos.x < transform.position.x - 0.5f)
-        {
-            ChangeSideHand(0);
-        }
+        if (mousePos.x < transform.position.x - 0.5f) ChangeSideHand(0);
 
-        if (mousePos.x <= transform.position.x + 0.5f && mousePos.x >= transform.position.x - 0.5f) 
-        {
-            ChangeSideHand(1);
-        }
+        if (mousePos.x <= transform.position.x + 0.5f && mousePos.x >= transform.position.x - 0.5f) ChangeSideHand(1);
     }
 
     private void WeaponLookAtPLayer(Vector3 mousePos)
@@ -142,34 +142,33 @@ public class StateManager : MonoBehaviour
     #region Collision
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Hole" && isDodging == false)
+        if (collision.tag == "Hole" && isDodging == false && GetComponent<InputManager>().isBlanking == false)
         {
             isOnFloor = false;
             allowToMove = false;
             SwitchState(new PitfallState());
         }
-        if (collision.tag == "Floor")
-        {
-            isOnFloor = true;
-
-        }
+        if (collision.tag == "Floor") isOnFloor = true;
+        if (collision.gameObject.tag == "Item") SwitchState(new GetItemState());
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.tag == "Hole" && isDodging == false)
+        if (collision.tag == "Hole" && isDodging == false && GetComponent<InputManager>().isBlanking == false)
         {
             allowToMove = false;
             SwitchState(new PitfallState());
         }
+        
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Door")
         {
             SwitchState(new RunBackDoorWayState());
-            if (collision.gameObject.name == "Chamber1") weaponActive = true;
             StartCoroutine("LoadScene",collision.gameObject.name);
+            if (collision.gameObject.name == "Chamber1") weaponActive = true;
         }
+        
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
@@ -186,18 +185,17 @@ public class StateManager : MonoBehaviour
     }
     #endregion
 
+    #region Another function
     private IEnumerator LoadScene(string name)
     {
         string levelName = name;
-        if(SceneManager.GetActiveScene().name == "Tutorial" && name == "TheBreach")
-        {
-            levelName = "TutorialToBreach";
-        }
+
+        if(SceneManager.GetActiveScene().name == "Tutorial" && name == "TheBreach") levelName = "TutorialToBreach";
+
         var scene = SceneManager.LoadSceneAsync(name,LoadSceneMode.Single);
-        while (scene.progress < 0.9f)
-        {
-            loading.SetActive(true);
-        }
+
+        while (scene.progress < 0.9f) loading.SetActive(true);
+        
         foreach (LevelData l in LevelManager.levelManager.levelDatas)
         {
             if (l.name == levelName)
@@ -206,13 +204,15 @@ public class StateManager : MonoBehaviour
                 break;
             }
         }
-        yield return new WaitForSeconds(7f);
+
+        yield return new WaitForSeconds(2.5f);
         yield return new WaitForEndOfFrame();
         loading.SetActive(false);
+        SwitchState(new IdleState());
     }
     private void UpdateSound()
     {
-        if (rb.velocity != Vector2.zero && allowToMove == true)
+        if (loading.activeSelf == false && rb.velocity != Vector2.zero && allowToMove == true)
         {
             PLAYBACK_STATE pLAYBACK_STATE;      // Variable to store the playback state of the sound event
             playerFootsteps.getPlaybackState(out pLAYBACK_STATE);    // Get the playback state of the sound event
@@ -220,10 +220,8 @@ public class StateManager : MonoBehaviour
             {
                 playerFootsteps.start();
             }
-            else
-            {
-                playerFootsteps.stop(STOP_MODE.ALLOWFADEOUT);       // If the sound event is already playing, stop it with fadeout
-            }
+            else playerFootsteps.stop(STOP_MODE.ALLOWFADEOUT);       // If the sound event is already playing, stop it with fadeout
         }
     }
+    #endregion
 }

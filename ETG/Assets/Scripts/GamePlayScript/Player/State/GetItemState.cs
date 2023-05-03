@@ -6,11 +6,11 @@ public class GetItemState : IState
 {
     public override void EnterState()
     {
-        throw new System.NotImplementedException();
+        stateManager.animator.Play("GetItem");
     }
 
     public override void UpdateState()
     {
-        throw new System.NotImplementedException();
+        stateManager.SwitchState(new IdleState());
     }
 }

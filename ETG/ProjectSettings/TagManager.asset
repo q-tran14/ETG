@@ -12,6 +12,12 @@ TagManager:
   - HiddenGround
   - Block
   - Choose
+  - Item
+  - Wall
+  - Weapon
+  - PlayerBullet
+  - EnemyBullet
+  - Enemy
   layers:
   - Default
   - TransparentFX

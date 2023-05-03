@@ -5,7 +5,8 @@ using UnityEngine;
 namespace Enemy
 {
     public abstract class IState
-    {protected StateManager manager;
+    {
+        protected StateManager manager;
         public void SetManager(StateManager _manager)
         {
             manager = _manager;
