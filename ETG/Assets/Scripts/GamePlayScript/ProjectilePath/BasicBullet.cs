@@ -5,7 +5,7 @@ public class BasicBullet : PathFireBullet
 {  
     [Header("Shooting Settings")]
     public float timeBetweenWaves = 5f; // Time between each wave
-    public float timeBetweenShots = 1f; // Time between each shot
+    public float timeBetweenShots = 5f; // Time between each shot
     public int bulletAmount = 1;
     public bool isFire = false;
 

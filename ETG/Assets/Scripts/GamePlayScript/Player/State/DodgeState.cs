@@ -6,10 +6,7 @@ public class DodgeState : IState
 {
     public override void EnterState()
     {
-        if(base.stateManager.hand.activeSelf == true && base.stateManager.weaponActive == true)
-        {
-            base.stateManager.hand.SetActive(false);
-        }
+        stateManager.weaponActive = false;
         base.setValueAndPlay("Dodge");
         base.stateManager.isOnFloor = false;
     }
@@ -19,10 +16,8 @@ public class DodgeState : IState
         if (base.stateManager.animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
         {
             base.stateManager.isDodging = false;
-            if (base.stateManager.hand.activeSelf == false && base.stateManager.weaponActive == true)
-            {
-                base.stateManager.hand.SetActive(true);
-            }
+            stateManager.weaponActive = true;
+            base.stateManager.isOnFloor = true;
             base.stateManager.SwitchState(new RunState());
         }
     }

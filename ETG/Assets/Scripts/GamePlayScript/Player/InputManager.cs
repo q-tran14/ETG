@@ -2,76 +2,93 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InputManager : MonoBehaviour
+public class InputManager : Publisher
 {
-    //Command
-    ICommand blank;
-    ICommand charge;
-    ICommand interact;
-    ICommand openMenu;
-    ICommand openItemList;
-    ICommand openWeaponList;
-    ICommand openMinimap;
-    ICommand openAmmonomicon;
-
+    public bool isBlanking = false;
     //Receiver
-
+    public GameObject weaponsUI;
+    public GameObject effect;
+    public GameObject slowMotion;
+    public PlayerController playController;
     //Invoker
-    Invoker invoker;
+    public Invoker invoker;
+    public GameObject currentWeapon;
     private void Start()
     {
+        playController = GetComponent<PlayerController>();
         invoker = new Invoker();
 
-        blank = new Blank();
-        charge = new Charge();
-        interact = new Interact();
-        openMenu = new OpenMenu();
-        openItemList = new OpenItemList();
-        openWeaponList = new OpenWeaponList();
-        openMinimap = new OpenMinimap();
-        openAmmonomicon = new OpenAmmonomicon();
+        ICommand blank = new Blank(effect);
+        ICommand openWeaponList = new OpenWeaponList(slowMotion);
+        ICommand closeWeaponList = new CloseWeaponList(slowMotion);
+        ICommand changeWeapon = new ChangeWeapon(playController, weaponsUI);
+
+        ICommand charge = new Charge();
+        ICommand interact = new Interact();
+        ICommand openMenu = new OpenMenu();
+        ICommand openMinimap = new OpenMinimap();
+        ICommand openAmmonomicon = new OpenAmmonomicon();
+
+        invoker.SetCommand(blank); // - 0
+        invoker.SetCommand(charge); // - 1
+        invoker.SetCommand(interact); // - 2
+        invoker.SetCommand(openMenu); // - 3
+        invoker.SetCommand(openWeaponList); // - 4
+        invoker.SetCommand(closeWeaponList); // - 5
+        invoker.SetCommand(openMinimap); // - 6
+        invoker.SetCommand(openAmmonomicon); // - 7
+        invoker.SetCommand(changeWeapon); // - 8
     }
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q) && isBlanking == false && GetComponent<PlayerController>().player.blank > 0)
         {
-            // Blank
+            isBlanking = true;
+            invoker.OnPress(0);
+            GetComponent<PlayerController>().player.blank -= 1;
+            notify("Blank", "Sub", 0);
         }
-
-        if (Input.GetKeyUp(KeyCode.E))
+        if ((Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.RightControl))) invoker.OnPress(4);
+        if ((Input.GetKeyUp(KeyCode.LeftControl) || Input.GetKeyUp(KeyCode.RightControl))) invoker.OnPress(5);
+        if (Input.GetAxis("ChangeWI") != 0f) invoker.OnPress(8);
+        
+        if (Input.GetMouseButtonDown(1))
+        {
+            //playController.player.weapons[playController.currentWeapon];
+        }
+        if (Input.GetKeyDown(KeyCode.E))
         {
             // Interact
         }
-        
-        if (Input.GetKeyUp(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             // Charge
         }
-
-        if (Input.GetKeyUp(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.I))
         {
             // Open ammonomico
         }
-
-        if (Input.GetKeyUp(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Tab))
         {
             // Open minimap
         }
-
-        if (Input.GetKeyUp(KeyCode.LeftShift) || Input.GetKeyUp(KeyCode.RightShift))
-        {
-            // Open item list
-        }
-
-        if (Input.GetKeyUp(KeyCode.LeftControl) || Input.GetKeyUp(KeyCode.RightControl))
-        {
-            // Open weapon list
-        }
-
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             // Open menu
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (isBlanking == true)
+        {
+            if (effect.GetComponent<Effect>().animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1) 
+            { 
+                isBlanking = false;
+                effect.GetComponent<Effect>().SetMotion(EffectName.None);
+                effect.GetComponent<Effect>().PlayAni();
+            }
         }
     }
 }

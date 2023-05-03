@@ -10,8 +10,8 @@ namespace Enemy{
         [Tooltip("Auto set target")]
         public GameObject target;
         public PathFireManager pathFireManager;
-        [SerializeField] protected float timer = 0;
-        public float shootingTime;
+        //[SerializeField] protected float timer = 0;
+        //public float shootingTime;
         public bool canCollision;
         #endregion
 
@@ -37,7 +37,6 @@ namespace Enemy{
 
         public int HP;
         public Animator animator;
-        public float waitToNextShot;
         public StateManager stateManager;
         protected enum side
         {
@@ -70,7 +69,6 @@ namespace Enemy{
         // Update is called once per frame
         void Update()
         {
-            
             targetPos = new Vector3(target.transform.position.x, target.transform.position.y, transform.position.z);
             SetAgentPos(targetPos);
             WeaponLookAtPLayer();

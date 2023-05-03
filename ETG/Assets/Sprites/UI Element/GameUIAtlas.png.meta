@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -281,10 +281,10 @@ TextureImporter:
       name: boss_health_bar
       rect:
         serializedVersion: 2
-        x: 2034
+        x: 2035
         y: 0
-        width: 12
-        height: 187
+        width: 11
+        height: 184
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -855,8 +855,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      level_config_off: 203169077
       silver_key: 984887557
+      GameUIAtlas_2: -1281637038
       GameUIAtlas_1: -8163592
       boss_introintro: 1406779898
       srcoll_ui: -652306157
@@ -882,13 +882,14 @@ TextureImporter:
       health_point_0: 530616582
       special_shield: 527575778
       back: 1408984838
+      GameUIAtlas_4: 376002658
       Talk_UIUI: 1080343571
       boss_health_bar1: -924054851
       cursor4cursor4: 565360464
       level_config_on: 1446274549
       UI: -353886553
       special_key1: -1585673525
-      GameUIAtlas_2: -1281637038
+      level_config_off: 203169077
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

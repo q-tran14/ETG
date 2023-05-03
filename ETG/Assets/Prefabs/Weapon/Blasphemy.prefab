@@ -13,11 +13,11 @@ GameObject:
   - component: {fileID: 1575271021509659729}
   m_Layer: 0
   m_Name: Blasphemy
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1575271021509659743
 Transform:
   m_ObjectHideFlags: 0

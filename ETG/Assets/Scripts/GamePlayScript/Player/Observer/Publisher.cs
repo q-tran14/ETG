@@ -6,20 +6,20 @@ public abstract class Publisher : MonoBehaviour
 {
     private static List<Subscriber> subscribers = new List<Subscriber>();
 
-    public static void Subcribe(Subscriber s)
+    public static void Subscribe(Subscriber s)
     {
         subscribers.Add(s);
     }
-    public static void Unsubcribe(Subscriber s)
+    public static void Unsubscribe(Subscriber s)
     {
         subscribers.Remove(s);
     }
-    public void notify(string detailChange)
+    public void notify(string detailChange, string addOrSub, int amount)
     {
         //foreach (Subscriber s in subscribers)
         //{
         //    s.OnNotify(detailChange);
         //}
-        subscribers.ForEach((s) => { s.OnNotify(detailChange); });
+        subscribers.ForEach((s) => { s.OnNotify(detailChange, addOrSub, amount); });
     }
 }

@@ -14,10 +14,10 @@ public class Player
     public int silverKey;
     public int goldkey;
     public int shell;
-    public List<Weapon> weapons;
-    public List<Item> activeItems;
-    public List<Item> passiveItems;
-    public List<Synergy> synergies;
+    public List<GameObject> weapons;
+    public List<GameObject> activeItems;
+    public List<GameObject> passiveItems;
+    //public List<Synergy> synergies;
 
     public Player(CharacterData characterData)
     {
@@ -26,41 +26,46 @@ public class Player
        shield = characterData.Shield;
        blank = characterData.Blank;
        silverKey = characterData.SilverKey;
-        goldkey = characterData.GoldKey;
-        shell = characterData.Coin;
+       goldkey = characterData.GoldKey;
+       shell = characterData.Coin;
+        weapons = new List<GameObject>();
+        activeItems = new List<GameObject>();
+        passiveItems = new List<GameObject>();
     }
 
-    public void addInList(object obj)
+    public void addInList(GameObject obj)
     {
-        switch (obj.GetType().Name)
+        switch (obj.tag)
         {
             case "Item":
-                var tmp = (Item)obj;
-                if (!activeItems.Contains(tmp))
+                if (!activeItems.Contains(obj) || activeItems.Count == 0)
                 {
-                    activeItems.Add(tmp);
+                    activeItems.Add(obj);
                 }
-                if (!passiveItems.Contains(tmp))
+                if (!passiveItems.Contains(obj) || passiveItems.Count == 0)
                 {
-                    passiveItems.Add(tmp);
+                    passiveItems.Add(obj);
                 }
                 break;
 
             case "Weapon":
-                var tmp1 = (Weapon)obj;
-                if (!weapons.Contains(tmp1))
+                if (weapons.Count == 0)
                 {
-                    weapons.Add(tmp1);
+                    weapons.Add(obj);
+                }
+                else if (weapons.Count > 0 && !weapons.Contains(obj))
+                {
+                    weapons.Add(obj);
                 }
                 break;
 
-            case "Synergy":
-                var tmp2 = (Synergy)obj;
-                if (!synergies.Contains(tmp2))
-                {
-                    synergies.Add(tmp2);
-                }
-                break;
+            //case "Synergy":
+            //    var tmp2 = (Synergy)obj;
+            //    if (!synergies.Contains(tmp2))
+            //    {
+            //        synergies.Add(tmp2);
+            //    }
+            //    break;
         }
     }
 }

@@ -8,12 +8,12 @@ namespace Enemy {
         private IState state;
         public Animator animator;
 
-
         public StateManager(IState _state, Animator ani)
         {
             state = _state;
             animator = ani;
             state.SetManager(this);
+            
         }
         // Start is called before the first frame update
         public void SwithcState(IState _state)

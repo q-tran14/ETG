@@ -19,7 +19,7 @@ MonoBehaviour:
   GoldKey: 0
   Coin: 0
   weapons:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 767004752343991959, guid: 0f5a06aa35c67834d9142cfd68589160, type: 3}
+  - {fileID: 542583034073563718, guid: f38ce70e2f1065d48bbea75f82cfd88d, type: 3}
   items:
   - {fileID: 0}

@@ -21,6 +21,7 @@ namespace Enemy
         {
             pathFireManager.SetFirePath(path);
             pathFireManager.Fire(this);
+            
         }
         private void OnTriggerEnter2D(Collider2D collision)
         {

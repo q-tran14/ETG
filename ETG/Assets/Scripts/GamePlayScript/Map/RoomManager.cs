@@ -1,3 +1,4 @@
+using Enemy;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -67,7 +68,8 @@ public class RoomManager : MonoBehaviour
 
                 // Instantiate enemy at random position and set target = player
                 GameObject enemy = enemies[e];
-                enemy.GetComponent<Enemy.Enemy>().target = player;
+                if(enemy.GetComponent<Enemy.Enemy>() != null) enemy.GetComponent<Enemy.Enemy>().target = player;
+                //if (enemy.GetComponent<Enemy.Boss>() != null) enemy.GetComponent<Enemy.Enemy>().target = player;
                 Instantiate(enemy, new Vector3(ranPos.x, ranPos.y, ranPos.z), Quaternion.identity);
 
                 enemiesCurrent += 1;
@@ -85,6 +87,7 @@ public class RoomManager : MonoBehaviour
         }
     }
 
+    
     void RoomCleared()
     {
         if (enemiesCurrent == 0 && spawnRound == 0)

@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -27,26 +27,31 @@ public class UIController : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        //if(loading.activeInHierarchy == false)
-        //{
-        string sceneName = SceneManager.GetActiveScene().name;
-        switch (sceneName)
+        if (loading.activeSelf == true)
         {
-            case "TheBreach":
-            case "Shopping":
-                hegemony.SetActive(true);
-                inChamber.SetActive(false);
-                break;
-            case "Start":
-                hegemony.SetActive(false);
-                inChamber.SetActive(false);
-                break;
-            default:
-                hegemony.SetActive(false);
-                inChamber.SetActive(true);
-                break;
-
+            if(hegemony.activeSelf == true) hegemony.SetActive(false);
+            if(inChamber.activeSelf == true) inChamber.SetActive(false);
         }
-        //}
+        else if (loading.activeInHierarchy == false)
+        {
+            string sceneName = SceneManager.GetActiveScene().name;
+            switch (sceneName)
+            {
+                case "TheBreach":
+                case "Shopping":
+                    hegemony.SetActive(true);
+                    inChamber.SetActive(false);
+                    break;
+                case "Start":
+                    hegemony.SetActive(false);
+                    inChamber.SetActive(false);
+                    break;
+                default:
+                    hegemony.SetActive(false);
+                    inChamber.SetActive(true);
+                    break;
+
+            }
+        }
     }
 }

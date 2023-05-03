@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 using static UnityEngine.GraphicsBuffer;
 
 public class CameraFollowPLayer : MonoBehaviour
 {
+    public static CameraFollowPLayer CInstance { get; private set; }
     public GameController controller;
     Vector3 target, mousePos, refVel, shakeOffset;
 
@@ -18,6 +20,11 @@ public class CameraFollowPLayer : MonoBehaviour
     Vector3 shakeVector;
 
     bool shaking;
+    private void Awake()
+    {
+        if (CInstance != null && CInstance != this) Destroy(GameObject.FindGameObjectsWithTag("MainCamera")[1]);
+        else CInstance = this;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -27,14 +34,8 @@ public class CameraFollowPLayer : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        if(controller.playerObj != null)
-        {
-            FollowMouse();
-        }
-        else
-        {
-            transform.position = new Vector3(5f,-3f,-10f);
-        }
+        if(controller.playerObj != null) FollowMouse();
+        else transform.position = new Vector3(5f, -3f, -10f);
     }
     void FollowMouse()
     {
@@ -50,10 +51,7 @@ public class CameraFollowPLayer : MonoBehaviour
         ret *= 2;
         ret -= Vector2.one;
         float max = 0.9f;
-        if (Mathf.Abs(ret.x) > max || Mathf.Abs(ret.y) > max)
-        {
-            ret = ret.normalized;
-        }
+        if (Mathf.Abs(ret.x) > max || Mathf.Abs(ret.y) > max) ret = ret.normalized;
         return ret;
     }
 

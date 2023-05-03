@@ -52,4 +52,5 @@ public class PathFireManager
     {
         e.StartCoroutine(pathFire.FireProjectile());
     }
+
 }

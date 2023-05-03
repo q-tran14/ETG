@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class OpenWeaponList : ICommand
 {
+    public GameObject slowMotionObj;
+    public OpenWeaponList(GameObject _slowMotionObj)
+    {
+        slowMotionObj = _slowMotionObj;
+    }
     public void Execute()
     {
-        throw new System.NotImplementedException();
+        slowMotionObj.GetComponent<SlowMotion>().TurnToSlowMotion();
     }
 }
