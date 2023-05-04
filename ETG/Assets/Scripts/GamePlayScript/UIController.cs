@@ -7,6 +7,7 @@ public class UIController : MonoBehaviour
 {
     public static UIController Instance { get; private set; }
     public Canvas canvas;
+    public GameObject EventSystem;
     public GameObject hegemony;
     public GameObject facecard;
     public GameObject loading;
@@ -19,10 +20,12 @@ public class UIController : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
             DontDestroyOnLoad(canvas);
+            DontDestroyOnLoad(EventSystem);
         }
         else
         {
             Destroy(gameObject);
+            Destroy(EventSystem); 
         }
     }
     private void FixedUpdate()

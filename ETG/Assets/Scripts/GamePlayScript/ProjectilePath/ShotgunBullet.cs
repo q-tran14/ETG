@@ -11,7 +11,6 @@ public class ShotgunBullet : PathFireBullet
     public float timeBetweenWaves = 1f;  // Time between waves
     public float waveNum = 1;            // Number of wave bullets shoot
     public int bulletAmount = 5;
-    public bool isFire = false;
     
 
     public override void SetSpecialValue2(float timeBetweenShots, float timeBetweenWaves, float waveNum, int bulletAmount)

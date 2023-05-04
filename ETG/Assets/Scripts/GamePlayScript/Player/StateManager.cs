@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 using System.Threading.Tasks;
 using FMOD.Studio;
 using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
+using Enemy;
 
 public class StateManager : MonoBehaviour
 {
@@ -32,6 +33,7 @@ public class StateManager : MonoBehaviour
     public bool allowToMove = false;
     public GameObject loading;
     private EventInstance playerFootsteps;
+    public bool die = false;
     private void Awake()
     {
         if (SInstance != null && SInstance != this) DestroyImmediate(gameObject);
@@ -59,7 +61,7 @@ public class StateManager : MonoBehaviour
             currentState.SetManager(this);
             currentState.EnterState();
         }
-        playerFootsteps = AudioManager.instance.CreateInstance(FMODEvents.instance.playerFootsteps);
+        //playerFootsteps = AudioManager.instance.CreateInstance(FMODEvents.instance.playerFootsteps);
     }
 
     // Update is called once per frame
@@ -90,7 +92,16 @@ public class StateManager : MonoBehaviour
                 GetMousePos(mousePos);
             }
             else if(!weaponActive && isInChamber) hand.SetActive(false);
-            if (controller.healthSystem.GetHeartList().Count == 0) SwitchState(new DeathState());
+            if (controller.healthSystem.Die() && die == false) 
+            {
+                die = true;
+                hand.SetActive(false);
+                SwitchState(new DeathState());
+            }
+            if (animator.GetCurrentAnimatorStateInfo(0).IsName("DeathShot") && animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
+            {
+                GetComponent<InputManager>().menu.SetActive(true);
+            }
         }
     }
 

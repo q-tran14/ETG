@@ -85,15 +85,16 @@ public class PlayerController : Publisher
 
     public void SetWeaponForState()
     {
-        foreach (GameObject w in player.weapons)
+        for (int i = 0; i < player.weapons.Count; i++)
         {
+            GameObject w = player.weapons[i];
             if (w.activeInHierarchy == true)
             {
+                currentWeapon = i;
                 GetComponent<StateManager>().weapon = w;
                 return;
             }
         }
         GetComponent<StateManager>().weapon = player.weapons[0];
-
     }
 }

@@ -11,6 +11,7 @@ using Random = UnityEngine.Random;
 public class RoomManager : MonoBehaviour
 {
     public GameObject player;
+    public List<GameObject> enemyInRoom;
     public bool isClear = false;
     public int spawnRoundMax = 2,spawnRoundMin = 1, spawnRound;
     
@@ -22,7 +23,6 @@ public class RoomManager : MonoBehaviour
     public GameObject[] doors;
     // ChamberManager to get chamber enemy list
     public GameObject[] enemies;
-    public int enemiesCurrent;
 
     // Room Area
     public List<Vector3Int> trackedCells;
@@ -43,14 +43,18 @@ public class RoomManager : MonoBehaviour
         {
             numEnemyPerTimeSpawnMin = 1; //5
         }
-        spawnRound = Random.Range(spawnRoundMin, spawnRoundMax + 1);
+        spawnRound = 1;//Random.Range(spawnRoundMin, spawnRoundMax + 1);
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(isClear == true) this.gameObject.SetActive(false);
-        //RoomCleared();
+        for(int i = 0; i < enemyInRoom.Count; i++)
+        {
+            if (enemyInRoom[i] == null) enemyInRoom.RemoveAt(i);
+        }
+        if(player != null) RoomCleared();
+        if (isClear == true) gameObject.GetComponent<RoomManager>().enabled = false;
     }
 
     void Spawn() // Initialization number spawn round for each room, number enemy for each spawn round, spawn position for enemies when enter the chamber
@@ -69,10 +73,9 @@ public class RoomManager : MonoBehaviour
                 // Instantiate enemy at random position and set target = player
                 GameObject enemy = enemies[e];
                 if(enemy.GetComponent<Enemy.Enemy>() != null) enemy.GetComponent<Enemy.Enemy>().target = player;
-                //if (enemy.GetComponent<Enemy.Boss>() != null) enemy.GetComponent<Enemy.Enemy>().target = player;
-                Instantiate(enemy, new Vector3(ranPos.x, ranPos.y, ranPos.z), Quaternion.identity);
-
-                enemiesCurrent += 1;
+                if (enemy.GetComponent<Enemy.Boss>() != null) enemy.GetComponent<Enemy.Boss>().target = player;
+                GameObject tmp = Instantiate(enemy, new Vector3(ranPos.x, ranPos.y, ranPos.z), Quaternion.identity);
+                enemyInRoom.Add(tmp);
             }
             spawnRound -= 1;
         }
@@ -81,21 +84,34 @@ public class RoomManager : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            //Close door
-            player = collision.gameObject;
-            Spawn();
+            if(collision.name == "Hunter")
+            {
+                foreach (GameObject d in doors)
+                {
+                    d.GetComponent<Door>().roomClear = false;
+                    d.GetComponent<Door>().Close();
+                }
+                player = collision.gameObject;
+                Spawn();
+            }
         }
     }
-
-    
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        gameObject.GetComponent<Collider2D>().enabled = false;
+    }
     void RoomCleared()
     {
-        if (enemiesCurrent == 0 && spawnRound == 0)
+        if (enemyInRoom.Count == 0 && spawnRound == 0)
         {
-            //door open
+            foreach (GameObject d in doors)
+            {
+                d.GetComponent<Door>().roomClear = true;
+                d.GetComponent<Door>().Open();
+            }
             isClear = true;
         }
-        else if (enemiesCurrent == 0 && spawnRound != 0)
+        else if (enemyInRoom.Count == 0 && spawnRound != 0)
         {
             Spawn();
         }

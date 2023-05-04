@@ -844,6 +844,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Menu
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 272
+        width: 465
+        height: 274
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61b19d721a5d77043b011500fbbcbe6c
+      internalID: 733763903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -870,6 +891,7 @@ TextureImporter:
       confirm: -1937223967
       boss_health_bar: 766144902
       cursor6: -1721888558
+      Menu: 376002658
       GameUIAtlas_0: 74293582
       boss_health_bar2: -1446412635
       shield_1: -1612357386
@@ -882,7 +904,6 @@ TextureImporter:
       health_point_0: 530616582
       special_shield: 527575778
       back: 1408984838
-      GameUIAtlas_4: 376002658
       Talk_UIUI: 1080343571
       boss_health_bar1: -924054851
       cursor4cursor4: 565360464

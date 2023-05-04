@@ -14,6 +14,7 @@ public abstract class PathFireBullet
 
     public GameObject owner;
     public Bullet bullet;           // get from projectilePrefab 
+    public bool isFire;
 
     public void SetValue(Transform target, Transform shootingPoint, GameObject projectilePrefab, float projectileSpeed, string typeBullet, GameObject owner)
     {
@@ -29,6 +30,7 @@ public abstract class PathFireBullet
     }
     public virtual void SetSpecialValue(float timeBetweenWaves, float timeBetweenShots, int bulletAmount, float bulletAngleStep) { } // variable 
     public virtual void SetSpecialValue2(float timeBetweenShots, float timeBetweenWaves, float waveNum, int bulletAmount) { }   //Shotgun kin
+    public virtual void SetSpecialValue(float timeBetweenShots, float timeBetweenWaves, float waveNum, int bulletAmount, float startAngle, float engAngle) { }
     public abstract IEnumerator FireProjectile();
 
 }

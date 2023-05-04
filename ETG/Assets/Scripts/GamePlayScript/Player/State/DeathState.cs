@@ -6,11 +6,14 @@ public class DeathState : IState
 {
     public override void EnterState()
     {
-        throw new System.NotImplementedException();
+        stateManager.animator.Play("Death");
     }
 
     public override void UpdateState()
     {
-        throw new System.NotImplementedException();
+        if (stateManager.animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
+        {
+            stateManager.animator.Play("DeathShot");
+        }
     }
 }
