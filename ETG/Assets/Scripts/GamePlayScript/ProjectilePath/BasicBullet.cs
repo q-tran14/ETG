@@ -7,7 +7,6 @@ public class BasicBullet : PathFireBullet
     public float timeBetweenWaves = 5f; // Time between each wave
     public float timeBetweenShots = 5f; // Time between each shot
     public int bulletAmount = 1;
-    public bool isFire = false;
 
     public override IEnumerator FireProjectile()
     {

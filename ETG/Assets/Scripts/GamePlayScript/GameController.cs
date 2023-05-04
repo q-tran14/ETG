@@ -61,6 +61,7 @@ public class GameController : MonoBehaviour
                     if (playerObj.name == "Hunter")
                     {
                         playerObj.GetComponent<PlayerController>().enabled = true;
+                        playerObj.GetComponent<StateManager>().enabled = true;
                         foreach (CharacterData c in GameObject.Find("CharacterData")?.GetComponent<Characters>().characterData)
                         {
                             if(c.name == playerObj.name)
@@ -74,10 +75,8 @@ public class GameController : MonoBehaviour
                                 break;
                             }
                         }
-                        
+                        DontDestroyOnLoad(playerObj);
                     }
-                    DontDestroyOnLoad (playerObj);
-                    
                 }
             }
         }

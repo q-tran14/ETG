@@ -16,6 +16,15 @@ public class HeartHealthSystem
             heartList.Add(heart);
         }
     }
+
+    public bool Die()
+    {
+        foreach (Heart heart in heartList)
+        {
+            if (heart.GetFragmentAmount() > 0) return false;
+        }
+        return true;
+    }
     public void expandHeart()
     {
         Heart heart = new Heart(MAX_FRAGMENT_AMOUNT);

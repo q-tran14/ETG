@@ -35,7 +35,7 @@ namespace Enemy{
         public GameObject weapon;
         public GameObject hand;
 
-        public int HP;
+        public float HP;
         public Animator animator;
         public StateManager stateManager;
         protected enum side
@@ -76,6 +76,7 @@ namespace Enemy{
             SetDir();
             if (agent.velocity != Vector3.zero) stateManager.SwithcState(new MoveState());
             else stateManager.SwithcState(new IdleState());
+            if (HP <= 0) Die();
         }
 
         private void SetAgentPos(Vector3 position)
@@ -158,11 +159,6 @@ namespace Enemy{
         }
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collision.collider.tag == "PlayerBullet")
-            {
-                HP -= 1; // Sub equal damage of player weapon
-                if (HP == 0) Die();
-            }
             if (collision.collider.tag == "Table")
             {
 

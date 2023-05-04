@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7873468422115430328
 Transform:
   m_ObjectHideFlags: 0
@@ -248,7 +248,7 @@ Transform:
   - {fileID: 7873468424064811047}
   - {fileID: 2120854431944785710}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7873468424193002341
 SpriteRenderer:
@@ -388,7 +388,8 @@ MonoBehaviour:
     heartList: []
   damaged: 0
   timer: 0
-  hand: {fileID: 0}
+  hand: {fileID: 7873468422115430329}
+  currentWeapon: 0
 --- !u!114 &7873468424193002365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -396,7 +397,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7873468424193002347}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c753c031e8de75b47bd8452834f2ed78, type: 3}
   m_Name: 
@@ -476,7 +477,7 @@ MonoBehaviour:
   - {x: -0.2380848, y: -1.0004139, z: 0}
   m_ShapePathHash: 1271433925
   m_Mesh: {fileID: 0}
-  m_InstanceId: 261448
+  m_InstanceId: -489442
 --- !u!114 &7873468424193002364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -504,10 +505,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBlanking: 0
+  weaponsUI: {fileID: 0}
   effect: {fileID: 2120854431944785705}
   slowMotion: {fileID: 0}
+  playController: {fileID: 0}
   currentWeapon: {fileID: 0}
-  previousWeapon: {fileID: 0}
+  menu: {fileID: 0}
 --- !u!1001 &7873468422207038898
 PrefabInstance:
   m_ObjectHideFlags: 0

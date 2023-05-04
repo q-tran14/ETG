@@ -10,9 +10,11 @@ public class InputManager : Publisher
     public GameObject effect;
     public GameObject slowMotion;
     public PlayerController playController;
+    public GameObject currentWeapon;
+    public GameObject menu;
     //Invoker
     public Invoker invoker;
-    public GameObject currentWeapon;
+    
     private void Start()
     {
         playController = GetComponent<PlayerController>();
@@ -25,19 +27,17 @@ public class InputManager : Publisher
 
         ICommand charge = new Charge();
         ICommand interact = new Interact();
-        ICommand openMenu = new OpenMenu();
         ICommand openMinimap = new OpenMinimap();
         ICommand openAmmonomicon = new OpenAmmonomicon();
 
         invoker.SetCommand(blank); // - 0
         invoker.SetCommand(charge); // - 1
         invoker.SetCommand(interact); // - 2
-        invoker.SetCommand(openMenu); // - 3
-        invoker.SetCommand(openWeaponList); // - 4
-        invoker.SetCommand(closeWeaponList); // - 5
-        invoker.SetCommand(openMinimap); // - 6
-        invoker.SetCommand(openAmmonomicon); // - 7
-        invoker.SetCommand(changeWeapon); // - 8
+        invoker.SetCommand(openWeaponList); // - 3
+        invoker.SetCommand(closeWeaponList); // - 4
+        invoker.SetCommand(openMinimap); // - 5
+        invoker.SetCommand(openAmmonomicon); // - 6
+        invoker.SetCommand(changeWeapon); // - 7
     }
     // Update is called once per frame
     void Update()
@@ -49,14 +49,16 @@ public class InputManager : Publisher
             GetComponent<PlayerController>().player.blank -= 1;
             notify("Blank", "Sub", 0);
         }
-        if ((Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.RightControl))) invoker.OnPress(4);
-        if ((Input.GetKeyUp(KeyCode.LeftControl) || Input.GetKeyUp(KeyCode.RightControl))) invoker.OnPress(5);
-        if (Input.GetAxis("ChangeWI") != 0f) invoker.OnPress(8);
+        if ((Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.RightControl))) invoker.OnPress(3);
+        if ((Input.GetKeyUp(KeyCode.LeftControl) || Input.GetKeyUp(KeyCode.RightControl))) invoker.OnPress(4);
+        if (Input.GetAxis("ChangeWI") != 0f) invoker.OnPress(7);
         
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(0) && GetComponent<StateManager>().isInChamber == true)
         {
-            //playController.player.weapons[playController.currentWeapon];
+            playController.player.weapons[playController.currentWeapon].GetComponent<Weapon>().ShootingBullet();
         }
+
+        #region Another Action
         if (Input.GetKeyDown(KeyCode.E))
         {
             // Interact
@@ -73,9 +75,12 @@ public class InputManager : Publisher
         {
             // Open minimap
         }
+        #endregion
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            // Open menu
+            if(menu.activeInHierarchy == false) menu.SetActive(true);
+            else menu.SetActive(false);
         }
     }
 

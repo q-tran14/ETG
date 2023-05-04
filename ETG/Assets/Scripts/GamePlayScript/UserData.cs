@@ -12,7 +12,7 @@ public class UserData: ScriptableObject
     [SerializeField] private List<Weapon> weaponCollection;
     [SerializeField] private List<Item> itemCollection;
     [SerializeField] private List<Enemy.Enemy> enemyCollection;
-    [SerializeField] private List<Boss> bossCollection;
+    [SerializeField] private List<Enemy.Boss> bossCollection;
     // Start is called before the first frame update
     public void addInList(object obj)
     {
@@ -43,7 +43,7 @@ public class UserData: ScriptableObject
                 break;
 
             case "Boss":
-                var tmp4 = (Boss)obj;
+                var tmp4 = (Enemy.Boss)obj;
                 if (!bossCollection.Contains(tmp4))
                 {
                     bossCollection.Add(tmp4);
