@@ -280,7 +280,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -309,8 +309,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  timer: 0
-  shootingTime: 0
   canCollision: 0
   spawnBullet: {fileID: 3043755018289582457}
   projectilePrefab: {fileID: 8706610897507911240, guid: ecfe0cbaa335849428072063f00db6b6, type: 3}
@@ -319,9 +317,8 @@ MonoBehaviour:
   owner: {fileID: 6902346446391698689}
   weapon: {fileID: 3355193276668867308}
   hand: {fileID: 1355525277190021487}
-  HP: 0
+  HP: 15
   animator: {fileID: 0}
-  waitToNextShot: 0
   curVerSide: 
   curHoriSide: 
   targetPos: {x: 0, y: 0, z: 0}
