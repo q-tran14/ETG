@@ -19,7 +19,7 @@ namespace Enemy
         private void Start()
         {
             path = new ShotgunBullet();
-            path.SetSpecialValue2(timeBetweenShots, timeBetweenWaves, waveNum, bulletAmount);
+            path.SetSpecialValue(timeBetweenShots, timeBetweenWaves, waveNum, bulletAmount);
             
         }
         public override void Fire()

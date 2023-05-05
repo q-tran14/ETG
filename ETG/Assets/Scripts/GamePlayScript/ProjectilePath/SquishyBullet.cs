@@ -39,7 +39,7 @@ public class SquishyBullet :  PathFireBullet
                             projectile.SetActive(true);
                             projectile.GetComponent<Bullet>().SetMoveDirection(direction.normalized);
                         }
-                        //AudioManager.instance.PlayOneShot(FMODEvents.instance.bulletShot, shootingPoint.position);
+                        AudioManager.instance.PlayOneShot(FMODEvents.instance.bulletShot, shootingPoint.position);
                         yield return new WaitForSeconds(timeBetweenShots);
                     }
                     yield return new WaitForSeconds(timeBetweenWaves);

@@ -5,16 +5,27 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    public List<GameObject> dontDestroyOnLoadGameObj;
+    public List<GameObject> currentInScene;
+    public List<GameObject> prefabDontDestroyOnLoadObj;
+     
     public void OnEnable()
     {
         Time.timeScale = 0;
     }
     public void Restart()
     {
-        foreach (GameObject go in dontDestroyOnLoadGameObj) DestroyImmediate(go);
+        foreach (GameObject go in currentInScene)
+        {
+            GameObject b = Instantiate(go);
+            prefabDontDestroyOnLoadObj.Add(b);
+            currentInScene.Remove(go);
+            DestroyImmediate(go);
+        }
+        foreach (GameObject go in prefabDontDestroyOnLoadObj)
+        {
+            currentInScene.Add(go);
+        }
         SceneManager.LoadScene(1);
-        foreach (GameObject go in dontDestroyOnLoadGameObj) Instantiate(go);
     }
     public void Continue()
     {

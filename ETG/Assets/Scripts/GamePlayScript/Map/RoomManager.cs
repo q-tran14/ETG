@@ -61,13 +61,15 @@ public class RoomManager : MonoBehaviour
     {
         if (trackedCells.Count > 0)
         {
-            int numEnemyPerTimeSpawn = 1;
-            if (numEnemyPerTimeSpawnMax != 1) numEnemyPerTimeSpawn = Random.Range(numEnemyPerTimeSpawnMin, numEnemyPerTimeSpawnMax); //A Number of enemies spawn in each round
+            //int numEnemyPerTimeSpawn = 1;
+            //if (numEnemyPerTimeSpawnMax != 1) 
+            int numEnemyPerTimeSpawn = Random.Range(numEnemyPerTimeSpawnMin, numEnemyPerTimeSpawnMax); //A Number of enemies spawn in each round
             for (int i = 0; i < numEnemyPerTimeSpawn; i++)
             {
                 // Random spawn position and enemy
                 int ran = Random.Range(0, trackedCells.Count - 1);
                 int e = Random.Range(0, enemies.Length - 1);
+                
                 Vector3Int ranPos = trackedCells.ToArray()[ran];
 
                 // Instantiate enemy at random position and set target = player
