@@ -16,14 +16,7 @@ public class Menu : MonoBehaviour
     {
         foreach (GameObject go in currentInScene)
         {
-            GameObject b = Instantiate(go);
-            prefabDontDestroyOnLoadObj.Add(b);
-            currentInScene.Remove(go);
-            DestroyImmediate(go);
-        }
-        foreach (GameObject go in prefabDontDestroyOnLoadObj)
-        {
-            currentInScene.Add(go);
+            Destroy(go);
         }
         SceneManager.LoadScene(1);
     }

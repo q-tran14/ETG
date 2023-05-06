@@ -50,7 +50,7 @@ public class SelectWeapon : MonoBehaviour
             weapon.transform.SetParent(transform);
             weapon.transform.localPosition = Vector3.zero;
             weapon.GetComponent<RectTransform>().anchoredPosition = new Vector2(0,0);
-            weapon.GetComponent<RectTransform>().sizeDelta = new Vector2(120, 60);
+            weapon.GetComponent<RectTransform>().sizeDelta = new Vector2(80, 40);
             Image weaponImage = weapon.GetComponent<Image>();
             weaponImage.sprite = w.GetComponent<SpriteRenderer>().sprite;
             weapon.SetActive(false);

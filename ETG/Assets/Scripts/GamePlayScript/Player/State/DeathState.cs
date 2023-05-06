@@ -11,9 +11,11 @@ public class DeathState : IState
 
     public override void UpdateState()
     {
-        if (stateManager.animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
+        if(stateManager.animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
         {
-            stateManager.animator.Play("DeathShot");
+            stateManager.clock.SetActive(true);
+            if (stateManager.clock.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).normalizedTime > 0.9f) stateManager.animator.Play("DeathShot");
         }
+        
     }
 }

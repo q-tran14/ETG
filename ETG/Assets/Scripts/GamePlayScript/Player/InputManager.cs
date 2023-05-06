@@ -42,45 +42,48 @@ public class InputManager : Publisher
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q) && isBlanking == false && GetComponent<PlayerController>().player.blank > 0)
+        if (GetComponent<StateManager>().die == false && GetComponent<StateManager>().loading.activeInHierarchy == false)
         {
-            isBlanking = true;
-            invoker.OnPress(0);
-            GetComponent<PlayerController>().player.blank -= 1;
-            notify("Blank", "Sub", 0);
-        }
-        if ((Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.RightControl))) invoker.OnPress(3);
-        if ((Input.GetKeyUp(KeyCode.LeftControl) || Input.GetKeyUp(KeyCode.RightControl))) invoker.OnPress(4);
-        if (Input.GetAxis("ChangeWI") != 0f) invoker.OnPress(7);
-        
-        if (Input.GetMouseButtonDown(0) && GetComponent<StateManager>().isInChamber == true)
-        {
-            playController.player.weapons[playController.currentWeapon].GetComponent<Weapon>().ShootingBullet();
-        }
+            if (Input.GetKeyDown(KeyCode.Q) && isBlanking == false && GetComponent<PlayerController>().player.blank > 0)
+            {
+                isBlanking = true;
+                invoker.OnPress(0);
+                GetComponent<PlayerController>().player.blank -= 1;
+                notify("Blank", "Sub", 0);
+            }
+            if ((Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.RightControl))) invoker.OnPress(3);
+            if ((Input.GetKeyUp(KeyCode.LeftControl) || Input.GetKeyUp(KeyCode.RightControl))) invoker.OnPress(4);
+            if (Input.GetAxis("ChangeWI") != 0f) invoker.OnPress(7);
 
-        #region Another Action
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            // Interact
-        }
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            // Charge
-        }
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            // Open ammonomico
-        }
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            // Open minimap
-        }
-        #endregion
+            if (Input.GetMouseButtonDown(0) && GetComponent<StateManager>().isInChamber == true)
+            {
+                playController.player.weapons[playController.currentWeapon].GetComponent<Weapon>().ShootingBullet();
+            }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if(menu.activeInHierarchy == false) menu.SetActive(true);
-            else menu.SetActive(false);
+            #region Another Action
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                // Interact
+            }
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                // Charge
+            }
+            if (Input.GetKeyDown(KeyCode.I))
+            {
+                // Open ammonomico
+            }
+            if (Input.GetKeyDown(KeyCode.Tab))
+            {
+                // Open minimap
+            }
+            #endregion
+
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                if (menu.activeInHierarchy == false) menu.SetActive(true);
+                else menu.SetActive(false);
+            }
         }
     }
 
