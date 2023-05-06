@@ -51,7 +51,7 @@ public class RadialBullet : PathFireBullet
                         }
                         angle += angleStep;
                     }
-                    //AudioManager.instance.PlayOneShot(FMODEvents.instance.bulletShot, shootingPoint.position);
+                    AudioManager.instance.PlayOneShot(FMODEvents.instance.bulletShot, shootingPoint.position);
                     if (w != waveNum - 1) // Don't wait after the last wave
                     {
                         yield return new WaitForSeconds(timeBetweenShots);

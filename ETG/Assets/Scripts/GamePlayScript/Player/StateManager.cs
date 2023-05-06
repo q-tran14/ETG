@@ -21,6 +21,7 @@ public class StateManager : MonoBehaviour
 
     public PlayerController controller;
     public Animator animator;
+    public GameObject clock;
     public SpriteRenderer spriteRenderer;
     public float ver, hori, speed = 5f;
     public Rigidbody2D rb;
@@ -32,6 +33,7 @@ public class StateManager : MonoBehaviour
     public Vector3 mousePos;
     public bool allowToMove = false;
     public GameObject loading;
+    public GameObject deathUI;
     private EventInstance playerFootsteps;
     public bool die = false;
     private void Awake()
@@ -44,24 +46,13 @@ public class StateManager : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
-        if (weaponActive == true)
-        {
-            currentState = new SelectState();
-            previousState = currentState;
-            currentState.SetSide("S", "S");
-            currentState.SetManager(this);
-            currentState.EnterState();
-        }
-        else
-        {
-            // Initialization Context in State pattern
-            currentState = new SelectState();
-            previousState = currentState;
-            currentState.SetSide("S", "S");
-            currentState.SetManager(this);
-            currentState.EnterState();
-        }
-        //playerFootsteps = AudioManager.instance.CreateInstance(FMODEvents.instance.playerFootsteps);
+        // Initialization Context in State pattern
+        currentState = new SelectState();
+        previousState = currentState;
+        currentState.SetSide("S", "S");
+        currentState.SetManager(this);
+        currentState.EnterState();
+        playerFootsteps = AudioManager.instance.CreateInstance(FMODEvents.instance.playerFootsteps);
     }
 
     // Update is called once per frame
@@ -76,6 +67,7 @@ public class StateManager : MonoBehaviour
                 ver = Input.GetAxis("Vertical");
                 hori = Input.GetAxis("Horizontal");
                 rb.velocity = new Vector2(hori, ver) * speed;
+
                 UpdateSound();
             }
             else rb.velocity = new Vector2(0, 0) * speed;
@@ -95,12 +87,12 @@ public class StateManager : MonoBehaviour
             if (controller.healthSystem.Die() && die == false) 
             {
                 die = true;
-                hand.SetActive(false);
+                weaponActive = false;
                 SwitchState(new DeathState());
             }
             if (animator.GetCurrentAnimatorStateInfo(0).IsName("DeathShot") && animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
             {
-                GetComponent<InputManager>().menu.SetActive(true);
+                //GetComponent<InputManager>().menu.SetActive(true);
             }
         }
     }
@@ -223,7 +215,7 @@ public class StateManager : MonoBehaviour
     }
     private void UpdateSound()
     {
-        if (loading.activeSelf == false && rb.velocity != Vector2.zero && allowToMove == true)
+        if (loading.activeInHierarchy == false && rb.velocity != Vector2.zero && allowToMove == true)
         {
             PLAYBACK_STATE pLAYBACK_STATE;      // Variable to store the playback state of the sound event
             playerFootsteps.getPlaybackState(out pLAYBACK_STATE);    // Get the playback state of the sound event

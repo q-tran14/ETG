@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 8285535028523950867}
   m_Layer: 0
   m_Name: BlueShotKin
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -169,7 +169,7 @@ Transform:
   - {fileID: 1293417665}
   - {fileID: 4166698027971008661}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7268922059781398779
 SpriteRenderer:
@@ -274,7 +274,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -325,8 +325,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  timer: 0
-  shootingTime: 10
   canCollision: 0
   spawnBullet: {fileID: 8367024604038392078}
   projectilePrefab: {fileID: 8706610897507911240, guid: ecfe0cbaa335849428072063f00db6b6, type: 3}
@@ -335,15 +333,14 @@ MonoBehaviour:
   owner: {fileID: 7294220645738181228}
   weapon: {fileID: 3869687198726577848}
   hand: {fileID: 8343561705110730541}
-  HP: 0
+  HP: 15
   animator: {fileID: 0}
-  waitToNextShot: 0
   curVerSide: 
   curHoriSide: 
   targetPos: {x: 0, y: 0, z: 0}
   agent: {fileID: 0}
-  timeBetweenShots: 0.1
-  timeBetweenWaves: 3
+  timeBetweenShots: 1
+  timeBetweenWaves: 4
   waveNum: 1
   bulletAmount: 5
 --- !u!1 &8343561705110730541

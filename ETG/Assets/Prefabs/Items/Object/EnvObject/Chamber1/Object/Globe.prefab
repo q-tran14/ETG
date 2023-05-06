@@ -139,7 +139,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -172,3 +172,10 @@ MonoBehaviour:
   - {fileID: 4701259807504617238, guid: a571ae56e5031494bbd54a467164184f, type: 3}
   - {fileID: 2766663004202637278, guid: f7ddc519e08505944900dadc9d76b98e, type: 3}
   spawnForce: 5
+  soundBreak:
+    Guid:
+      Data1: 347439069
+      Data2: 1217246662
+      Data3: -580271483
+      Data4: -966574901
+    Path: event:/Object/GlobeBreaked

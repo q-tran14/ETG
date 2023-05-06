@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class SpawnFragments : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class SpawnFragments : MonoBehaviour
     [Header("Spawn Settings")]
     private Animator animator;
     private Collider2D colliderObject;
+    [SerializeField] private EventReference soundBreak;
     private void Start() {
         animator = GetComponent<Animator>();
         colliderObject = GetComponent<Collider2D>();
@@ -19,7 +21,8 @@ public class SpawnFragments : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             animator.SetTrigger("Trigger");   
-            spawnAction();    
+            spawnAction();
+            AudioManager.instance.PlayOneShot(soundBreak, this.transform.position);
             colliderObject.enabled = false;
         } 
     }

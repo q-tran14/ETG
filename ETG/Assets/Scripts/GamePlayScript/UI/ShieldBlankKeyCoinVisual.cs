@@ -31,11 +31,11 @@ public class ShieldBlankKeyCoinVisual : MonoBehaviour
     }
     void SetUpBlank() // Set up when UI active
     {
-        Vector2 blankAnchoredPos = new Vector2(50, -140);
+        Vector2 blankAnchoredPos = new Vector2(50, -120);
         for (int i = 0; i < GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().player.blank; i++)
         {
             CreateBlankImage(blankAnchoredPos);
-            blankAnchoredPos += new Vector2(90, 0);
+            blankAnchoredPos += new Vector2(60, 0);
         }
 
     }
@@ -76,11 +76,11 @@ public class ShieldBlankKeyCoinVisual : MonoBehaviour
     {
         if (blanks.Count != 0)
         {
-            CreateBlankImage(blanks[blanks.Count - 1].GetComponent<RectTransform>().anchoredPosition + new Vector2(90, 0));
+            CreateBlankImage(blanks[blanks.Count - 1].GetComponent<RectTransform>().anchoredPosition + new Vector2(60, 0));
         }
         else
         {
-            CreateBlankImage(new Vector2(50, -140));
+            CreateBlankImage(new Vector2(50, -120));
         }
         
     }
@@ -103,11 +103,11 @@ public class ShieldBlankKeyCoinVisual : MonoBehaviour
         if (shields.Count == 0)
         {
             Vector2 lastHeart = heartCounter.heartImageList[heartCounter.heartImageList.Count - 1].GetHeartImage().GetComponent<RectTransform>().anchoredPosition;
-            CreateShieldImage(lastHeart + new Vector2(90, 0));
+            CreateShieldImage(lastHeart + new Vector2(60, 0));
         }
         else
         {
-            CreateShieldImage(shields[shields.Count-1].GetComponent<RectTransform>().anchoredPosition + new Vector2(90, 0));
+            CreateShieldImage(shields[shields.Count-1].GetComponent<RectTransform>().anchoredPosition + new Vector2(60, 0));
         }
     }
     #endregion
@@ -120,7 +120,7 @@ public class ShieldBlankKeyCoinVisual : MonoBehaviour
         _blank.transform.localPosition = Vector3.zero;
 
         _blank.GetComponent<RectTransform>().anchoredPosition = anchoredPosition;
-        _blank.GetComponent<RectTransform>().sizeDelta = new Vector2(80, 80);
+        _blank.GetComponent<RectTransform>().sizeDelta = new Vector2(50, 50);
 
         Image blankUI = _blank.GetComponent<Image>();
         blankUI.sprite = blank;
@@ -135,7 +135,7 @@ public class ShieldBlankKeyCoinVisual : MonoBehaviour
         _shield.transform.localPosition = Vector3.zero;
 
         _shield.GetComponent<RectTransform>().anchoredPosition = anchoredPosition;
-        _shield.GetComponent<RectTransform>().sizeDelta = new Vector2(80, 80);
+        _shield.GetComponent<RectTransform>().sizeDelta = new Vector2(50, 50);
 
         Image shieldUI = _shield.GetComponent<Image>();
         shieldUI.sprite = this.shield;

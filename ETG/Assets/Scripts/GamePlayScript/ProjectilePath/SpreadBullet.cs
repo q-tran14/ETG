@@ -44,7 +44,7 @@ public class SpreadBullet : PathFireBullet
                             projectile.transform.rotation = owner.transform.rotation;
                             projectile.SetActive(true);
                             projectile.GetComponent<Bullet>().SetMoveDirection(direction);
-                        } //AudioManager.instance.PlayOneShot(FMODEvents.instance.bulletShot, shootingPoint.position);
+                        } AudioManager.instance.PlayOneShot(FMODEvents.instance.bulletShot, shootingPoint.position);
                         yield return new WaitForSeconds(timeBetweenShots);
                     }
                     yield return new WaitForSeconds(timeBetweenWaves);

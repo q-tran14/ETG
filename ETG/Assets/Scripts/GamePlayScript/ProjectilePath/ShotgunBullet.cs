@@ -13,7 +13,7 @@ public class ShotgunBullet : PathFireBullet
     public int bulletAmount = 5;
     
 
-    public override void SetSpecialValue2(float timeBetweenShots, float timeBetweenWaves, float waveNum, int bulletAmount)
+    public override void SetSpecialValue(float timeBetweenShots, float timeBetweenWaves, float waveNum, int bulletAmount)
     {
         this.timeBetweenShots = timeBetweenShots;
         this.timeBetweenWaves = timeBetweenWaves;

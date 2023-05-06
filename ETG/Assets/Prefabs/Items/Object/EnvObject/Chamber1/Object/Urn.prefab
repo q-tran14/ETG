@@ -163,3 +163,10 @@ MonoBehaviour:
   - {fileID: 7748741087442736270, guid: 5c245fca444a21642b9be30c27a3c63e, type: 3}
   - {fileID: 2255688882318183536, guid: a0f740f344277f74a985818ac9d0a63c, type: 3}
   spawnForce: 5
+  soundBreak:
+    Guid:
+      Data1: 382774593
+      Data2: 1108006466
+      Data3: 576661144
+      Data4: 2083077037
+    Path: event:/Object/UrnBreaked
