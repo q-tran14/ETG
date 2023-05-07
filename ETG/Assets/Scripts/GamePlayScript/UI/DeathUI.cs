@@ -8,11 +8,9 @@ using UnityEngine.UI;
 
 public class DeathUI : MonoBehaviour
 {
-    public bool win;
     public Image capturScreen;
     public TMP_Text titleTxt,defeatTxt, timeTxt,moneyTxt,killTxt,reasonTxt,detailOfReasonTxt;
     public GameObject completed;
-    public Sprite forWin;
 
     public void SetForWin(string timer, int money, int kill, List<GameObject> weapon)
     {

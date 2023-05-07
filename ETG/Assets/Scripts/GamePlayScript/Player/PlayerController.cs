@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
 public class PlayerController : Publisher
 {
+    public GameObject conditionToWin;
     public Player player;
     public bool onChange = false;
     public bool isFinishedTutorial = false;
@@ -52,9 +54,6 @@ public class PlayerController : Publisher
             damaged = false;
             timer = 0;
         }
-    }
-    private void LateUpdate()
-    {
         if (GetComponent<StateManager>().die == true && win != true && stop == false)
         {
             if (screenShotFinish == true) deathUI.GetComponent<DeathUI>().SetForLose(GetTime(), player.shell, kills, "???", player.weapons, screenShot);
@@ -76,10 +75,6 @@ public class PlayerController : Publisher
     }
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Weapon")
-        {
-            notify("WeaponList","",0);
-        }
         if (collision.gameObject.tag == "Enemy")
         {
             DecreaseShieldOrHeart();
@@ -103,13 +98,27 @@ public class PlayerController : Publisher
         }
     }
 
-    public void AddWeapon(GameObject weapon)
+    public void AddWeapon(GameObject weapon, bool more)
     {
-        GameObject w = Instantiate(weapon,Vector3.zero,Quaternion.identity) as GameObject;
-        w.transform.SetParent(hand.transform);
-        w.transform.localPosition = new Vector3(0.43f, 0.11f, 0);
-        player.addInList(w);
-        w.SetActive(false);
+        weapon.GetComponent<Rigidbody2D>().simulated = false;
+        weapon.GetComponent<Collider2D>().enabled = false;
+        if (more == false)
+        {
+            GameObject w = Instantiate(weapon, Vector3.zero, Quaternion.identity) as GameObject;
+            w.transform.SetParent(hand.transform);
+            w.transform.localPosition = new Vector3(0.43f, 0.125f, 0);
+            player.addInList(w);
+            w.SetActive(false);
+        }
+        if (more == true)
+        {
+            weapon.transform.SetParent(hand.transform);
+            weapon.transform.localPosition = new Vector3(0.43f, 0.125f, 0);
+            player.addInList(weapon);
+            weapon.SetActive(false);
+            if (weapon.name == conditionToWin.name) win = true;
+            notify("WeaponList", "", 0);
+        }
     }
 
     public void SetWeaponForState()

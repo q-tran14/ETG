@@ -59,5 +59,17 @@ public class SelectWeapon : MonoBehaviour
         weapons[selectedWeapon].SetActive(true);
     }
 
+    public void AddWeapon()
+    {
+        GameObject weapon = new GameObject(playerController.player.weapons[playerController.player.weapons.Count - 1].name, typeof(Image));
+        weapon.transform.SetParent(transform);
+        weapon.transform.localPosition = Vector3.zero;
+        weapon.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, 0);
+        weapon.GetComponent<RectTransform>().sizeDelta = new Vector2(80, 40);
+        Image weaponImage = weapon.GetComponent<Image>();
+        weaponImage.sprite = playerController.player.weapons[playerController.player.weapons.Count - 1].GetComponent<SpriteRenderer>().sprite;
+        weapon.SetActive(false);
+        weapons.Add(weapon);
+    }
     
 }

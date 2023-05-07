@@ -70,7 +70,7 @@ public class GameController : MonoBehaviour
                                 playerObj.GetComponent<PlayerController>().player = playerData;
                                 foreach (GameObject w in c.weapons)
                                 {
-                                    playerObj.GetComponent<PlayerController>().AddWeapon(w);
+                                    playerObj.GetComponent<PlayerController>().AddWeapon(w,false);
                                 }
                                 break;
                             }

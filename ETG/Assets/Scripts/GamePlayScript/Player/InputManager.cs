@@ -63,10 +63,6 @@ public class InputManager : Publisher
             #endregion
 
             #region Another Action
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                // Interact
-            }
             if (Input.GetKeyDown(KeyCode.R))
             {
                 // Charge
@@ -98,6 +94,16 @@ public class InputManager : Publisher
                 isBlanking = false;
                 effect.GetComponent<Effect>().SetMotion(EffectName.None);
                 effect.GetComponent<Effect>().PlayAni();
+            }
+        }
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Weapon"))
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                GetComponent<PlayerController>().AddWeapon(collision.gameObject, true);
             }
         }
     }

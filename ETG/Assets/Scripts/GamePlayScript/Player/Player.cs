@@ -59,13 +59,6 @@ public class Player
                 }
                 break;
 
-            //case "Synergy":
-            //    var tmp2 = (Synergy)obj;
-            //    if (!synergies.Contains(tmp2))
-            //    {
-            //        synergies.Add(tmp2);
-            //    }
-            //    break;
         }
     }
 }

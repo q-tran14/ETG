@@ -29,7 +29,7 @@ public class UISub : MonoBehaviour,Subscriber
                 counter.GetComponent<ShieldBlankKeyCoinVisual>().ChangeShield(addOrSub);
                 break;
             case "WeaponList":
-                weaponList.GetComponent<SelectWeapon>().GetCurrentWeapons();
+                weaponList.GetComponent<SelectWeapon>().AddWeapon();
                 break;
             default:
                 counter.GetComponent<HeartHealthVisual>().HeartHealthSystemHaveChange();
