@@ -31,6 +31,7 @@ public abstract class PathFireBullet
     public virtual void SetSpecialValue(float timeBetweenWaves, float timeBetweenShots, int bulletAmount, float bulletAngleStep) { } // variable 
     public virtual void SetSpecialValue(float timeBetweenShots, float timeBetweenWaves, float waveNum, int bulletAmount) { }   //Shotgun kin
     public virtual void SetSpecialValue(float timeBetweenShots, float timeBetweenWaves, float waveNum, int bulletAmount, float startAngle, float engAngle) { }
+    public virtual void SetSpecialValue(float timeBetweenWaves, float timeBetweenShots, int bulletAmount, float shootAmplitude, float shootFrequency) { } // boss Lich
     public abstract IEnumerator FireProjectile();
 
 }

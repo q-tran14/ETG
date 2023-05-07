@@ -73,11 +73,9 @@ public class RoomManager : MonoBehaviour
             if (player != null) 
             {
                 if (enemyInRoom.Count < 3 && spawnRound != 0)
-                {
-                    timer += Time.deltaTime;
-                    Debug.Log(timer);
-                }
-                RoomCleared(); 
+                timer += Time.deltaTime;
+                Debug.Log(timer);
+                RoomCleared();
             }
             if (isClear == true) gameObject.GetComponent<RoomManager>().enabled = false;
         }
@@ -96,7 +94,6 @@ public class RoomManager : MonoBehaviour
                 foreach (GameObject n in neighborRoom) n.SetActive(true);
             }
         }
-        
     }
 
     void Spawn() // Initialization number spawn round for each room, number enemy for each spawn round, spawn position for enemies when enter the chamber
