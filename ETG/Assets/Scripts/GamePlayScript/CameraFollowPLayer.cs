@@ -13,7 +13,7 @@ public class CameraFollowPLayer : MonoBehaviour
 
     float cameraDist = 3.5f;
 
-    float smoothTime = 0.2f, zStart = -10; //zStart tu gan
+    float smoothTime = 0.2f, zStart = -50; //zStart tu gan
 
     float shakeMag, shakeTimeEnd;
 

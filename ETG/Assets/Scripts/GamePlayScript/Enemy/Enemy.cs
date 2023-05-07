@@ -74,7 +74,7 @@ namespace Enemy{
             WeaponLookAtPLayer();
             CompareTargetPositionToAgent();
             SetDir();
-            if (agent.velocity != Vector3.zero) stateManager.SwithcState(new MoveState());
+            if (agent.velocity != Vector3.zero && HP > 0) stateManager.SwithcState(new MoveState());
             else stateManager.SwithcState(new IdleState());
             if (HP <= 0) Die();
         }
