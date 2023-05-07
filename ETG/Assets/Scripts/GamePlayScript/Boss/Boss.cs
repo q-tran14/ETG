@@ -69,12 +69,18 @@ namespace Enemy
                     isFire = true;
                     templateSkillBoss();
                 }
+                if (isFire == true)
+                {
+                    agent.isStopped = true;
+                    stateManager.SwithcState(new BossAttackState());
+                }
                 timer += Time.deltaTime;
-                if (timer > 4)
+                if (timer > 8)
                 {
                     isFire = false;
                     StopAllCoroutines();
                     timer = 0;
+                    agent.isStopped = false;
                 }
                 if (HP <= 0) Die();
             }
@@ -134,7 +140,7 @@ namespace Enemy
             stateManager.SwithcState(new Die());
             if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
             {
-                Destroy(gameObject,3f);
+                Destroy(gameObject,1.5f);
             }
         }
 

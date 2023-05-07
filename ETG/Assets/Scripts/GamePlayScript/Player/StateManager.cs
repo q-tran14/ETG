@@ -77,7 +77,7 @@ public class StateManager : MonoBehaviour
             currentState.UpdateState();
             if (isOnFloor) lastPos = transform.position;
 
-            if (weaponActive && isInChamber && die != true) 
+            if (weaponActive && isInChamber && die != true && controller.win == false) 
             {
                 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 hand.SetActive(true);

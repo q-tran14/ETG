@@ -175,7 +175,7 @@ Transform:
   - {fileID: 8976121757611627842}
   - {fileID: 2595500256663091928}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8947464881579644430
 SpriteRenderer:
@@ -514,7 +514,9 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6032954421437388715, guid: 8c87a8eb686b66e4e810787cf4bbdc0a, type: 3}
+    - {fileID: -2290146935278729584, guid: 8c87a8eb686b66e4e810787cf4bbdc0a, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3352007576106321198, guid: 8c87a8eb686b66e4e810787cf4bbdc0a, type: 3}
       insertIndex: -1

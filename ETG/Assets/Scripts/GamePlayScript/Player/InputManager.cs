@@ -58,6 +58,11 @@ public class InputManager : Publisher
 
             if (Input.GetMouseButtonDown(0) && GetComponent<StateManager>().isInChamber == true)
             {
+                if (playController.player.weapons[playController.currentWeapon] == playController.conditionToWin)
+                {
+                    playController.player.weapons[playController.currentWeapon].GetComponent<KillThePast>().Fire();
+                    playController.win = true;
+                }
                 playController.player.weapons[playController.currentWeapon].GetComponent<Weapon>().ShootingBullet();
             }
             #endregion
@@ -101,10 +106,7 @@ public class InputManager : Publisher
     {
         if (collision.CompareTag("Weapon"))
         {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                GetComponent<PlayerController>().AddWeapon(collision.gameObject, true);
-            }
+            GetComponent<PlayerController>().AddWeapon(collision.gameObject, true);
         }
     }
 }

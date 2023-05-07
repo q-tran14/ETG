@@ -154,18 +154,10 @@ namespace Enemy{
             stateManager.SwithcState(new Die());
             if(animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
             {
-                Destroy(gameObject);
-            }
-        }
-        private void OnCollisionEnter2D(Collision2D collision)
-        {
-            if (collision.collider.tag == "Table")
-            {
-
-            }
-            if (collision.collider.tag == "Obj")
-            {
-
+                Destroy(gameObject, 3f);
+                agent.isStopped = true;
+                this.enabled = false;
+                if (hand != null) hand.SetActive(false);
             }
         }
     }

@@ -55,7 +55,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Fire
+  m_Name: Shoot
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -111,13 +111,13 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -7386304069855199000}
-    m_Position: {x: 200, y: 0, z: 0}
+    m_Position: {x: 340, y: 0, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6421901678289190945}
-    m_Position: {x: 235, y: 65, z: 0}
+    m_Position: {x: 340, y: 70, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2921152423845696063}
-    m_Position: {x: 270, y: 130, z: 0}
+    m_Position: {x: 340, y: 150, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []

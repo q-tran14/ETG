@@ -276,7 +276,7 @@ Transform:
   - {fileID: 8172984926325220523}
   - {fileID: 6065090203711621468}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2552705591240029363
 SpriteRenderer:
@@ -513,7 +513,9 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -6103869288587545658, guid: 29a3f2940afdda04bbd75340c3c56df7, type: 3}
+    - {fileID: -2902446267014005161, guid: 29a3f2940afdda04bbd75340c3c56df7, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4696705821814687156, guid: 29a3f2940afdda04bbd75340c3c56df7, type: 3}
       insertIndex: -1
