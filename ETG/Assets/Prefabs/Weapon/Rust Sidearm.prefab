@@ -121,14 +121,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbce1a111537fa742a8ad1520a9abcc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  posInHand: {x: 0.43, y: 0.11, z: 0}
   idleSprite: {fileID: 0}
   bulletIdle: {fileID: 0}
   spawnBullet: {fileID: 2010525852475916590}
   projectilePrefab: {fileID: 3577871916125006775, guid: d4d5b64c589c6004fb3fded7edb8afd9, type: 3}
   projectileSpeed: 5
   dmg: 0
-  bulletAmountPerTime: 0
-  timeToRecharge: 0
+  bulletAmountPerTime: 6
+  animator: {fileID: 0}
+  defaultBulletAmount: 6
 --- !u!61 &-3378551657977568428
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -136,7 +138,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 767004752343991959}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -164,7 +166,7 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 767004752343991959}
   m_BodyType: 0
-  m_Simulated: 1
+  m_Simulated: 0
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1

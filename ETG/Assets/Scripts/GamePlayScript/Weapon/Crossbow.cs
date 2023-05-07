@@ -9,15 +9,20 @@ public class Crossbow : Weapon
         Vector3 tmp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3 mousePosition = new Vector3(tmp.x, tmp.y, 0.0f);
         Vector3 direction = (mousePosition - spawnBullet.transform.position).normalized;
-
-        GameObject projectile = ObjectPool.SharedInstance.GetPooledObject(projectilePrefab);
-        if (projectile != null)
+        if (bulletAmountPerTime > 0)
         {
-            projectile.transform.position = spawnBullet.transform.position;
-            projectile.transform.rotation = Quaternion.identity;
-            projectile.SetActive(true);
-            projectile.GetComponent<PlayerBullet>().SetMoveDirection(direction);
+            GameObject projectile = ObjectPool.SharedInstance.GetPooledObject(projectilePrefab);
+            if (projectile != null)
+            {
+                projectile.transform.position = spawnBullet.transform.position;
+                projectile.transform.rotation = Quaternion.identity;
+                projectile.SetActive(true);
+                projectile.GetComponent<PlayerBullet>().SetMoveDirection(direction);
+            }
+            animator.Play("Shoot");
+            bulletAmountPerTime -= 1;
         }
+        
         //AudioManager.instance.PlayOneShot(FMODEvents.instance.bulletShot, spawnBullet.transform.position);
     }
 }
