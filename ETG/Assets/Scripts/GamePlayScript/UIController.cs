@@ -12,6 +12,8 @@ public class UIController : MonoBehaviour
     public GameObject facecard;
     public GameObject loading;
     public GameObject inChamber;
+    public GameObject deathUI;
+    public bool died;
     // Start is called before the first frame update
     void Awake()
     {
@@ -55,6 +57,10 @@ public class UIController : MonoBehaviour
                     break;
 
             }
+        }
+        if(died == true)
+        {
+            deathUI.SetActive(true);
         }
     }
 }
