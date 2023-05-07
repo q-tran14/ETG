@@ -153,7 +153,6 @@ public class StateManager : MonoBehaviour
         {
             if (collision.gameObject.transform.parent.name == "Elevator")
             {
-                Debug.Log("E");
                 if (collision.gameObject.transform.parent.gameObject.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
                 {
                     string sceneN = collision.gameObject.transform.parent.GetComponent<Elevator>().sceneName;
@@ -169,7 +168,7 @@ public class StateManager : MonoBehaviour
             allowToMove = false;
             SwitchState(new PitfallState());
         }
-        
+
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
