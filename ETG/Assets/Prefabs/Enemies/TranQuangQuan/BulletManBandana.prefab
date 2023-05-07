@@ -138,7 +138,7 @@ Transform:
   - {fileID: 1477980534362140838}
   - {fileID: 2551832437537362912}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3458408387808982796
 SpriteRenderer:
@@ -494,7 +494,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spawn Bullet
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -764731648991462440, guid: 2968a07882db4ab43806dcfdd61e4a5d, type: 3}
+    - {fileID: -858512277093166652, guid: 2968a07882db4ab43806dcfdd61e4a5d, type: 3}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 2968a07882db4ab43806dcfdd61e4a5d, type: 3}
 --- !u!4 &4658915858207703261 stripped

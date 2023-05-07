@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class Weapon : MonoBehaviour
 {
+    public Vector3 posInHand;
     // Use for display in UI
     [Header("Display in UI")]
     public Sprite idleSprite;
@@ -17,17 +18,22 @@ public abstract class Weapon : MonoBehaviour
    
     public float dmg;
     public int bulletAmountPerTime; // ammo
-    public float timeToRecharge; // reload ammo
+    public Animator animator;
+    public int defaultBulletAmount;
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (bulletAmountPerTime == 0) 
+        {
+            animator.Play("Reload");
+            if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1) bulletAmountPerTime = defaultBulletAmount;
+        }
     }
 
     public abstract void ShootingBullet();

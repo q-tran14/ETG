@@ -17,7 +17,7 @@ public class DeathUI : MonoBehaviour
         titleTxt.text = "YOU WON";
         defeatTxt.text = "COMPLETED";
         reasonTxt.text = "DEFEAT";
-        detailOfReasonTxt.text = "Final Boss";
+        detailOfReasonTxt.text = "Your Past";
         timeTxt.text = timer;
         moneyTxt.text = money.ToString();
         killTxt.text = kill.ToString();

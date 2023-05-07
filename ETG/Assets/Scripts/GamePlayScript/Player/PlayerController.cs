@@ -100,23 +100,22 @@ public class PlayerController : Publisher
 
     public void AddWeapon(GameObject weapon, bool more)
     {
-        weapon.GetComponent<Rigidbody2D>().simulated = false;
         weapon.GetComponent<Collider2D>().enabled = false;
+        weapon.GetComponent<Rigidbody2D>().simulated = false;
         if (more == false)
         {
             GameObject w = Instantiate(weapon, Vector3.zero, Quaternion.identity) as GameObject;
             w.transform.SetParent(hand.transform);
-            w.transform.localPosition = new Vector3(0.43f, 0.125f, 0);
+            w.transform.localPosition = weapon.GetComponent<Weapon>().posInHand;
             player.addInList(w);
             w.SetActive(false);
         }
         if (more == true)
         {
             weapon.transform.SetParent(hand.transform);
-            weapon.transform.localPosition = new Vector3(0.43f, 0.125f, 0);
+            weapon.transform.localPosition = weapon.GetComponent<Weapon>().posInHand;
             player.addInList(weapon);
             weapon.SetActive(false);
-            if (weapon.name == conditionToWin.name) win = true;
             notify("WeaponList", "", 0);
         }
     }

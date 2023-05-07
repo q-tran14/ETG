@@ -7,22 +7,29 @@ public class Floor : MonoBehaviour
 {
     public GridLayout grid;
     public Tilemap tilemap;
+    public int totalRoomInChamber;
+    public int i;
     // Start is called before the first frame update
     void Start()
     {
         grid = GetComponentInParent<GridLayout>();
         tilemap = GetComponent<Tilemap>();
     }
-
     // Update is called once per frame
     private void OnTriggerStay2D(Collider2D collision)
     {
-        // Same as OnTriggerEnter2D()
-        var cellBounds = new BoundsInt(
-            grid.WorldToCell(collision.bounds.min),
-            grid.WorldToCell(collision.bounds.size) + new Vector3Int(0, 0, 1));
+        if ( i < totalRoomInChamber)
+        {
+            if (collision.tag == "Room")
+            {
+                // Same as OnTriggerEnter2D()
+                var cellBounds = new BoundsInt(
+                    grid.WorldToCell(collision.bounds.min),
+                    grid.WorldToCell(collision.bounds.size) + new Vector3Int(0, 0, 1));
 
-        IdentifyIntersections(collision, cellBounds);
+                IdentifyIntersections(collision, cellBounds);
+            }
+        }
     }
     void IdentifyIntersections(Collider2D other, BoundsInt cellBounds)
     {
@@ -51,5 +58,7 @@ public class Floor : MonoBehaviour
                 }
             }
         }
+        other.gameObject.SetActive(false);
+        i += 1;
     }
 }

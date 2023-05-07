@@ -249,7 +249,7 @@ Transform:
   - {fileID: 2120854431944785710}
   - {fileID: 2169195641464113416}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7873468424193002341
 SpriteRenderer:
@@ -372,6 +372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3db86b55549b4cb4e9c46d86441ffd58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  conditionToWin: {fileID: 4407309425472447067, guid: b583001900c0e8a4f86a573235362e5d, type: 3}
   player:
     name: 
     health: 0
@@ -391,6 +392,12 @@ MonoBehaviour:
   timer: 0
   hand: {fileID: 7873468422115430329}
   currentWeapon: 0
+  timerBeginWhenPlayerEnterChamber: 0
+  win: 0
+  deathUI: {fileID: 0}
+  screenShot: {fileID: 0}
+  screenShotFinish: 0
+  stop: 0
 --- !u!114 &7873468424193002365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -407,6 +414,7 @@ MonoBehaviour:
   hand: {fileID: 7873468422115430329}
   controller: {fileID: 7873468424193002336}
   animator: {fileID: 7873468424193002346}
+  clock: {fileID: 2169195641464113419}
   spriteRenderer: {fileID: 0}
   ver: 0
   hori: 0
@@ -479,7 +487,7 @@ MonoBehaviour:
   - {x: -0.2380848, y: -1.0004139, z: 0}
   m_ShapePathHash: 1271433925
   m_Mesh: {fileID: 0}
-  m_InstanceId: 242972
+  m_InstanceId: -1912
 --- !u!114 &7873468424193002364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -636,6 +644,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clock
       objectReference: {fileID: 0}
+    - target: {fileID: 7802433724999073944, guid: cabf78d6cbf3f6248b4f19bc54413ad7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7802433724999073947, guid: cabf78d6cbf3f6248b4f19bc54413ad7, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -689,3 +701,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7802433724999073947, guid: cabf78d6cbf3f6248b4f19bc54413ad7, type: 3}
   m_PrefabInstance: {fileID: 8240839457642793363}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2169195641464113419 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7802433724999073944, guid: cabf78d6cbf3f6248b4f19bc54413ad7, type: 3}
+  m_PrefabInstance: {fileID: 8240839457642793363}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1157810601
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2169195641464113419}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2c3ec0198a7404b4daecb9cf5a717089, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
