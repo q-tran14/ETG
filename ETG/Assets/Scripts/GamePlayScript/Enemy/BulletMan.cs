@@ -15,6 +15,7 @@ namespace Enemy
         {
             path = new BasicBullet();
             
+            
         }
         public override void Fire()
         {
