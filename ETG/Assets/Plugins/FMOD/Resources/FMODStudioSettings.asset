@@ -454,6 +454,7 @@ MonoBehaviour:
   - Bullet
   - MusicBackground
   - ObjectSFX
+  - PlayerBullet
   - PlayerSFX
   BanksToLoad:
   - Bullet

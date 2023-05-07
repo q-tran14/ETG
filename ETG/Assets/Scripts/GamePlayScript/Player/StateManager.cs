@@ -33,9 +33,9 @@ public class StateManager : MonoBehaviour
     public Vector3 mousePos;
     public bool allowToMove = false;
     public GameObject loading;
-    public GameObject deathUI;
     private EventInstance playerFootsteps;
     public bool die = false;
+
     private void Awake()
     {
         if (SInstance != null && SInstance != this) DestroyImmediate(gameObject);
@@ -58,7 +58,7 @@ public class StateManager : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (controller.enabled == true)
+        if (controller.enabled == true && die == false)
         {
             if(SceneManager.GetActiveScene().name != "TheBreach") isInChamber = true;
             else isInChamber = false;
@@ -77,7 +77,7 @@ public class StateManager : MonoBehaviour
             currentState.UpdateState();
             if (isOnFloor) lastPos = transform.position;
 
-            if (weaponActive && isInChamber) 
+            if (weaponActive && isInChamber && die != true) 
             {
                 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 hand.SetActive(true);
@@ -89,10 +89,6 @@ public class StateManager : MonoBehaviour
                 die = true;
                 weaponActive = false;
                 SwitchState(new DeathState());
-            }
-            if (animator.GetCurrentAnimatorStateInfo(0).IsName("DeathShot") && animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
-            {
-                //GetComponent<InputManager>().menu.SetActive(true);
             }
         }
     }
@@ -153,6 +149,18 @@ public class StateManager : MonoBehaviour
         }
         if (collision.tag == "Floor") isOnFloor = true;
         if (collision.gameObject.tag == "Item") SwitchState(new GetItemState());
+        if (collision.gameObject.tag == "Door")
+        {
+            if (collision.gameObject.transform.parent.name == "Elevator")
+            {
+                Debug.Log("E");
+                if (collision.gameObject.transform.parent.gameObject.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
+                {
+                    string sceneN = collision.gameObject.transform.parent.GetComponent<Elevator>().sceneName;
+                    StartCoroutine("LoadScene", sceneN);
+                }
+            }
+        }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -168,7 +176,7 @@ public class StateManager : MonoBehaviour
         if (collision.gameObject.tag == "Door")
         {
             SwitchState(new RunBackDoorWayState());
-            StartCoroutine("LoadScene",collision.gameObject.name);
+            StartCoroutine("LoadScene", collision.gameObject.name);
             if (collision.gameObject.name == "Chamber1") weaponActive = true;
         }
         

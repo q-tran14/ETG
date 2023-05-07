@@ -44,6 +44,7 @@ public class InputManager : Publisher
     {
         if (GetComponent<StateManager>().die == false && GetComponent<StateManager>().loading.activeInHierarchy == false)
         {
+            #region Finished
             if (Input.GetKeyDown(KeyCode.Q) && isBlanking == false && GetComponent<PlayerController>().player.blank > 0)
             {
                 isBlanking = true;
@@ -59,6 +60,7 @@ public class InputManager : Publisher
             {
                 playController.player.weapons[playController.currentWeapon].GetComponent<Weapon>().ShootingBullet();
             }
+            #endregion
 
             #region Another Action
             if (Input.GetKeyDown(KeyCode.E))

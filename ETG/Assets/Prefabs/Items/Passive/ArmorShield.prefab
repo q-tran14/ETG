@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7563079025888506470}
   - component: {fileID: 7563079025888506469}
   - component: {fileID: 2052285821811572093}
+  - component: {fileID: 1110286705}
   m_Layer: 0
   m_Name: ArmorShield
   m_TagString: Item
@@ -33,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7563079025888506471
 SpriteRenderer:
@@ -151,3 +152,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acb4603e1a682f1498d5934d794a3c64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1110286705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7563079025888506468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a02c9f7c5476c54d87b6c8e2f1c7761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: 0.1
+  maxMiny: 0.1
+  speed: 6
+  beginPosY: 0

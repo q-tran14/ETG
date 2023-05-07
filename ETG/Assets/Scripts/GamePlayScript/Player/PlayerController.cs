@@ -14,6 +14,13 @@ public class PlayerController : Publisher
     public float timer;
     public GameObject hand;
     public int currentWeapon = 0;
+    private int kills = 0;
+    public float timerBeginWhenPlayerEnterChamber = 0.0f;
+    public bool win;
+    public GameObject deathUI;
+    public Texture2D screenShot;
+    public bool screenShotFinish = false;
+    public bool stop = false;
     // Start is called before the first frame update
     
     void Start()
@@ -27,7 +34,16 @@ public class PlayerController : Publisher
     void Update()
     {
         SetWeaponForState();
+        if (GetComponent<StateManager>().isInChamber == true && GetComponent<StateManager>().die != true) timerBeginWhenPlayerEnterChamber += Time.deltaTime;
+        else if((GetComponent<StateManager>().isInChamber == true && GetComponent<StateManager>().die == true) || win == true) timerBeginWhenPlayerEnterChamber += 0;
         if (damaged == true) timer += Time.deltaTime;
+        if(GetComponent<StateManager>().die == true && win != true)
+        {
+            Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, 4, 3); 
+            StartCoroutine(Capture());
+            screenShotFinish = true;
+            StopCoroutine(Capture());
+        }
     }
     private void FixedUpdate()
     {
@@ -35,6 +51,19 @@ public class PlayerController : Publisher
         {
             damaged = false;
             timer = 0;
+        }
+    }
+    private void LateUpdate()
+    {
+        if (GetComponent<StateManager>().die == true && win != true && stop == false)
+        {
+            if (screenShotFinish == true) deathUI.GetComponent<DeathUI>().SetForLose(GetTime(), player.shell, kills, "???", player.weapons, screenShot);
+            stop = true;
+        }
+        else if (GetComponent<StateManager>().die != true && win == true && stop == false)
+        {
+            deathUI.GetComponent<DeathUI>().SetForWin(GetTime(), player.shell, kills, player.weapons);
+            stop = true;
         }
     }
     public void OnTriggerEnter2D(Collider2D collision)
@@ -74,7 +103,7 @@ public class PlayerController : Publisher
         }
     }
 
-    public void SetWeapon(GameObject weapon)
+    public void AddWeapon(GameObject weapon)
     {
         GameObject w = Instantiate(weapon,Vector3.zero,Quaternion.identity) as GameObject;
         w.transform.SetParent(hand.transform);
@@ -96,5 +125,26 @@ public class PlayerController : Publisher
             }
         }
         GetComponent<StateManager>().weapon = player.weapons[0];
+    }
+
+    public string GetTime()
+    {
+        string time;
+        int min = (Mathf.RoundToInt(timerBeginWhenPlayerEnterChamber) % 3600) / 60;
+        int second = Mathf.RoundToInt(timerBeginWhenPlayerEnterChamber) % 60;
+        int hour = Mathf.RoundToInt(timerBeginWhenPlayerEnterChamber) / 3600;
+        string secondS = (second < 10) ? "0" + second.ToString() : second.ToString();
+        string minS = (min < 10) ? "0" + min.ToString() : min.ToString();
+        string hourS = (hour < 10) ? "0" + hour.ToString() : hour.ToString();
+        time = hourS + ":" + minS + ":" + secondS;
+        return time;
+    }
+
+    public IEnumerator Capture()
+    {
+        yield return new WaitForEndOfFrame();
+        Texture2D texture = ScreenCapture.CaptureScreenshotAsTexture();
+        screenShot = texture;
+        yield return null;
     }
 }
