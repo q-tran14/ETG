@@ -58,8 +58,7 @@ public class RoomManager : MonoBehaviour
             {
                 foreach (GameObject d in doors)
                 {
-                    d.GetComponent<Door>().roomClear = true;
-                    d.GetComponent<Door>().Open();
+                    d.SetActive(false);
                 }
                 isClear = true;
             }
@@ -74,7 +73,6 @@ public class RoomManager : MonoBehaviour
             {
                 if (enemyInRoom.Count < 3 && spawnRound != 0)
                 timer += Time.deltaTime;
-                Debug.Log(timer);
                 RoomCleared();
             }
             if (isClear == true) gameObject.GetComponent<RoomManager>().enabled = false;
@@ -126,8 +124,11 @@ public class RoomManager : MonoBehaviour
             {
                 foreach (GameObject d in doors)
                 {
-                    d.GetComponent<Door>().roomClear = false;
-                    d.GetComponent<Door>().Close();
+                    if (d.GetComponent<Door>() != null)
+                    {
+                        d.GetComponent<Door>().roomClear = false;
+                        d.GetComponent<Door>().Close();
+                    }
                 }
                 player = collision.gameObject;
                 if (spawnRoom == false) Spawn();

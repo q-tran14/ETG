@@ -56,21 +56,27 @@ public class PlayerController : Publisher
         }
         if (GetComponent<StateManager>().die == true && win != true && stop == false)
         {
+            Time.timeScale = 0;
             if (screenShotFinish == true) deathUI.GetComponent<DeathUI>().SetForLose(GetTime(), player.shell, kills, "???", player.weapons, screenShot);
             stop = true;
         }
         else if (GetComponent<StateManager>().die != true && win == true && stop == false)
         {
+            Time.timeScale = 0;
             deathUI.GetComponent<DeathUI>().SetForWin(GetTime(), player.shell, kills, player.weapons);
             stop = true;
         }
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if ((collision.tag == "EnemyBullet" || collision.tag == "Hole") && GetComponent<StateManager>().loading.activeInHierarchy == false && GetComponent<StateManager>().weaponActive == true && GetComponent<InputManager>().isBlanking == false && damaged == false)
+        if (collision.tag == "Hole" && GetComponent<StateManager>().loading.activeInHierarchy == false && GetComponent<StateManager>().weaponActive == true && GetComponent<InputManager>().isBlanking == false && damaged == false)
         {
             DecreaseShieldOrHeart();
 
+        }
+        if ((collision.gameObject.tag == "EnemyBullet") && GetComponent<StateManager>().loading.activeInHierarchy == false && GetComponent<StateManager>().weaponActive == true && GetComponent<InputManager>().isBlanking == false && damaged == false)
+        {
+            DecreaseShieldOrHeart();
         }
     }
     public void OnCollisionEnter2D(Collision2D collision)

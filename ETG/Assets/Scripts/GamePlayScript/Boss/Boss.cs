@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 namespace Enemy
 {
@@ -42,7 +43,9 @@ namespace Enemy
         [SerializeField] protected string curVerSide, curHoriSide;
         [SerializeField] private Vector3 targetPos;
         [SerializeField] protected NavMeshAgent agent;
-
+        public GameObject myHealth;
+        private BossHealth healthBar;
+        public bool setAlready;
         private void Awake()
         {
             pathFireManager = new PathFireManager();
@@ -54,17 +57,28 @@ namespace Enemy
             stateManager = new StateManager(new Spawn(), animator);
             stateManager.EnterState();
         }
+        private void Start()
+        {
+            myHealth = UIController.Instance.bossHealth;
+            healthBar = myHealth.GetComponent<BossHealth>();
 
+        }
         private void Update() {
             if (target != null)
             {
+                if (setAlready == false)
+                {
+                    myHealth.SetActive(true);
+                    healthBar.SetValue(HP);
+                    setAlready = true;
+                }
                 targetPos = new Vector3(target.transform.position.x, target.transform.position.y, transform.position.z);
                 SetAgentPos(targetPos);
                 CompareTargetPositionToAgent();
                 SetDir();
                 if (agent.velocity != Vector3.zero && HP > 0) stateManager.SwithcState(new MoveState());
-                else if (HP > 0) stateManager.SwithcState(new IdleState());
-                if (isFire == false)
+                else if (HP > 0 && isFire == false) stateManager.SwithcState(new IdleState());
+                if (isFire == false && HP > 0)
                 {
                     isFire = true;
                     templateSkillBoss();
@@ -73,16 +87,23 @@ namespace Enemy
                 {
                     agent.isStopped = true;
                     stateManager.SwithcState(new BossAttackState());
+                    timer += Time.deltaTime;
                 }
-                timer += Time.deltaTime;
+                
+                if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && isFire == false && HP > 0) stateManager.SwithcState(new IdleState());
+                agent.isStopped = false;
                 if (timer > 8)
                 {
                     isFire = false;
                     StopAllCoroutines();
-                    timer = 0;
-                    agent.isStopped = false;
+                    timer = 0; 
                 }
-                if (HP <= 0) Die();
+
+                if (HP <= 0) 
+                {
+                    isFire = false;
+                    Die(); 
+                }
             }
         }
         private void templateSkillBoss()     //template method
@@ -132,6 +153,7 @@ namespace Enemy
 
         public void Die()
         {
+            myHealth.SetActive(false);
             StopAllCoroutines();
             foreach (GameObject b in GameObject.FindGameObjectsWithTag("EnemyBullet"))
             {
@@ -149,5 +171,9 @@ namespace Enemy
         public abstract void SkillTwo();
         public abstract void SkillThree();
         public abstract void SetRandomSpecialValue();
+        public void GetDmg(float dmg)
+        {
+            healthBar.Damage(dmg);
+        }
     }   
 }

@@ -13,6 +13,7 @@ public class UIController : MonoBehaviour
     public GameObject loading;
     public GameObject inChamber;
     public GameObject deathUI;
+    public GameObject bossHealth;
     public bool died;
     // Start is called before the first frame update
     void Awake()

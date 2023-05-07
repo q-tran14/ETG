@@ -16,7 +16,7 @@ public class Table : MonoBehaviour
     }
     public void OnCollisionStay2D(Collision2D collision)
     {
-       if(collision.collider.tag == "Player")
+       if(collision.collider.tag == "Shadow")
        {
             if (collision.contacts[0].point.x > transform.position.x && (collision.contacts[0].point.y > transform.position.y - 0.5f && collision.contacts[0].point.y < transform.position.y + 0.5f)) dirToFlip = 4;
             if (collision.contacts[0].point.x < transform.position.x && (collision.contacts[0].point.y > transform.position.y - 0.5f && collision.contacts[0].point.y < transform.position.y + 0.5f)) dirToFlip = 1;
@@ -34,13 +34,5 @@ public class Table : MonoBehaviour
                 ani.SetBool("break", isbreak);
             }
        }
-    }
-
-    public void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.collider.tag == "Player")
-        {
-            //player = null;
-        }
     }
 }

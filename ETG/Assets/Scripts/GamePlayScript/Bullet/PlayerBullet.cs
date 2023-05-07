@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -38,14 +39,18 @@ public class PlayerBullet : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.tag == "Wall")
+        if (collider.tag == "Wall" || (collider.tag == "Table" && collider.GetComponent<Table>().fliped == true))
         {
             Destroy();
         }
         if (collider.tag == "Enemy")
         {
             if (collider.GetComponent<Enemy.Enemy>() != null) collider.GetComponent<Enemy.Enemy>().HP -= damage;
-            if (collider.GetComponent<Enemy.Boss>() != null) collider.GetComponent<Enemy.Boss>().HP -= damage;
+            if (collider.GetComponent<Enemy.Boss>() != null) 
+            { 
+                collider.GetComponent<Enemy.Boss>().HP -= damage;
+                collider.GetComponent<Enemy.Boss>().GetDmg(damage);
+            }
             Destroy();
         }
     }

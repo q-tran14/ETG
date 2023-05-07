@@ -57,7 +57,15 @@ public class Bullet : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collider.tag == "Wall")
+        if(collider.tag == "Wall" || (collider.tag == "Table" && collider.GetComponent<Table>().fliped == true))
+        {
+            Destroy();
+        }
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Door")
         {
             Destroy();
         }
