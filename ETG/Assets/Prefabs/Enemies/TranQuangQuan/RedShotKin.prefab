@@ -309,6 +309,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  itemsToSpawn:
+  - {fileID: 2697140191385362987, guid: adf8b36116780e44db0b5519e6ee9f66, type: 3}
+  - {fileID: 2697140191385362987, guid: adf8b36116780e44db0b5519e6ee9f66, type: 3}
+  - {fileID: 2256120196690815654, guid: 802e0bb9574f75c4188eb8c90b644066, type: 3}
+  - {fileID: 982116987287343305, guid: b572ec0d1b8e73c469804865ef4d9a47, type: 3}
+  - {fileID: 2697140191385362987, guid: adf8b36116780e44db0b5519e6ee9f66, type: 3}
+  - {fileID: 2697140191385362987, guid: adf8b36116780e44db0b5519e6ee9f66, type: 3}
+  - {fileID: 6225091620536018004, guid: cac16c3197d102e48bee52eb97206401, type: 3}
+  - {fileID: 2697140191385362987, guid: adf8b36116780e44db0b5519e6ee9f66, type: 3}
+  - {fileID: 2697140191385362987, guid: adf8b36116780e44db0b5519e6ee9f66, type: 3}
+  - {fileID: 7563079025888506468, guid: df0e7d51e4f2fee46ac01b265f43d959, type: 3}
+  - {fileID: 2697140191385362987, guid: adf8b36116780e44db0b5519e6ee9f66, type: 3}
   canCollision: 0
   spawnBullet: {fileID: 3043755018289582457}
   projectilePrefab: {fileID: 8706610897507911240, guid: ecfe0cbaa335849428072063f00db6b6, type: 3}

@@ -9,6 +9,7 @@ namespace Enemy
     public abstract class Boss : MonoBehaviour
     {
         public float timer = 0;
+        public List<GameObject> itemsToSpawn;
         [Tooltip("Auto set target")]
         public GameObject target;
         public PathFireManager pathFireManager;
@@ -76,9 +77,9 @@ namespace Enemy
                 SetAgentPos(targetPos);
                 CompareTargetPositionToAgent();
                 SetDir();
-                if (agent.velocity != Vector3.zero && HP > 0) stateManager.SwithcState(new MoveState());
-                else if (HP > 0 && isFire == false) stateManager.SwithcState(new IdleState());
-                if (isFire == false && HP > 0)
+                if (agent.velocity != Vector3.zero && HP > 0 && isFire == false) stateManager.SwithcState(new MoveState());
+                if (isFire == false && HP > 0) timer += Time.deltaTime;
+                if (isFire == false && HP > 0 && timer > 3)
                 {
                     isFire = true;
                     templateSkillBoss();
@@ -90,15 +91,16 @@ namespace Enemy
                     timer += Time.deltaTime;
                 }
                 
-                if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && isFire == false && HP > 0) stateManager.SwithcState(new IdleState());
-                agent.isStopped = false;
+                //if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && isFire == true && HP > 0) stateManager.SwithcState(new IdleState());
+                
                 if (timer > 8)
                 {
                     isFire = false;
                     StopAllCoroutines();
-                    timer = 0; 
+                    timer = 0;
+                    agent.isStopped = false;
                 }
-
+                
                 if (HP <= 0) 
                 {
                     isFire = false;
@@ -162,6 +164,7 @@ namespace Enemy
             stateManager.SwithcState(new Die());
             if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
             {
+                //spawnAction();
                 Destroy(gameObject,1.5f);
             }
         }
@@ -174,6 +177,22 @@ namespace Enemy
         public void GetDmg(float dmg)
         {
             healthBar.Damage(dmg);
+        }
+        private void spawnAction()
+        {
+            int ran = Random.Range(7,15);
+            for (int i = 0; i < ran; i++)
+            {
+                int ranIndex = Random.Range(0, itemsToSpawn.Count - 1);
+                GameObject item = Instantiate(itemsToSpawn[ranIndex], transform.position, Quaternion.identity);
+                Vector2 randomDirection = Random.insideUnitCircle.normalized; // Set the direction
+                Vector3 randomVelocity = randomDirection * 3 * Random.Range(0.1f, 1f); // Set the velocity
+
+                Transform itemTransform = item.GetComponent<Transform>();
+                itemTransform.position = transform.position + randomVelocity;
+                itemTransform.rotation = Quaternion.identity;
+                itemTransform.Rotate(new Vector3(0, 0, Random.Range(0f, 360f))); // Add a random rotation to make the fragment rotate randomly
+            }
         }
     }   
 }

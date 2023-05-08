@@ -9,13 +9,11 @@ public class Elevator : MonoBehaviour
     public Collider2D under;
     public bool comeAndGo;
     public string sceneName;
-    public GameObject player;
-    public bool justCome;
-    private void Start()
+    private void Update()
     {
-        if (justCome == true)
+        if (comeAndGo == false && UIController.Instance.loading.activeInHierarchy == false)
         {
-            GetComponent<Animation>().Play("Open");
+            GetComponent<Animator>().Play("Open");
         }
     }
     void OnTriggerStay2D(Collider2D collision)

@@ -222,7 +222,7 @@ public class StateManager : MonoBehaviour
     }
     private void UpdateSound()
     {
-        if (loading.activeInHierarchy == false && rb.velocity != Vector2.zero && allowToMove == true)
+        if (loading.activeInHierarchy == false && rb.velocity != Vector2.zero && allowToMove == true && die != true)
         {
             PLAYBACK_STATE pLAYBACK_STATE;      // Variable to store the playback state of the sound event
             playerFootsteps.getPlaybackState(out pLAYBACK_STATE);    // Get the playback state of the sound event

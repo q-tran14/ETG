@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.UIElements;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -35,6 +36,7 @@ public class GameController : MonoBehaviour
     void Update()
     {
         if(playerObj == null) ChoosePlayer();
+        if (SceneManager.GetActiveScene().name == "Chamber1") DontDestroyOnLoad(GameObject.Find("ObjPool"));
     }
 
     void GameOver() //Handle lose or win game event

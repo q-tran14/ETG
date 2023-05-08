@@ -37,13 +37,22 @@ public abstract class IState
             if (stateManager.spriteRenderer.flipX == true) stateManager.spriteRenderer.flipX = false;
             previous_side_hori = "D"; // Right
         }
+        if (Input.GetKeyUp(KeyCode.D) && stateManager.isInChamber == true)
+        {
+            if (stateManager.spriteRenderer.flipX == true) stateManager.spriteRenderer.flipX = false;
+            previous_side_hori = "S"; // Right
+        }
 
         if (Input.GetKeyDown(KeyCode.A))
         {
             if (stateManager.spriteRenderer.flipX == false) stateManager.spriteRenderer.flipX = true;
             previous_side_hori = "A"; // Leftt
         }
-
+        if (Input.GetKeyUp(KeyCode.A) && stateManager.isInChamber == true)
+        {
+            if (stateManager.spriteRenderer.flipX == true) stateManager.spriteRenderer.flipX = false;
+            previous_side_hori = "S"; // Right
+        }
         if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S)) && (!Input.GetKeyDown(KeyCode.D)) && !Input.GetKeyDown(KeyCode.A)) previous_side_hori = "S";
 
         if (Input.GetKeyDown(KeyCode.W)) previous_side_ver = "W";

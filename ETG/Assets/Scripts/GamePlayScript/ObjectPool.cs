@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Unity.Burst.Intrinsics.X86.Avx;
 
 [System.Serializable]
 public class ObjectPoolItem
@@ -33,6 +34,7 @@ public class ObjectPool : MonoBehaviour
             for (int j = 0; j < item.amountToPool; j++)
             {
                 GameObject tmp = Instantiate(item.objectToPool);
+                tmp.transform.SetParent(gameObject.transform);
                 tmp.SetActive(false);
                 pooledObjects.Add(tmp);
             }
@@ -62,6 +64,7 @@ public class ObjectPool : MonoBehaviour
                 if (item.willGrow)
                 {
                     GameObject obj = Instantiate(item.objectToPool);
+                    obj.transform.SetParent(gameObject.transform);
                     obj.SetActive(false);
                     pooledObjects.Add(obj);
                     return obj;

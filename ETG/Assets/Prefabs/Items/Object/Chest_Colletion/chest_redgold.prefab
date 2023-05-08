@@ -34,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5108024422196869639
 SpriteRenderer:
@@ -167,4 +167,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87e3de344fd086f479bac3988a0816ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemsList: []
+  itemsList:
+  - {fileID: 4480454821440455605, guid: 10cfe180d16112942bcc2b577b19ef52, type: 3}
+  - {fileID: 7563079025888506468, guid: df0e7d51e4f2fee46ac01b265f43d959, type: 3}
+  - {fileID: 6225091620536018004, guid: cac16c3197d102e48bee52eb97206401, type: 3}
+  - {fileID: 2256120196690815654, guid: 802e0bb9574f75c4188eb8c90b644066, type: 3}
+  - {fileID: 1891518090287578477, guid: 13e7026e82b2bec4783906da415a5eea, type: 3}
+  hasOpened: 0

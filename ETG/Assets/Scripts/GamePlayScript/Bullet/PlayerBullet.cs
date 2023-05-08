@@ -45,11 +45,16 @@ public class PlayerBullet : MonoBehaviour
         }
         if (collider.tag == "Enemy")
         {
-            if (collider.GetComponent<Enemy.Enemy>() != null) collider.GetComponent<Enemy.Enemy>().HP -= damage;
+            if (collider.GetComponent<Enemy.Enemy>() != null)
+            {
+                collider.GetComponent<Enemy.Enemy>().HP -= damage;
+                if (collider.GetComponent<Enemy.Enemy>().HP == 0) GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().kills += 1;
+            }
             if (collider.GetComponent<Enemy.Boss>() != null) 
             { 
                 collider.GetComponent<Enemy.Boss>().HP -= damage;
                 collider.GetComponent<Enemy.Boss>().GetDmg(damage);
+                if (collider.GetComponent<Enemy.Boss>().HP == 0) GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().kills += 1;
             }
             Destroy();
         }

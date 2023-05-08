@@ -16,7 +16,7 @@ public class PlayerController : Publisher
     public float timer;
     public GameObject hand;
     public int currentWeapon = 0;
-    private int kills = 0;
+    public int kills = 0;
     public float timerBeginWhenPlayerEnterChamber = 0.0f;
     public bool win;
     public GameObject deathUI;
@@ -41,11 +41,23 @@ public class PlayerController : Publisher
         if (damaged == true) timer += Time.deltaTime;
         if(GetComponent<StateManager>().die == true && win != true)
         {
+            if (GetComponent<StateManager>().die) Time.timeScale = 0;
             Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, 4, 3); 
             StartCoroutine(Capture());
             screenShotFinish = true;
             StopCoroutine(Capture());
         }
+        if (GetComponent<StateManager>().die == true && win != true && stop == false)
+        {
+            if (screenShotFinish == true) deathUI.GetComponent<DeathUI>().SetForLose(GetTime(), player.shell, kills, "???", player.weapons, screenShot);
+            stop = true;
+        }
+        else if (GetComponent<StateManager>().die != true && win == true && stop == false)
+        {
+            deathUI.GetComponent<DeathUI>().SetForWin(GetTime(), player.shell, kills, player.weapons);
+            stop = true;
+        }
+        
     }
     private void FixedUpdate()
     {
@@ -53,18 +65,6 @@ public class PlayerController : Publisher
         {
             damaged = false;
             timer = 0;
-        }
-        if (GetComponent<StateManager>().die == true && win != true && stop == false)
-        {
-            Time.timeScale = 0;
-            if (screenShotFinish == true) deathUI.GetComponent<DeathUI>().SetForLose(GetTime(), player.shell, kills, "???", player.weapons, screenShot);
-            stop = true;
-        }
-        else if (GetComponent<StateManager>().die != true && win == true && stop == false)
-        {
-            Time.timeScale = 0;
-            deathUI.GetComponent<DeathUI>().SetForWin(GetTime(), player.shell, kills, player.weapons);
-            stop = true;
         }
     }
     public void OnTriggerEnter2D(Collider2D collision)
@@ -119,7 +119,8 @@ public class PlayerController : Publisher
         if (more == true)
         {
             weapon.transform.SetParent(hand.transform);
-            weapon.transform.localPosition = weapon.GetComponent<Weapon>().posInHand;
+            if (weapon.GetComponent<KillThePast>() != null) weapon.transform.localPosition = weapon.GetComponent<KillThePast>().posInHand;
+            else weapon.transform.localPosition = weapon.GetComponent<Weapon>().posInHand;
             player.addInList(weapon);
             weapon.SetActive(false);
             notify("WeaponList", "", 0);

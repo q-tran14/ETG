@@ -58,12 +58,11 @@ public class InputManager : Publisher
 
             if (Input.GetMouseButtonDown(0) && GetComponent<StateManager>().isInChamber == true)
             {
-                if (playController.player.weapons[playController.currentWeapon] == playController.conditionToWin)
+                if (playController.player.weapons[playController.currentWeapon].name == playController.conditionToWin.name + "(Clone)")
                 {
                     playController.player.weapons[playController.currentWeapon].GetComponent<KillThePast>().Fire();
                     playController.win = true;
-                }
-                playController.player.weapons[playController.currentWeapon].GetComponent<Weapon>().ShootingBullet();
+                }else playController.player.weapons[playController.currentWeapon].GetComponent<Weapon>().ShootingBullet();
             }
             #endregion
 

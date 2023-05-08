@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4407309425472447068}
   - component: {fileID: -8480682248485220369}
   - component: {fileID: 6625308944328357715}
+  - component: {fileID: -4181364443393461182}
   m_Layer: 0
   m_Name: GunCanKillPass
   m_TagString: Weapon
@@ -154,3 +155,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &-4181364443393461182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4407309425472447067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c373686359dddc545894bd42ab722568, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  posInHand: {x: 0.419, y: 0.212, z: 0}

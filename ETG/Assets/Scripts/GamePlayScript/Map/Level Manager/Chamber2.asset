@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84cd959e96f4fc44d814791a59b76118, type: 3}
   m_Name: Chamber2
   m_EditorClassIdentifier: 
-  posX: 1
-  posY: 7
+  posX: 0
+  posY: 8
