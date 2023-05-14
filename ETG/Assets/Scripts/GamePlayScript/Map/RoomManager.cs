@@ -45,7 +45,7 @@ public class RoomManager : MonoBehaviour
             if (trackedCells.Count <= 1000) numEnemyPerTimeSpawnMin = 3; //3
             if (trackedCells.Count > 1000 && trackedCells.Count <= 1600) numEnemyPerTimeSpawnMin = 4; //4
             if (trackedCells.Count > 1600) numEnemyPerTimeSpawnMin = 5; //5
-            spawnRound = Random.Range(spawnRoundMin, spawnRoundMax + 1);
+            spawnRound = Random.Range(spawnRoundMin, spawnRoundMax);
         }
     }
 
