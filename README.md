@@ -1,17 +1,52 @@
-<!-- # Enter The Dungeon (clone from Enter The Gungeon)
-## Các Folder được cung cấp:
+# Enter The Dungeon (clone from Enter The Gungeon)
+## KẾT QUẢ:
+### Map:
+
+- The Breach
+![Imgur](https://i.imgur.com/j7zxZ2n.png)
+- Chamber 1
+![Imgur](https://i.imgur.com/TOt1IWS.png)
+- Chamber 2
+![Imgur](https://i.imgur.com/MujQsUU.png)
+- Aimless Void (End game)
+![Imgur](https://i.imgur.com/m7fwKbn.png)
+### Gameplay:
+- Choose Player
+![Imgur](https://i.imgur.com/YPIdJv6.png)
+- Enter the Dungeon door
+![Imgur](https://i.imgur.com/QVhZyWW.png)
+- Fire
+![Imgur](https://i.imgur.com/CioJMUq.png)
+- Fight with Enemies
+![Imgur](https://i.imgur.com/5QOe4K1.png)
+- Fight with Bosses
+![Imgur](https://i.imgur.com/FxjyM0C.png)
+- Get the Gun Can Kill Past and win
+![Imgur](https://i.imgur.com/KNGsdTD.png)
+### Others:
+- Splash Screen
+![Imgur](https://i.imgur.com/XkbC24t.png)
+- Start Screen
+![Imgur](https://i.imgur.com/7lSU7bJ.png)
+- Win UI
+![Imgur](https://i.imgur.com/yjs7vPC.png)
+- Defeated UI
+![Imgur](https://i.imgur.com/o2LyNBh.png)
+
+## QUÁ TRÌNH:
+### Các Folder được cung cấp:
 - [x] Sprites
 - [x] Sounds
 
-## Phân công:
-### Boss:
+### Phân công:
+#### Boss:
 
 | Quân | Phát | Phúc | Duy | Thiện |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
 | &#x2610; Final Lich | &#x2610; Blobulord | &#x2611; Boss Final Guide | &#x2611; Bullet King | &#x2610; Gatling Gull |
 | &#x2610; ~~Beholster~~ | &#x2610; Lich Phase 2 | &#x2611; Boss Final Marine | ---- | &#x2610; ~~Meduzi~~ |
 
-### Enemy:
+#### Enemy:
 | Quân | Phát | Phúc | Duy | Thiện |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
 |&#x2611; angry book blue | &#x2610; ~~angry book~~ | &#x2611; angry book green | &#x2611; angry book necro | &#x2611; big hell face |
@@ -29,7 +64,7 @@
 |&#x2611; sunburst | &#x2610; T-Bulon	| &#x2610; ~~wizard blue~~ | &#x2610; ~~wizard purple~~ | &#x2610; ~~wizard yellow~~ |
 |&#x2611; wizard red| ---- | ---- | ---- | ---- |
 
-## Map được xử lí bởi:
+### Map được xử lí bởi:
 * Ai làm scene nào thì vào edit file README.md trong ***branch của mình***. Thay "..." bằng ***tên của mình***. Khi hoàn thành thì xóa dấu cách trong ngoặc vuông [] và thay bằng chữ **x**.
 
 VD:
@@ -50,7 +85,7 @@ VD:
 - [x] Boss Chamber for Hunter: ***Phúc***
 - [x] Boss Chamber for Marine: ***Phúc***
 
-### Sorting Layer - Order in Layer
+#### Sorting Layer - Order in Layer
 > - Group object name == Sorting Layer name:
 >     - TileMap name - order in layer [n]
 
@@ -69,7 +104,7 @@ VD:
     - FrontWall - 2 (static tiles / animated tiles)
 - Roof - 0
 
-## Vấn đề cần lưu ý:
+### Vấn đề cần lưu ý:
 - Trong Sprites - Main Characters, **Guide** chính là **Hunter**.
 - Sprite của Shotgun Kin không có folder ảnh lẻ.
 - Folder Bosses và Enemies trong folder Sounds không được phân đúng loại nên nếu kiếm sound của các Enemy và Boss thì nên kiểm ở cả 2 folder này.
@@ -79,7 +114,7 @@ VD:
 - Sprite của character, enemy tileset, env và platform - map spawn enemy thông thường - Pixels Per Unit (Trong Sprite Editor): ***16***
 - Làm xong thì push lên branch của bản thân rồi vô github tạo ***pull request*** để mn cùng duyệt xong. ***TUYỆT ĐỐI KHÔNG ĐC PHÉP TỰ Ý MERGE VÔ BRANCH "MASTER".***
 
-***Quy ước kích thước corridor: **[ Tìm hiểu chi tiết ở Chamber 1, Tutorial ở các tilemap liên quan đến wall ]** ***
+Quy ước kích thước corridor: **[ Tìm hiểu chi tiết ở Chamber 1, Tutorial ở các tilemap liên quan đến wall ]**
 - Horizontal corridor:
   
 ![Imgur](https://imgur.com/vVfMSDg.png)
@@ -92,13 +127,13 @@ VD:
 
 ![Imgur](https://imgur.com/bYpKH1U.png)
 
-***Qui trình xử lý project:**
+**Qui trình xử lý project: **
 - Github Desktop: Fetch origin để load bài -> đảm bảo phải commit/push bài mới nhất của mình -> Fetch origin để load bài -> Update from master để pull và merge từ branch gốc
-- CMD: 
-## Hệ thống màn chơi và các scene:
+
+### Hệ thống màn chơi và các scene:
 ![Imgur](https://i.imgur.com/de2ponc.png)
 
-## Lưu ý trước khi bắt tay vô làm
+### Lưu ý trước khi bắt tay vô làm
 1. [Sơ đồ từng Chamber](https://drive.google.com/file/d/1NMAKiJlCoooQzqXneosSSOAuTvSE_SlM/view) (1 - 5): có thể sử dụng lại (ngoại trừ các room đặc biệt).
 2. ***Tạo nhánh mới có name là MSSV_HoTen.***
 
@@ -127,7 +162,7 @@ Ngoài ra cũng cần tham khảo thêm trên Youtube để tạo hình các roo
 - Aimless Void
 - 2 boss chamber trong cốt chuyện của Hunter và Marine
 
-## Các lỗi thường gặp:
+### Các lỗi thường gặp:
 1. Lỗi khi có sự conflict khi update từ master về branch làm việc của mình trên Github Desktop
 
 ![mergeIssue](https://user-images.githubusercontent.com/30680192/224209180-c6da9537-50a2-4757-9565-52b419f780b3.png)
@@ -139,4 +174,4 @@ Ngoài ra cũng cần tham khảo thêm trên Youtube để tạo hình các roo
 
 ![UIStep2](https://user-images.githubusercontent.com/30680192/224210381-dff738b2-5210-4899-a00b-eac920e7aa94.png)
 
-Giải thích: Lỗi này xảy ra khi người chơi thực hiện chỉnh sửa file khác với branch chính (thêm/bớt sprite trong palette,...) nên khi update từ branch chính về sẽ bị xung đột do khác cấu trúc, nên ta phải thực hiện thêm phần chỉnh sửa của mình để override data của branch master chưa chỉnh sửa. -->
+Giải thích: Lỗi này xảy ra khi người chơi thực hiện chỉnh sửa file khác với branch chính (thêm/bớt sprite trong palette,...) nên khi update từ branch chính về sẽ bị xung đột do khác cấu trúc, nên ta phải thực hiện thêm phần chỉnh sửa của mình để override data của branch master chưa chỉnh sửa.
