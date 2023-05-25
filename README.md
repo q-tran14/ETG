@@ -1,4 +1,4 @@
-# Enter The Dungeon (clone from Enter The Gungeon)
+<!-- # Enter The Dungeon (clone from Enter The Gungeon)
 ## Các Folder được cung cấp:
 - [x] Sprites
 - [x] Sounds
@@ -139,4 +139,4 @@ Ngoài ra cũng cần tham khảo thêm trên Youtube để tạo hình các roo
 
 ![UIStep2](https://user-images.githubusercontent.com/30680192/224210381-dff738b2-5210-4899-a00b-eac920e7aa94.png)
 
-Giải thích: Lỗi này xảy ra khi người chơi thực hiện chỉnh sửa file khác với branch chính (thêm/bớt sprite trong palette,...) nên khi update từ branch chính về sẽ bị xung đột do khác cấu trúc, nên ta phải thực hiện thêm phần chỉnh sửa của mình để override data của branch master chưa chỉnh sửa.
+Giải thích: Lỗi này xảy ra khi người chơi thực hiện chỉnh sửa file khác với branch chính (thêm/bớt sprite trong palette,...) nên khi update từ branch chính về sẽ bị xung đột do khác cấu trúc, nên ta phải thực hiện thêm phần chỉnh sửa của mình để override data của branch master chưa chỉnh sửa. -->
