@@ -13,6 +13,5 @@ public class StartScene : MonoBehaviour
     public void Exit()
     {
         Application.Quit();
-        UnityEditor.EditorApplication.ExitPlaymode();
     }
 }

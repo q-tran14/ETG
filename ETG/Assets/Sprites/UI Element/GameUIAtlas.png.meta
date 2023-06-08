@@ -362,27 +362,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GameUIAtlas_1
-      rect:
-        serializedVersion: 2
-        x: 1084
-        y: 1072
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 357cb8685ef19174f9efd18794fe1358
-      internalID: -8163592
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: shield
       rect:
         serializedVersion: 2
@@ -404,69 +383,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: health_point_1
-      rect:
-        serializedVersion: 2
-        x: 1090
-        y: 1030
-        width: 15
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fda79eb302787414f9b588f771b9e885
-      internalID: -326866497
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: health_point_2
-      rect:
-        serializedVersion: 2
-        x: 1090
-        y: 1016
-        width: 15
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cfee2eef3cbfee543805f047163c78a2
-      internalID: -1936785247
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: health_point_0
-      rect:
-        serializedVersion: 2
-        x: 1105
-        y: 1016
-        width: 15
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bf2165ab37251704db26710db63868f1
-      internalID: 530616582
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: special_shield
       rect:
         serializedVersion: 2
@@ -483,27 +399,6 @@ TextureImporter:
       bones: []
       spriteID: 9e40f903845526a48a35d4c3f727047c
       internalID: 527575778
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: shield_1
-      rect:
-        serializedVersion: 2
-        x: 1071
-        y: 1058
-        width: 13
-        height: 14
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 69d340a3dc936a7428eceeb57c017ae2
-      internalID: -1612357386
       vertices: []
       indices: 
       edges: []
@@ -853,7 +748,7 @@ TextureImporter:
         width: 465
         height: 274
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using static UnityEditor.Progress;
 
 namespace Enemy{
     public abstract class Enemy : MonoBehaviour

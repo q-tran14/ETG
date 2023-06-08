@@ -7,7 +7,6 @@ using UnityEngine.XR;
 using UnityEngine.SceneManagement;
 using System.Threading.Tasks;
 using FMOD.Studio;
-using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 using Enemy;
 
 public class StateManager : MonoBehaviour
