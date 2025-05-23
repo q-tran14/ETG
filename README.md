@@ -1,6 +1,5 @@
 # Enter The Dungeon (clone from Enter The Gungeon)
-## KẾT QUẢ:
-### Map:
+## Map:
 
 - The Breach
 ![Imgur](https://i.imgur.com/j7zxZ2n.png)
